@@ -15,7 +15,7 @@
 
 
 <body>
-<div class="bg-white">
+<div class="bg-brown">
   <!--
     Mobile menu
 
@@ -71,7 +71,7 @@
           <div id="tabs-1-panel-1" class="space-y-10 px-4 pt-10 pb-8" aria-labelledby="tabs-1-tab-1" role="tabpanel" tabindex="0">
             <div class="grid grid-cols-2 gap-x-4">
               <div class="group relative text-sm">
-                <img src="https://tailwindcss.com/plus-assets/img/ecommerce-images/mega-menu-category-01.jpg" alt="Models sitting back to back, wearing Basic Tee in black and bone." class="aspect-square w-full rounded-lg bg-gray-100 object-cover group-hover:opacity-75">
+                <img src="jamu.png" alt="Models sitting back to back, wearing Basic Tee in black and bone." class="aspect-square w-full rounded-lg bg-gray-100 object-cover group-hover:opacity-75">
                 <a href="#" class="mt-6 block font-medium text-gray-900">
                   <span class="absolute inset-0 z-10" aria-hidden="true"></span>
                   New Arrivals
@@ -167,7 +167,7 @@
           <div id="tabs-1-panel-2" class="space-y-10 px-4 pt-10 pb-8" aria-labelledby="tabs-1-tab-2" role="tabpanel" tabindex="0">
             <div class="grid grid-cols-2 gap-x-4">
               <div class="group relative text-sm">
-                <img src="https://tailwindcss.com/plus-assets/img/ecommerce-images/product-page-04-detail-product-shot-01.jpg" alt="Drawstring top with elastic loop closure and textured interior padding." class="aspect-square w-full rounded-lg bg-gray-100 object-cover group-hover:opacity-75">
+                <img src="jamu.png" alt="Drawstring top with elastic loop closure and textured interior padding." class="aspect-square w-full rounded-lg bg-gray-100 object-cover group-hover:opacity-75">
                 <a href="#" class="mt-6 block font-medium text-gray-900">
                   <span class="absolute inset-0 z-10" aria-hidden="true"></span>
                   New Arrivals
@@ -175,7 +175,7 @@
                 <p aria-hidden="true" class="mt-1">Shop now</p>
               </div>
               <div class="group relative text-sm">
-                <img src="https://tailwindcss.com/plus-assets/img/ecommerce-images/category-page-02-image-card-06.jpg" alt="Three shirts in gray, white, and blue arranged on table with same line drawing of hands and shapes overlapping on front of shirt." class="aspect-square w-full rounded-lg bg-gray-100 object-cover group-hover:opacity-75">
+                <img src="jamu.png" alt="Three shirts in gray, white, and blue arranged on table with same line drawing of hands and shapes overlapping on front of shirt." class="aspect-square w-full rounded-lg bg-gray-100 object-cover group-hover:opacity-75">
                 <a href="#" class="mt-6 block font-medium text-gray-900">
                   <span class="absolute inset-0 z-10" aria-hidden="true"></span>
                   Artwork Tees
@@ -184,7 +184,7 @@
               </div>
             </div>
             <div>
-              <p id="men-clothing-heading-mobile" class="font-medium text-gray-900">Clothing</p>
+              <p id="men-clothing-heading-mobile" class="font-medium text-gray-900">Obat Herbal</p>
               <ul role="list" aria-labelledby="men-clothing-heading-mobile" class="mt-6 flex flex-col space-y-6">
                 <li class="flow-root">
                   <a href="#" class="-m-2 block p-2 text-gray-500">Tops</a>
@@ -281,8 +281,11 @@
     </div>
   </div>
 
-  <header class="relative bg-white">
-    <p class="flex h-10 items-center justify-center bg-indigo-600 px-4 text-sm font-medium text-white sm:px-6 lg:px-8">Get free delivery on orders over $100</p>
+
+  <!---navigation bar--->
+  
+  <header class="relative bg-brown">
+    <p class="flex h-10 items-center justify-center bg-orange-950 px-4 text-sm font-medium text-white sm:px-6 lg:px-8">Get free delivery on orders over $100</p>
 
     <nav aria-label="Top" class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8" x-data="{ isOpen: false }">
       <div class="border-b border-gray-200">
@@ -325,13 +328,13 @@
                     To: "opacity-0"
                 -->
                 <div  x-show="isOpen"
-    x-transition:enter="transition ease-out duration-200 transform"
-    x-transition:enter-start="opacity-0 scale-95"
-    x-transition:enter-end="opacity-100 scale-100"
-    x-transition:leave="transition ease-in duration-150 transform"
-    x-transition:leave-start="opacity-100 scale-100"
-    x-transition:leave-end="opacity-0 scale-95" 
-    class="absolute inset-x-0 top-full text-sm text-gray-500">
+                  x-transition:enter="transition ease-out duration-200 transform"
+                  x-transition:enter-start="opacity-0 scale-95"
+                  x-transition:enter-end="opacity-100 scale-100"
+                  x-transition:leave="transition ease-in duration-150 transform"
+                  x-transition:leave-start="opacity-100 scale-100"
+                  x-transition:leave-end="opacity-0 scale-95" 
+                  class="absolute inset-x-0 top-full text-sm text-gray-500">
                   <!-- Presentational element used to render the bottom shadow, if we put the shadow on the actual panel it pokes out the top, so we use this shorter element to hide the top of the shadow -->
                   <div class="absolute inset-0 top-1/2 bg-white shadow-sm" aria-hidden="true"></div>
 
@@ -340,7 +343,7 @@
                       <div class="grid grid-cols-2 gap-x-8 gap-y-10 py-16">
                         <div class="col-start-2 grid grid-cols-2 gap-x-8">
                           <div class="group relative text-base sm:text-sm">
-                            <img src="https://tailwindcss.com/plus-assets/img/ecommerce-images/mega-menu-category-01.jpg" alt="Models sitting back to back, wearing Basic Tee in black and bone." class="aspect-square w-full rounded-lg bg-gray-100 object-cover group-hover:opacity-75">
+                            <img src="jamu.png" alt="Models sitting back to back, wearing Basic Tee in black and bone." class="aspect-square w-full rounded-lg bg-gray-100 object-cover group-hover:opacity-75">
                             <a href="#" class="mt-6 block font-medium text-gray-900">
                               <span class="absolute inset-0 z-10" aria-hidden="true"></span>
                               New Arrivals
@@ -348,7 +351,7 @@
                             <p aria-hidden="true" class="mt-1">Shop now</p>
                           </div>
                           <div class="group relative text-base sm:text-sm">
-                            <img src="https://tailwindcss.com/plus-assets/img/ecommerce-images/mega-menu-category-02.jpg" alt="Close up of Basic Tee fall bundle with off-white, ochre, olive, and black tees." class="aspect-square w-full rounded-lg bg-gray-100 object-cover group-hover:opacity-75">
+                            <img src="jamu.png" alt="Close up of Basic Tee fall bundle with off-white, ochre, olive, and black tees." class="aspect-square w-full rounded-lg bg-gray-100 object-cover group-hover:opacity-75">
                             <a href="#" class="mt-6 block font-medium text-gray-900">
                               <span class="absolute inset-0 z-10" aria-hidden="true"></span>
                               Basic Tees
@@ -470,7 +473,7 @@
                       <div class="grid grid-cols-2 gap-x-8 gap-y-10 py-16">
                         <div class="col-start-2 grid grid-cols-2 gap-x-8">
                           <div class="group relative text-base sm:text-sm">
-                            <img src="https://tailwindcss.com/plus-assets/img/ecommerce-images/product-page-04-detail-product-shot-01.jpg" alt="Drawstring top with elastic loop closure and textured interior padding." class="aspect-square w-full rounded-lg bg-gray-100 object-cover group-hover:opacity-75">
+                            <img src="jamu.png" alt="Drawstring top with elastic loop closure and textured interior padding." class="aspect-square w-full rounded-lg bg-gray-100 object-cover group-hover:opacity-75">
                             <a href="#" class="mt-6 block font-medium text-gray-900">
                               <span class="absolute inset-0 z-10" aria-hidden="true"></span>
                               New Arrivals
@@ -478,7 +481,7 @@
                             <p aria-hidden="true" class="mt-1">Shop now</p>
                           </div>
                           <div class="group relative text-base sm:text-sm">
-                            <img src="https://tailwindcss.com/plus-assets/img/ecommerce-images/category-page-02-image-card-06.jpg" alt="Three shirts in gray, white, and blue arranged on table with same line drawing of hands and shapes overlapping on front of shirt." class="aspect-square w-full rounded-lg bg-gray-100 object-cover group-hover:opacity-75">
+                            <img src="jamu.png" alt="Three shirts in gray, white, and blue arranged on table with same line drawing of hands and shapes overlapping on front of shirt." class="aspect-square w-full rounded-lg bg-gray-100 object-cover group-hover:opacity-75">
                             <a href="#" class="mt-6 block font-medium text-gray-900">
                               <span class="absolute inset-0 z-10" aria-hidden="true"></span>
                               Artwork Tees
