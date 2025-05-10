@@ -88,7 +88,7 @@
               </div>
             </div>
             <div>
-              <p id="women-clothing-heading-mobile" class="font-medium text-gray-900">Clothing</p>
+              <p id="women-clothing-heading-mobile" class="font-medium text-gray-900">Minuman Herbal</p>
               <ul role="list" aria-labelledby="women-clothing-heading-mobile" class="mt-6 flex flex-col space-y-6">
                 <li class="flow-root">
                   <a href="#" class="-m-2 block p-2 text-gray-500">Tops</a>
@@ -120,7 +120,7 @@
               </ul>
             </div>
             <div>
-              <p id="women-accessories-heading-mobile" class="font-medium text-gray-900">Accessories</p>
+              <p id="women-accessories-heading-mobile" class="font-medium text-gray-900">Jamu Anak</p>
               <ul role="list" aria-labelledby="women-accessories-heading-mobile" class="mt-6 flex flex-col space-y-6">
                 <li class="flow-root">
                   <a href="#" class="-m-2 block p-2 text-gray-500">Watches</a>
@@ -303,7 +303,7 @@
           <div class="ml-4 flex lg:ml-0">
             <a href="#">
               <span class="sr-only">JamuKita</span>
-              <img class="h-8 w-auto" src="jamu.png" alt="">
+              <img class="h-8 w-auto" src="jamukita.jpg" alt="">
             </a>
           </div>
 
@@ -313,7 +313,7 @@
               <div class="flex">
                 <div  class="relative flex">
                   <!-- Item active: "border-indigo-600 text-indigo-600", Item inactive: "border-transparent text-gray-700 hover:text-gray-800" -->
-                  <button type="button" @click="isOpen = !isOpen" class="relative z-10 -mb-px flex items-center border-b-2 border-transparent pt-px text-sm font-medium text-gray-700 transition-colors duration-200 ease-out hover:text-gray-800" aria-expanded="false">Category Jamu</button>
+                  <button type="button" @click="isOpen = !isOpen" class="relative z-10 -mb-px flex items-center border-b-2 border-transparent pt-px text-sm font-medium text-gray-700 transition-colors duration-200 ease-out hover:text-gray-800" aria-expanded="false">Category</button>
                     
                 </div>
 
@@ -361,78 +361,43 @@
                         </div>
                         <div class="row-start-1 grid grid-cols-3 gap-x-8 gap-y-10 text-sm">
                           <div>
-                            <p id="Clothing-heading" class="font-medium text-gray-900">Clothing</p>
+                            <p id="Clothing-heading" class="font-medium text-gray-900">Minuman Herbal</p>
                             <ul role="list" aria-labelledby="Clothing-heading" class="mt-6 space-y-6 sm:mt-4 sm:space-y-4">
                               <li class="flex">
-                                <a href="#" class="hover:text-gray-800">Tops</a>
+                                <a href="#" class="hover:text-gray-800">Wedang Jahe</a>
                               </li>
                               <li class="flex">
-                                <a href="#" class="hover:text-gray-800">Dresses</a>
+                                <a href="#" class="hover:text-gray-800">Kunyit Asam</a>
                               </li>
                               <li class="flex">
-                                <a href="#" class="hover:text-gray-800">Pants</a>
-                              </li>
-                              <li class="flex">
-                                <a href="#" class="hover:text-gray-800">Denim</a>
-                              </li>
-                              <li class="flex">
-                                <a href="#" class="hover:text-gray-800">Sweaters</a>
-                              </li>
-                              <li class="flex">
-                                <a href="#" class="hover:text-gray-800">T-Shirts</a>
-                              </li>
-                              <li class="flex">
-                                <a href="#" class="hover:text-gray-800">Jackets</a>
-                              </li>
-                              <li class="flex">
-                                <a href="#" class="hover:text-gray-800">Activewear</a>
-                              </li>
-                              <li class="flex">
-                                <a href="#" class="hover:text-gray-800">Browse All</a>
+                                <a href="#" class="hover:text-gray-800">Wedang Uwuh</a>
                               </li>
                             </ul>
                           </div>
                           <div>
-                            <p id="Accessories-heading" class="font-medium text-gray-900">Accessories</p>
+                            <p id="Accessories-heading" class="font-medium text-gray-900">Jamu Anak</p>
                             <ul role="list" aria-labelledby="Accessories-heading" class="mt-6 space-y-6 sm:mt-4 sm:space-y-4">
                               <li class="flex">
-                                <a href="#" class="hover:text-gray-800">Watches</a>
+                                <a href="#" class="hover:text-gray-800">Buyung Upik</a>
                               </li>
                               <li class="flex">
-                                <a href="#" class="hover:text-gray-800">Wallets</a>
-                              </li>
-                              <li class="flex">
-                                <a href="#" class="hover:text-gray-800">Bags</a>
-                              </li>
-                              <li class="flex">
-                                <a href="#" class="hover:text-gray-800">Sunglasses</a>
-                              </li>
-                              <li class="flex">
-                                <a href="#" class="hover:text-gray-800">Hats</a>
-                              </li>
-                              <li class="flex">
-                                <a href="#" class="hover:text-gray-800">Belts</a>
+                                <a href="#" class="hover:text-gray-800">Beras Kencur</a>
                               </li>
                             </ul>
                           </div>
                           <div>
-                            <p id="Brands-heading" class="font-medium text-gray-900">Brands</p>
+                            <p id="Brands-heading" class="font-medium text-gray-900">Obat Herbal</p>
                             <ul role="list" aria-labelledby="Brands-heading" class="mt-6 space-y-6 sm:mt-4 sm:space-y-4">
                               <li class="flex">
-                                <a href="#" class="hover:text-gray-800">Full Nelson</a>
+                                <a href="#" class="hover:text-gray-800">Jahe</a>
                               </li>
                               <li class="flex">
-                                <a href="#" class="hover:text-gray-800">My Way</a>
+                                <a href="#" class="hover:text-gray-800">Temulawak</a>
                               </li>
                               <li class="flex">
-                                <a href="#" class="hover:text-gray-800">Re-Arranged</a>
+                                <a href="#" class="hover:text-gray-800">Kunyit</a>
                               </li>
-                              <li class="flex">
-                                <a href="#" class="hover:text-gray-800">Counterfeit</a>
-                              </li>
-                              <li class="flex">
-                                <a href="#" class="hover:text-gray-800">Significant Other</a>
-                              </li>
+                            
                             </ul>
                           </div>
                         </div>
@@ -441,8 +406,7 @@
                   </div>
                 </div>
               </div>
-             
-
+              
               <a href="#" class="flex items-center text-sm font-medium text-gray-700 hover:text-gray-800">Company</a>
               <a href="#" class="flex items-center text-sm font-medium text-gray-700 hover:text-gray-800">Stores</a>
             </div>
@@ -453,14 +417,6 @@
               <a href="#" class="text-sm font-medium text-gray-700 hover:text-gray-800">Sign in</a>
               <span class="h-6 w-px bg-gray-200" aria-hidden="true"></span>
               <a href="#" class="text-sm font-medium text-gray-700 hover:text-gray-800">Create account</a>
-            </div>
-
-            <div class="hidden lg:ml-8 lg:flex">
-              <a href="#" class="flex items-center text-gray-700 hover:text-gray-800">
-                <img src="https://tailwindcss.com/plus-assets/img/flags/flag-canada.svg" alt="" class="block h-auto w-5 shrink-0">
-                <span class="ml-3 block text-sm font-medium">CAD</span>
-                <span class="sr-only">, change currency</span>
-              </a>
             </div>
 
             <!-- Search -->
@@ -496,19 +452,19 @@
 
     <div class="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8">
       <a href="#" class="group">
-        <img src="jamu.png" alt="Tall slender porcelain bottle with natural clay textured body and cork stopper." class="aspect-square w-full rounded-lg bg-gray-200 object-cover group-hover:opacity-75 xl:aspect-7/8">
+        <img src="jamukita.jpg" alt="Tall slender porcelain bottle with natural clay textured body and cork stopper." class="aspect-square w-full rounded-lg bg-gray-200 object-cover group-hover:opacity-75 xl:aspect-7/8">
         <h3 class="mt-4 text-sm text-gray-700">Kencur Beras</h3>
         <p class="mt-1 text-lg font-medium text-gray-900">$48</p>
         <button href="#">BELI</button>
       </a>
       <a href="#" class="group">
-        <img src="buyungupik.png" alt="Olive drab green insulated bottle with flared screw lid and flat top." class="aspect-square w-full rounded-lg bg-gray-200 object-cover group-hover:opacity-75 xl:aspect-7/8">
+        <img src="buyungupik.jpg" alt="Olive drab green insulated bottle with flared screw lid and flat top." class="aspect-square w-full rounded-lg bg-gray-200 object-cover group-hover:opacity-75 xl:aspect-7/8">
         <h3 class="mt-4 text-sm text-gray-700">Buyung upik</h3>
         <p class="mt-1 text-lg font-medium text-gray-900">$35</p>
-        <button href="#">BELI</button>
+        <button onclick="location.href='https://shopee.co.id/';">BELI</button>
       </a>
       <a href="#" class="group">
-        <img src="jamu.png" alt="Jamu Temulawak" class="aspect-square w-full rounded-lg bg-gray-200 object-cover group-hover:opacity-75 xl:aspect-7/8">
+        <img src="jamukita.jpg" alt="Jamu Temulawak" class="aspect-square w-full rounded-lg bg-gray-200 object-cover group-hover:opacity-75 xl:aspect-7/8">
         <h3 class="mt-4 text-sm text-gray-700">Temulawak</h3>
         <p class="mt-1 text-lg font-medium text-gray-900">$89</p>
         <button href="#">BELI</button>
@@ -516,7 +472,7 @@
       
 
       <a href="#" class="group">
-        <img src="jamu.png" alt="Jamu Temulawak" class="aspect-square w-full rounded-lg bg-gray-200 object-cover group-hover:opacity-75 xl:aspect-7/8">
+        <img src="jamukita.jpg" alt="Jamu Temulawak" class="aspect-square w-full rounded-lg bg-gray-200 object-cover group-hover:opacity-75 xl:aspect-7/8">
         <h3 class="mt-4 text-sm text-gray-700">Temulawak</h3>
         <p class="mt-1 text-lg font-medium text-gray-900">$89</p>
         <button href="#">BELI</button>
