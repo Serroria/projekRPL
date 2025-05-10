@@ -313,7 +313,7 @@
               <div class="flex">
                 <div  class="relative flex">
                   <!-- Item active: "border-indigo-600 text-indigo-600", Item inactive: "border-transparent text-gray-700 hover:text-gray-800" -->
-                  <button type="button" @click="isOpen = !isOpen" class="relative z-10 -mb-px flex items-center border-b-2 border-transparent pt-px text-sm font-medium text-gray-700 transition-colors duration-200 ease-out hover:text-gray-800" aria-expanded="false">Jamu Org Gede</button>
+                  <button type="button" @click="isOpen = !isOpen" class="relative z-10 -mb-px flex items-center border-b-2 border-transparent pt-px text-sm font-medium text-gray-700 transition-colors duration-200 ease-out hover:text-gray-800" aria-expanded="false">Category Jamu</button>
                     
                 </div>
 
@@ -441,127 +441,7 @@
                   </div>
                 </div>
               </div>
-              <div class="flex">
-                <div  class="relative flex">
-                  <!-- Item active: "border-indigo-600 text-indigo-600", Item inactive: "border-transparent text-gray-700 hover:text-gray-800" -->
-                  <button type="button" @click="isOpen = !isOpen" class="relative z-10 -mb-px flex items-center border-b-2 border-transparent pt-px text-sm font-medium text-gray-700 transition-colors duration-200 ease-out hover:text-gray-800" aria-expanded="false">Jamu Bocah</button>
-                </div>
-
-                <!--
-                  'Men' flyout menu, show/hide based on flyout menu state.
-
-                  Entering: "transition ease-out duration-200"
-                    From: "opacity-0"
-                    To: "opacity-100"
-                  Leaving: "transition ease-in duration-150"
-                    From: "opacity-100"
-                    To: "opacity-0"
-                -->
-                <div  x-show="isOpen"
-    x-transition:enter="transition ease-out duration-100 transform"
-    x-transition:enter-start="opacity-0 scale-95"
-    x-transition:enter-end="opacity-100 scale-100"
-    x-transition:leave="transition ease-in duration-75 transform"
-    x-transition:leave-start="opacity-100 scale-100"
-    x-transition:leave-end="opacity-0 scale-95" 
-     class="absolute inset-x-0 top-full text-sm text-gray-500">
-                  <!-- Presentational element used to render the bottom shadow, if we put the shadow on the actual panel it pokes out the top, so we use this shorter element to hide the top of the shadow -->
-                  <div class="absolute inset-0 top-1/2 bg-white shadow-sm" aria-hidden="true"></div>
-
-                  <div class="relative bg-white">
-                    <div class="mx-auto max-w-7xl px-8">
-                      <div class="grid grid-cols-2 gap-x-8 gap-y-10 py-16">
-                        <div class="col-start-2 grid grid-cols-2 gap-x-8">
-                          <div class="group relative text-base sm:text-sm">
-                            <img src="jamu.png" alt="Drawstring top with elastic loop closure and textured interior padding." class="aspect-square w-full rounded-lg bg-gray-100 object-cover group-hover:opacity-75">
-                            <a href="#" class="mt-6 block font-medium text-gray-900">
-                              <span class="absolute inset-0 z-10" aria-hidden="true"></span>
-                              New Arrivals
-                            </a>
-                            <p aria-hidden="true" class="mt-1">Shop now</p>
-                          </div>
-                          <div class="group relative text-base sm:text-sm">
-                            <img src="jamu.png" alt="Three shirts in gray, white, and blue arranged on table with same line drawing of hands and shapes overlapping on front of shirt." class="aspect-square w-full rounded-lg bg-gray-100 object-cover group-hover:opacity-75">
-                            <a href="#" class="mt-6 block font-medium text-gray-900">
-                              <span class="absolute inset-0 z-10" aria-hidden="true"></span>
-                              Artwork Tees
-                            </a>
-                            <p aria-hidden="true" class="mt-1">Shop now</p>
-                          </div>
-                        </div>
-                        <div class="row-start-1 grid grid-cols-3 gap-x-8 gap-y-10 text-sm">
-                          <div>
-                            <p id="Clothing-heading" class="font-medium text-gray-900">Clothing</p>
-                            <ul role="list" aria-labelledby="Clothing-heading" class="mt-6 space-y-6 sm:mt-4 sm:space-y-4">
-                              <li class="flex">
-                                <a href="#" class="hover:text-gray-800">Tops</a>
-                              </li>
-                              <li class="flex">
-                                <a href="#" class="hover:text-gray-800">Pants</a>
-                              </li>
-                              <li class="flex">
-                                <a href="#" class="hover:text-gray-800">Sweaters</a>
-                              </li>
-                              <li class="flex">
-                                <a href="#" class="hover:text-gray-800">T-Shirts</a>
-                              </li>
-                              <li class="flex">
-                                <a href="#" class="hover:text-gray-800">Jackets</a>
-                              </li>
-                              <li class="flex">
-                                <a href="#" class="hover:text-gray-800">Activewear</a>
-                              </li>
-                              <li class="flex">
-                                <a href="#" class="hover:text-gray-800">Browse All</a>
-                              </li>
-                            </ul>
-                          </div>
-                          <div>
-                            <p id="Accessories-heading" class="font-medium text-gray-900">Accessories</p>
-                            <ul role="list" aria-labelledby="Accessories-heading" class="mt-6 space-y-6 sm:mt-4 sm:space-y-4">
-                              <li class="flex">
-                                <a href="#" class="hover:text-gray-800">Watches</a>
-                              </li>
-                              <li class="flex">
-                                <a href="#" class="hover:text-gray-800">Wallets</a>
-                              </li>
-                              <li class="flex">
-                                <a href="#" class="hover:text-gray-800">Bags</a>
-                              </li>
-                              <li class="flex">
-                                <a href="#" class="hover:text-gray-800">Sunglasses</a>
-                              </li>
-                              <li class="flex">
-                                <a href="#" class="hover:text-gray-800">Hats</a>
-                              </li>
-                              <li class="flex">
-                                <a href="#" class="hover:text-gray-800">Belts</a>
-                              </li>
-                            </ul>
-                          </div>
-                          <div>
-                            <p id="Brands-heading" class="font-medium text-gray-900">Brands</p>
-                            <ul role="list" aria-labelledby="Brands-heading" class="mt-6 space-y-6 sm:mt-4 sm:space-y-4">
-                              <li class="flex">
-                                <a href="#" class="hover:text-gray-800">Re-Arranged</a>
-                              </li>
-                              <li class="flex">
-                                <a href="#" class="hover:text-gray-800">Counterfeit</a>
-                              </li>
-                              <li class="flex">
-                                <a href="#" class="hover:text-gray-800">Full Nelson</a>
-                              </li>
-                              <li class="flex">
-                                <a href="#" class="hover:text-gray-800">My Way</a>
-                              </li>
-                            </ul>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+             
 
               <a href="#" class="flex items-center text-sm font-medium text-gray-700 hover:text-gray-800">Company</a>
               <a href="#" class="flex items-center text-sm font-medium text-gray-700 hover:text-gray-800">Stores</a>
@@ -617,26 +497,28 @@
     <div class="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8">
       <a href="#" class="group">
         <img src="jamu.png" alt="Tall slender porcelain bottle with natural clay textured body and cork stopper." class="aspect-square w-full rounded-lg bg-gray-200 object-cover group-hover:opacity-75 xl:aspect-7/8">
-        <h3 class="mt-4 text-sm text-gray-700">Earthen Bottle</h3>
+        <h3 class="mt-4 text-sm text-gray-700">Kencur Beras</h3>
         <p class="mt-1 text-lg font-medium text-gray-900">$48</p>
         <button href="#">BELI</button>
       </a>
       <a href="#" class="group">
-        <img src="jamu.png" alt="Olive drab green insulated bottle with flared screw lid and flat top." class="aspect-square w-full rounded-lg bg-gray-200 object-cover group-hover:opacity-75 xl:aspect-7/8">
-        <h3 class="mt-4 text-sm text-gray-700">Nomad Tumbler</h3>
+        <img src="buyungupik.png" alt="Olive drab green insulated bottle with flared screw lid and flat top." class="aspect-square w-full rounded-lg bg-gray-200 object-cover group-hover:opacity-75 xl:aspect-7/8">
+        <h3 class="mt-4 text-sm text-gray-700">Buyung upik</h3>
         <p class="mt-1 text-lg font-medium text-gray-900">$35</p>
         <button href="#">BELI</button>
       </a>
       <a href="#" class="group">
-        <img src="jamu.png" alt="Person using a pen to cross a task off a productivity paper card." class="aspect-square w-full rounded-lg bg-gray-200 object-cover group-hover:opacity-75 xl:aspect-7/8">
-        <h3 class="mt-4 text-sm text-gray-700">Focus Paper Refill</h3>
+        <img src="jamu.png" alt="Jamu Temulawak" class="aspect-square w-full rounded-lg bg-gray-200 object-cover group-hover:opacity-75 xl:aspect-7/8">
+        <h3 class="mt-4 text-sm text-gray-700">Temulawak</h3>
         <p class="mt-1 text-lg font-medium text-gray-900">$89</p>
         <button href="#">BELI</button>
       </a>
+      
+
       <a href="#" class="group">
-        <img src="jamu.png" alt="Hand holding black machined steel mechanical pencil with brass tip and top." class="aspect-square w-full rounded-lg bg-gray-200 object-cover group-hover:opacity-75 xl:aspect-7/8">
-        <h3 class="mt-4 text-sm text-gray-700">Machined Mechanical Pencil</h3>
-        <p class="mt-1 text-lg font-medium text-gray-900">$35</p>
+        <img src="jamu.png" alt="Jamu Temulawak" class="aspect-square w-full rounded-lg bg-gray-200 object-cover group-hover:opacity-75 xl:aspect-7/8">
+        <h3 class="mt-4 text-sm text-gray-700">Temulawak</h3>
+        <p class="mt-1 text-lg font-medium text-gray-900">$89</p>
         <button href="#">BELI</button>
       </a>
 

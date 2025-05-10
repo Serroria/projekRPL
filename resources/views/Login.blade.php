@@ -8,6 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
     
     @vite('resources/css/loginCs.css')
+    @vite('resources/js/loginJs.js')
    
 </head>
 <body>
