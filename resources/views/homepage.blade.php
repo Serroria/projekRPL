@@ -280,12 +280,12 @@
       </div>
     </div>
   </div>
-
+ 
 
   <!---navigation bar--->
   
   <header class="relative bg-brown">
-    <p class="flex h-10 items-center justify-center bg-orange-950 px-4 text-sm font-medium text-white sm:px-6 lg:px-8">Get free delivery on orders over $100</p>
+    <p class="flex h-10 items-center justify-center bg-orange-950 px-4 text-sm font-medium text-white sm:px-6 lg:px-8">Sehat-sehat bersama JAMU!</p>
 
     <nav aria-label="Top" class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8" x-data="{ isOpen: false }">
       <div class="border-b border-gray-200">
