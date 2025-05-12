@@ -478,6 +478,35 @@
         <button href="#">BELI</button>
       </a>
 
+      <a href="#" class="group">
+        <img src="{{ asset('jamu-bersalin.png') }}" alt="Jamu Pegal Linu" class="aspect-square w-full rounded-lg bg-gray-200 object-cover group-hover:opacity-75 xl:aspect-7/8">
+        <h3 class="mt-4 text-sm text-gray-700">Jamu Bersalin</h3>
+        <p class="mt-1 text-lg font-medium text-gray-900">Rp. 3.000,00</p>
+        <button href="#">BELI</button>
+      </a>
+
+            <a href="#" class="group">
+        <img src="{{ asset('jamu-klingsir.png') }}" alt="Jamu Klingsir" class="aspect-square w-full rounded-lg bg-gray-200 object-cover group-hover:opacity-75 xl:aspect-7/8">
+        <h3 class="mt-4 text-sm text-gray-700">Jamu Klingsir</h3>
+        <p class="mt-1 text-lg font-medium text-gray-900">Rp. 18.000,00</p>
+        <button href="#">BELI</button>
+      </a>
+
+            <a href="#" class="group">
+        <img src="{{ asset('jamu-gemuk-sehat.png') }}" alt="Jamu Gemuk Sehat" class="aspect-square w-full rounded-lg bg-gray-200 object-cover group-hover:opacity-75 xl:aspect-7/8">
+        <h3 class="mt-4 text-sm text-gray-700">Jamu Gemuk Sehat</h3>
+        <p class="mt-1 text-lg font-medium text-gray-900">Rp. 18.000,00</p>
+        <button href="#">BELI</button>
+      </a>
+
+            <a href="#" class="group">
+        <img src="{{ asset('jamu-galian-montok.png') }}" alt="Jamu Galian Montok" class="aspect-square w-full rounded-lg bg-gray-200 object-cover group-hover:opacity-75 xl:aspect-7/8">
+        <h3 class="mt-4 text-sm text-gray-700">Jamu Galian Montok</h3>
+        <p class="mt-1 text-lg font-medium text-gray-900">Rp. 18.000,00</p>
+        <button href="#">BELI</button>
+      </a>
+
+
       <!-- More products... -->
     </div>
   </div>
