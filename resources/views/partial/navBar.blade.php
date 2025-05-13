@@ -4,13 +4,13 @@
       <div class="border-b border-gray-200">
         <div class="flex h-16 items-center">
           <!-- Mobile menu toggle, controls the 'mobileMenuOpen' state. -->
-          <button class="relative rounded-md bg-[#902727] p-2 text-white lg:hidden">
+          <!-- <button class="relative rounded-md bg-[#902727] p-2 text-white lg:hidden">
             <span  class="absolute -inset-0.5"></span>
             <span class="sr-only">Open menu</span>
             <svg class="size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
               <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
             </svg>
-          </button>
+          </button> -->
 
           <!-- Logo -->
           <div class="ml-4 flex lg:ml-0">
