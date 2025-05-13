@@ -5,7 +5,7 @@
         <div class="flex h-16 items-center">
           <!-- Mobile menu toggle, controls the 'mobileMenuOpen' state. -->
           <button class="relative rounded-md bg-[#902727] p-2 text-white lg:hidden">
-            <span class="absolute -inset-0.5"></span>
+            <span  class="absolute -inset-0.5"></span>
             <span class="sr-only">Open menu</span>
             <svg class="size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
               <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
@@ -127,23 +127,23 @@
 
           <div class="ml-auto flex items-center">
             <div class="hidden lg:flex lg:flex-1 lg:items-center lg:justify-end lg:space-x-6">
-              <a href="#" class="text-sm font-medium text-white hover:text-gray">Sign in</a>
+              <!-- <a href="#" class="text-sm font-medium text-white hover:text-gray">Sign in</a> -->
               <span class="h-6 w-px bg-gray-200" aria-hidden="true"></span>
-              <a href="#" class="text-sm font-medium text-white hover:text-gray">Create account</a>
+              <!-- <a href="#" class="text-sm font-medium text-white hover:text-gray">Create account</a> -->
             </div>
 
             <!-- Search -->
-            <div class="flex lg:ml-6">
+            <!-- <div class="flex lg:ml-6">
               <a href="#" class="p-2 text-white hover:text-gray">
-                <span class="sr-only">Search</span>
-                <svg class="size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
+                <!-- <span class="sr-only">Search</span> -->
+                <!-- <svg class="size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
                   <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
-                </svg>
-              </a>
-            </div>
+                </svg> -->
+              <!-- </a>
+            </div> --> -->
 
             <!-- Cart -->
-            <div class="ml-4 flow-root lg:ml-6">
+            <!-- <div class="ml-4 flow-root lg:ml-6">
               <a href="#" class="group -m-2 flex items-center p-2">
                 <svg class="size-6 shrink-0 text-white grup-hover:text-gray" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
                   <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 10.5V6a3.75 3.75 0 1 0-7.5 0v4.5m11.356-1.993 1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 0 1-1.12-1.243l1.264-12A1.125 1.125 0 0 1 5.513 7.5h12.974c.576 0 1.059.435 1.119 1.007ZM8.625 10.5a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm7.5 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z" />
@@ -151,7 +151,7 @@
                 <span class="ml-2 text-sm font-medium text-white grup-hover:text-gray">0</span>
                 <span class="sr-only">items in cart, view bag</span>
               </a>
-            </div>
+            </div> -->
           </div>
         </div>
       </div>
