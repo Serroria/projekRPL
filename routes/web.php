@@ -9,6 +9,9 @@ Route::get('/', function () {
 Route::get('/login', function () {
     return view('Login');
 });
+Route::get('/company', function () {
+    return view('company');
+})->name('company');
 
 use App\Http\Controllers\LoginController;
 

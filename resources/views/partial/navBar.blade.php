@@ -56,7 +56,7 @@
                       <div class="grid grid-cols-2 gap-x-8 gap-y-10 py-16">
                         <div class="col-start-2 grid grid-cols-2 gap-x-8">
                           <div class="group relative text-base sm:text-sm">
-                            <img src="jamu.png" alt="Models sitting back to back, wearing Basic Tee in black and bone." class="aspect-square w-full rounded-lg bg-gray-100 object-cover group-hover:opacity-75">
+                            <img src="buyungupik.jpg" alt="Models sitting back to back, wearing Basic Tee in black and bone." class="aspect-square w-full rounded-lg bg-gray-100 object-cover group-hover:opacity-75">
                             <a href="#" class="mt-6 block font-medium text-gray-900">
                               <span class="absolute inset-0 z-10" aria-hidden="true"></span>
                               New Arrivals
@@ -64,10 +64,10 @@
                             <p aria-hidden="true" class="mt-1">Shop now</p>
                           </div>
                           <div class="group relative text-base sm:text-sm">
-                            <img src="jamu.png" alt="Close up of Basic Tee fall bundle with off-white, ochre, olive, and black tees." class="aspect-square w-full rounded-lg bg-gray-100 object-cover group-hover:opacity-75">
+                            <img src="jamu-galian-montok.png" alt="Close up of Basic Tee fall bundle with off-white, ochre, olive, and black tees." class="aspect-square w-full rounded-lg bg-gray-100 object-cover group-hover:opacity-75">
                             <a href="#" class="mt-6 block font-medium text-gray-900">
                               <span class="absolute inset-0 z-10" aria-hidden="true"></span>
-                              Basic Tees
+                              New Arrivals
                             </a>
                             <p aria-hidden="true" class="mt-1">Shop now</p>
                           </div>
@@ -119,8 +119,8 @@
                   </div>
                 </div>
               </div>
-              
-              <a href="#" class="flex items-center text-sm font-medium text-white hover:text-gray">Company</a>
+            
+              <a href="{{ route('company') }}" class="flex items-center text-sm font-medium text-white hover:text-gray">Company</a>
               <a href="#" class="flex items-center text-sm font-medium text-white hover:text-gray">Stores</a>
             </div>
           </div>
@@ -131,8 +131,8 @@
               <span class="h-6 w-px bg-gray-200" aria-hidden="true"></span>
               <a href="#" class="text-sm font-medium text-white hover:text-gray">Create account</a>
             </div>
-
-            <!-- Search -->
+<!--Search-->
+            
             <div class="flex lg:ml-6">
               <a href="#" class="p-2 text-white hover:text-gray">
                 <span class="sr-only">Search</span>
@@ -142,7 +142,8 @@
               </a>
             </div>
 
-            <!-- Cart -->
+          
+  <!-- Cart -->
             <div class="ml-4 flow-root lg:ml-6">
               <a href="#" class="group -m-2 flex items-center p-2">
                 <svg class="size-6 shrink-0 text-white grup-hover:text-gray" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
@@ -155,5 +156,7 @@
           </div>
         </div>
       </div>
+    
+
     </nav>
   </header>
