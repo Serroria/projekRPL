@@ -314,38 +314,7 @@
   }" 
   class="relative w-full h-[410px] overflow-hidden"
 >
-  <!-- Slides -->
-  <template x-for="(slide, index) in slides" :key="index">
-    <img 
-      x-show="currentSlide === index"
-      :src="slide"
-      alt="Poster Iklan"
-      class="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000"
-      x-transition:enter="transition-opacity ease-in duration-700"
-      x-transition:enter-start="opacity-0"
-      x-transition:enter-end="opacity-100"
-      x-transition:leave="transition-opacity ease-out duration-700"
-      x-transition:leave-start="opacity-100"
-      x-transition:leave-end="opacity-0"
-    />
-  </template>
 
-  <!-- Navigation Buttons -->
-  <button 
-    @click="prev" 
-    class="absolute top-1/2 left-4 transform -translate-y-1/2 bg-black bg-opacity-50 text-white text-3xl rounded-full p-2 hover:bg-opacity-75"
-    aria-label="Previous"
-  >
-    &#10094;
-  </button>
-  <button 
-    @click="next" 
-    class="absolute top-1/2 right-4 transform -translate-y-1/2 bg-black bg-opacity-50 text-white text-3xl rounded-full p-2 hover:bg-opacity-75"
-    aria-label="Next"
-  >
-    &#10095;
-  </button>
-</div>
 
 @yield('mainLayout')
 
@@ -359,7 +328,7 @@
       <!-- Tentang Kami -->
       <div>
         <h3 class="text-lg font-semibold mb-2">Tentang Kami</h3>
-        <p>Kami adalah tim pengembang web yang berdedikasi menciptakan solusi digital berkualitas.</p>
+        <p>Kami adalah UMKM yang bergerak di bidang jual beli obat herbal tradional Indonesia.</p>
       </div>
 
       <!-- Link Cepat -->
