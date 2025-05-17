@@ -21,7 +21,7 @@ body{
     width: 100%;
     position: sticky;
     top: 0;
-    background: #2d0808;
+    background: #902727;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(10px);
     z-index: 999;
