@@ -90,7 +90,7 @@ body{
 @media (max-width: 880px){
     .navbar {
         backdrop-filter: none;
-        background-color: #2d0808;
+        background-color: #902727;
     }
 
     .navbar-container .navbar-menu {
