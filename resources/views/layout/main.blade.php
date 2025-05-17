@@ -16,6 +16,7 @@
    
     @vite('resources/css/app.css')
     @vite('resources/css/hamburger.css')
+    @vite('resources/css/category.css')
     @vite('resources/js/hamburger.js')
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="//unpkg.com/alpinejs" defer></script>
@@ -316,10 +317,15 @@
     }
   }" 
   class="relative w-full h-[410px] overflow-hidden"
->
+></div>
+<!--Kategori-->
+
+@include('partial.category')
+
 
 
 @yield('mainLayout')
+
 
 <footer class="bg-[#902727] text-white py-6 mt-12">
   <div class="container mx-auto flex flex-col items-center justify-center">
