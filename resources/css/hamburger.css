@@ -54,7 +54,7 @@ body{
 .navbar-container .navbar-menu li a {
     text-decoration: none;
     color: #fff;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     font-weight: 500;
     padding: 3px 20px;
     border-radius: 20px;
@@ -66,12 +66,12 @@ body{
 .navbar-container .navbar-menu li a:hover,
 .navbar-container .navbar-menu li a.active{
     color: #162530;
-    background: rgba(188, 212, 229, 0.8);
-    border: 2px solid #fff;
+    background: #8c2020;
+    border: 2px solid #902727;
 }
 .navbar-toggle {
     display: none;
-    background: transparent;
+    background: #902727;
     padding: 10px;
     border: none;
     cursor: pointer;
