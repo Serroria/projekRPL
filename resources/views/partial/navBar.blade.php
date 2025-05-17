@@ -56,7 +56,7 @@
                       <div class="grid grid-cols-2 gap-x-8 gap-y-10 py-16">
                         <div class="col-start-2 grid grid-cols-2 gap-x-8">
                           <div class="group relative text-base sm:text-sm">
-                            <img src="jamu.png" alt="Models sitting back to back, wearing Basic Tee in black and bone." class="aspect-square w-full rounded-lg bg-gray-100 object-cover group-hover:opacity-75">
+                            <img src="buyungupik.jpg" alt="Models sitting back to back, wearing Basic Tee in black and bone." class="aspect-square w-full rounded-lg bg-gray-100 object-cover group-hover:opacity-75">
                             <a href="#" class="mt-6 block font-medium text-gray-900">
                               <span class="absolute inset-0 z-10" aria-hidden="true"></span>
                               New Arrivals
@@ -64,10 +64,10 @@
                             <p aria-hidden="true" class="mt-1">Shop now</p>
                           </div>
                           <div class="group relative text-base sm:text-sm">
-                            <img src="jamu.png" alt="Close up of Basic Tee fall bundle with off-white, ochre, olive, and black tees." class="aspect-square w-full rounded-lg bg-gray-100 object-cover group-hover:opacity-75">
+                            <img src="jamu-galian-montok.png" alt="Close up of Basic Tee fall bundle with off-white, ochre, olive, and black tees." class="aspect-square w-full rounded-lg bg-gray-100 object-cover group-hover:opacity-75">
                             <a href="#" class="mt-6 block font-medium text-gray-900">
                               <span class="absolute inset-0 z-10" aria-hidden="true"></span>
-                              Basic Tees
+                              New Arrivals
                             </a>
                             <p aria-hidden="true" class="mt-1">Shop now</p>
                           </div>
@@ -119,8 +119,8 @@
                   </div>
                 </div>
               </div>
-              
-              <a href="#" class="flex items-center text-sm font-medium text-white hover:text-gray">Company</a>
+            
+              <a href="{{ route('company') }}" class="flex items-center text-sm font-medium text-white hover:text-gray">Company</a>
               <a href="#" class="flex items-center text-sm font-medium text-white hover:text-gray">Stores</a>
             </div>
           </div>
@@ -131,19 +131,20 @@
               <span class="h-6 w-px bg-gray-200" aria-hidden="true"></span>
               <!-- <a href="#" class="text-sm font-medium text-white hover:text-gray">Create account</a> -->
             </div>
-
-            <!-- Search -->
-            <!-- <div class="flex lg:ml-6">
+<!--Search-->
+            
+            <div class="flex lg:ml-6">
               <a href="#" class="p-2 text-white hover:text-gray">
                 <!-- <span class="sr-only">Search</span> -->
                 <!-- <svg class="size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
                   <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
-                </svg> -->
-              <!-- </a>
-            </div> --> 
+                </svg>
+              </a>
+            </div>
 
-            <!-- Cart -->
-            <!-- <div class="ml-4 flow-root lg:ml-6">
+          
+  <!-- Cart -->
+            <div class="ml-4 flow-root lg:ml-6">
               <a href="#" class="group -m-2 flex items-center p-2">
                 <svg class="size-6 shrink-0 text-white grup-hover:text-gray" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
                   <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 10.5V6a3.75 3.75 0 1 0-7.5 0v4.5m11.356-1.993 1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 0 1-1.12-1.243l1.264-12A1.125 1.125 0 0 1 5.513 7.5h12.974c.576 0 1.059.435 1.119 1.007ZM8.625 10.5a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm7.5 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z" />
@@ -155,5 +156,7 @@
           </div>
         </div>
       </div>
+    
+
     </nav>
   </header>
