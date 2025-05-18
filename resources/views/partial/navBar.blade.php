@@ -2,18 +2,18 @@
 <nav class="navbar">
         <div class="navbar-container">
             <!--logo-->
-            <a href="index.html" class="navbar-logo">
-                <img src="iconLogo.png" alt=""></a>
-            <button class="navbar-toggle">
+            <a href="#" class="navbar-logo">
+                <img src="iconLogo.png" alt="logoJamuKita"></a>
+            <button class="navbar-toggle">  
                 <span class="bar"></span>
                 <span class="bar"></span>
                 <span class="bar"></span>
             </button>
             <ul class="navbar-menu">
-                <li><a href="#" >Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="#" >Beranda</a></li>
+                <li><a href="#">Tentang Kami</a></li>
+                <li><a href="#">Cara Order</a></li>
+                <li><a href="#">Kontak Kami</a></li>
             </ul>
         </div>
     </nav>
