@@ -2,9 +2,11 @@
 
 <!-- Katalog Home Page-->
 @section('mainLayout')
-
+<!-- 
   <!-- Slides -->
-  <template x-for="(slide, index) in slides" :key="index">
+
+  
+  <!-- <template x-for="(slide, index) in slides" :key="index">
     <img 
       x-show="currentSlide === index"
       :src="slide"
@@ -17,10 +19,10 @@
       x-transition:leave-start="opacity-100"
       x-transition:leave-end="opacity-0"
     />
-  </template>
+  </template> -->
 
   <!-- Navigation Buttons -->
-  <button 
+  <!-- <button 
     @click="prev" 
     class="absolute top-1/2 left-4 transform -translate-y-1/2 bg-black bg-opacity-50 text-white text-3xl rounded-full p-2 hover:bg-opacity-75"
     aria-label="Previous"
@@ -33,7 +35,7 @@
     aria-label="Next"
   >
     &#10095;
-  </button>
+  </button>  -->
 </div>
 
 <div class= bg-[#f9f6ee] >

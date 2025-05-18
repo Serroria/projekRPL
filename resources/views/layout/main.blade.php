@@ -17,7 +17,7 @@
     @vite('resources/css/app.css')
     @vite('resources/css/hamburger.css')
     @vite('resources/css/category.css')
-    @vite('resources/css/posterSlide.css')
+    
     @vite('resources/js/category.js')
     @vite('resources/js/hamburger.js')
     @vite('resources/js/posterSlide.js')
@@ -304,7 +304,9 @@
 </div>
 
 <!-- Poster Slider -->
- @include('partial.poster-slide')
+ <!-- <div>
+  @include('partial.posterSlide');
+ </div> -->
 <!-- <div 
   x-data="{
     currentSlide: 0,
