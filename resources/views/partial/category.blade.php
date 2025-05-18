@@ -8,10 +8,9 @@
             <button id="search">Search</button>
         </div>
         <div id="buttons">
-            <button class="button-value" onclick="filterPorduct"('all')>All</button>
-            <button class="button-value" onclick="filterPorduct"('jamuHerbal')>Jamu Herbal</button>
-            <button class="button-value" onclick="filterPorduct"('jamuAnak')>Jamu Anak</button>
-            <button class="button-value" onclick="filterPorduct"('minumanHerbal')>Minuman Herbal</button>
-
-        </div>
+  <button class="button-value" data-filter="all" onclick="filterProduct('all')">All</button>
+  <button class="button-value" data-filter="jamuHerbal" onclick="filterProduct('jamuHerbal')">Jamu Herbal</button>
+  <button class="button-value" data-filter="jamuAnak" onclick="filterProduct('jamuAnak')">Jamu Anak</button>
+  <button class="button-value" data-filter="minumanHerbal" onclick="filterProduct('minumanHerbal')">Minuman Herbal</button>
+</div>
     </div>

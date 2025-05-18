@@ -23,7 +23,20 @@ body {
 }
 
 #search-container {
-    margin: 1em 0;
+    display: flex;
+    gap: 10px;
+    margin: 20px 0;
+    width: 100%;
+    max-width: 500px;
+}
+
+#search-input {
+    flex: 1;
+    padding: 10px 15px;
+    border: 2px solid #ddd;
+    border-radius: 25px;
+    font-size: 16px;
+    transition: border-color 0.3s;
 }
 
 #search-container input{
@@ -35,16 +48,31 @@ body {
 
 #search-container input:focus {
     border-bottom-color: #902727;
+    outline: none;
 }
 
 #search-container button{
+    padding: 10px 25px;
+    background-color: #902727;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 16px;
+}
+
+#search-container button:hover{
+    background-color: #7a1f1f;
+}
+/* #search-container button{
     padding: 1em 2em;
     margin-left: 1em;
     background-color: #902727;
     color: #ffff;
     border-radius: 5px;
     margin-top: 0.5em;
-}
+} */
 
 .button-value{
    border: 2px solid #902727;
@@ -64,7 +92,8 @@ body {
 
 .button-value.active {
     background-color: #902727;
-    color: #ffff;
+    color: #ffff !important;
+    border-color: #902727;
 }
 
 .button-value:not(.active):hover {
@@ -77,9 +106,35 @@ body {
     color: #ffff;
 }
 
+/* Flex Layout for Buttons */
+#buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5em;
+    justify-content: center;
+    width: 100%;
+}
+
+/* Tambahkan ini di CSS */
+.grid {
+  display: grid !important;
+}
+
+.product-card {
+  display: block !important; /* Timpa properti display dari JavaScript */
+}
+
+.product-card[hidden] {
+  display: none !important;
+}
 
 /* Media Queries */
 @media (max-width: 768px) {
+     #search-container {
+        flex-direction: column;
+        gap: 0.5em;
+    }
+
     #search-container input {
         width: 100%;
         margin-bottom: 0.5em;
@@ -89,8 +144,13 @@ body {
         width: 100%;
     }
 
+      #buttons {
+        flex-wrap: wrap;
+    }
+
+
     .button-value {
-        width: 100%;
+        flex: 1 1 45%;
         padding: 0.8em 0;
     }
 }

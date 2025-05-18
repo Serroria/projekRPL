@@ -41,7 +41,7 @@
     <h2 class="sr-only">Products</h2>
 
     <div class="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8">
-      <div class="max-w-sm mx-auto">
+      <div class="max-w-sm mx-auto product-card" data-category="minumanHerbal">
         <div class="group block">
           <img src="kencurberas.png" alt="Beras Kencur" class="aspect-square w-full rounded-lg bg-gray-200 object-cover group-hover:opacity-75 xl:aspect-7/8">
           
@@ -66,7 +66,7 @@
         </div>
       </div>
       
-      <div class="max-w-sm mx-auto">
+      <div class="max-w-sm mx-auto product-card" data-category="jamuAnak">
             <div class="group block">
               <img src="buyungupik2.png" alt="Buyung Upik" class="aspect-square w-full rounded-lg bg-gray-200 object-cover group-hover:opacity-75 xl:aspect-7/8">
 
@@ -93,7 +93,7 @@
             </div>
       </div>
 
-      <div class="max-w-sm mx-auto">
+      <div class="max-w-sm mx-auto product-card" data-category="minumanHerbal">
             <div class="group block">
               <img src="sari-temulawak.png" alt="Jamu Temulawak" class="aspect-square w-full rounded-lg bg-gray-200 object-cover group-hover:opacity-75 xl:aspect-7/8">
 
@@ -120,7 +120,7 @@
             </div>
       </div>
 
-      <div class="max-w-sm mx-auto">
+      <div class="max-w-sm mx-auto product-card" data-category="jamuHerbal">
             <div class="group block">
               <img src="encok.png" alt="Jamu Temulawak" class="aspect-square w-full rounded-lg bg-gray-200 object-cover group-hover:opacity-75 xl:aspect-7/8">
 
@@ -147,7 +147,7 @@
             </div>
       </div>
 
-      <div class="max-w-sm mx-auto">
+      <div class="max-w-sm mx-auto product-card" data-category="jamuHerbal">
             <div class="group block">
               <img src="{{ asset('jamu-bersalin.png') }}" alt="Jamu Bersalin" class="aspect-square w-full rounded-lg bg-gray-200 object-cover group-hover:opacity-75 xl:aspect-7/8">
 
@@ -174,7 +174,7 @@
             </div>
       </div>
 
-      <div class="max-w-sm mx-auto">
+      <div class="max-w-sm mx-auto product-card" data-category="jamuHerbal">
             <div class="group block">
               <img src="{{ asset('jamu-klingsir.png') }}" alt="Jamu Klingsir" class="aspect-square w-full rounded-lg bg-gray-200 object-cover group-hover:opacity-75 xl:aspect-7/8">
 
@@ -201,7 +201,7 @@
             </div>
       </div>
 
-      <div class="max-w-sm mx-auto">
+      <div class="max-w-sm mx-auto product-card" data-category="jamuHerbal">
             <div class="group block">
               <img src="{{ asset('jamu-gemuk-sehat.png') }}" alt="Jamu Gemuk Sehat" class="aspect-square w-full rounded-lg bg-gray-200 object-cover group-hover:opacity-75 xl:aspect-7/8">
 
@@ -228,7 +228,7 @@
             </div>
       </div>
 
-      <div class="max-w-sm mx-auto">
+      <div class="max-w-sm mx-auto product-card" data-category="jamuHerbal">
             <div class="group block">
               <img src="{{ asset('galian-delima-putih.png') }}" alt="Jamu Gemuk Sehat" class="aspect-square w-full rounded-lg bg-gray-200 object-cover group-hover:opacity-75 xl:aspect-7/8">
 
@@ -255,7 +255,7 @@
             </div>
       </div>
 
-      <div class="max-w-sm mx-auto">
+      <div class="max-w-sm mx-auto product-card" data-category="jamuHerbal">
             <div class="group block">
               <img src="{{ asset('galian-parem.png') }}" alt="Jamu Gemuk Sehat" class="aspect-square w-full rounded-lg bg-gray-200 object-cover group-hover:opacity-75 xl:aspect-7/8">
 
