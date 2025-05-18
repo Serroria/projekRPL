@@ -21,8 +21,8 @@
     />
   </template> -->
 
-  <!-- Navigation Buttons -->
-  <!-- <button 
+  <!-- Navigation Buttons
+  <button 
     @click="prev" 
     class="absolute top-1/2 left-4 transform -translate-y-1/2 bg-black bg-opacity-50 text-white text-3xl rounded-full p-2 hover:bg-opacity-75"
     aria-label="Previous"
