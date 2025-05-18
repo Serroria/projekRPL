@@ -59,7 +59,7 @@
           <h3 class="mt-2 text-sm text-gray-700">'Minuman Herbal'</h3>
           <p class="mt-1 text-lg font-medium text-gray-900">Rp. 8.500,00</p>
 
-          <button class="mt-2 bg-orange-950 hover:bg-blue-700 text-white font-bold py-2 px-4 border border-blue-700 rounded" 
+          <button class="mt-2 bg-orange-950 hover:bg-red-700 text-white font-bold py-2 px-4 border rounded" 
             onclick="location.href='https://shopee.co.id/davidnicolas4?categoryId=100001&entryPoint=ShopByPDP&itemId=43550536931';">
             BELI
           </button>
@@ -86,7 +86,7 @@
               <!-- Kategori, Harga, Tombol Beli -->
               <h3 class="mt-2 text-sm text-gray-700">'Jamu Anak'</h3>
               <p class="mt-1 text-lg font-medium text-gray-900">Rp. 7.600,00</p>
-              <button class="mt-2 bg-orange-950 hover:bg-blue-700 text-white font-bold py-2 px-4 border border-blue-700 rounded"
+              <button class="mt-2 bg-orange-950 hover:bg-red-700 text-white font-bold py-2 px-4 border rounded"
                 onclick="location.href='https://shopee.co.id/davidnicolas4?categoryId=100001&entryPoint=ShopByPDP&itemId=43550536931';">
                 BELI
               </button>
@@ -113,7 +113,7 @@
               <!-- Kategori, Harga, Tombol Beli -->
               <h3 class="mt-2 text-sm text-gray-700">'Minuman Herbal'</h3>
               <p class="mt-1 text-lg font-medium text-gray-900">Rp. 85.000,00</p>
-              <button class="mt-2 bg-orange-950 hover:bg-blue-700 text-white font-bold py-2 px-4 border border-blue-700 rounded"
+              <button class="mt-2 bg-orange-950 hover:bg-red-700 text-white font-bold py-2 px-4 border rounded"
                 onclick="location.href='https://shopee.co.id/davidnicolas4?categoryId=100001&entryPoint=ShopByPDP&itemId=43550536931';">
                 BELI
               </button>
@@ -140,7 +140,7 @@
               <!-- Kategori, Harga, Tombol Beli -->
               <h3 class="mt-2 text-sm text-gray-700">'Jamu Herbal'</h3>
               <p class="mt-1 text-lg font-medium text-gray-900">Rp. 2.000,00</p>
-              <button class="mt-2 bg-orange-950 hover:bg-blue-700 text-white font-bold py-2 px-4 border border-blue-700 rounded"
+              <button class="mt-2 bg-orange-950 hover:bg-red-700 text-white font-bold py-2 px-4 border rounded"
                 onclick="location.href='https://shopee.co.id/JAMU-ENCOK-Sido-Muncul-i.217988839.40650755375';">
                 BELI
               </button>
@@ -167,7 +167,7 @@
               <!-- Kategori, Harga, Tombol Beli -->
               <h3 class="mt-2 text-sm text-gray-700">'Jamu Herbal'</h3>
               <p class="mt-1 text-lg font-medium text-gray-900">Rp. 2.000,00</p>
-              <button class="mt-2 bg-orange-950 hover:bg-blue-700 text-white font-bold py-2 px-4 border border-blue-700 rounded"
+              <button class="mt-2 bg-orange-950 hover:bg-red-700 text-white font-bold py-2 px-4 border rounded"
                 onclick="location.href='https://shopee.co.id/JAMU-BERSALIN-Sido-Muncul-i.217988839.43250749369';">
                 BELI
               </button>
@@ -194,7 +194,7 @@
               <!-- Kategori, Harga, Tombol Beli -->
               <h3 class="mt-2 text-sm text-gray-700">'Jamu Herbal'</h3>
               <p class="mt-1 text-lg font-medium text-gray-900">Rp. 2.000,00</p>
-              <button class="mt-2 bg-orange-950 hover:bg-blue-700 text-white font-bold py-2 px-4 border border-blue-700 rounded"
+              <button class="mt-2 bg-orange-950 hover:bg-red-700 text-white font-bold py-2 px-4 border rounded"
                 onclick="location.href='https://shopee.co.id/JAMU-KLINGSIR-Sido-Muncul-i.217988839.41700776478';">
                 BELI
               </button>
@@ -221,7 +221,7 @@
               <!-- Kategori, Harga, Tombol Beli -->
               <h3 class="mt-2 text-sm text-gray-700">'Jamu Herbal'</h3>
               <p class="mt-1 text-lg font-medium text-gray-900">Rp. 2.500,00</p>
-              <button class="mt-2 bg-orange-950 hover:bg-blue-700 text-white font-bold py-2 px-4 border border-blue-700 rounded"
+              <button class="mt-2 bg-orange-950 hover:bg-red-700 text-white font-bold py-2 px-4 border rounded"
                 onclick="location.href='https://shopee.co.id/JAMU-GEMUK-SEHAT-Sido-Muncul-i.217988839.40800771846';">
                 BELI
               </button>
@@ -248,7 +248,7 @@
               <!-- Kategori, Harga, Tombol Beli -->
               <h3 class="mt-2 text-sm text-gray-700">'Jamu Herbal'</h3>
               <p class="mt-1 text-lg font-medium text-gray-900">Rp. 2.500,00</p>
-              <button class="mt-2 bg-orange-950 hover:bg-blue-700 text-white font-bold py-2 px-4 border border-blue-700 rounded"
+              <button class="mt-2 bg-orange-950 hover:bg-red-700 text-white font-bold py-2 px-4 border rounded"
                 onclick="location.href='https://shopee.co.id/JAMU-GALIAN-DELIMA-PUTIH-Sido-Muncul-i.217988839.43850750470';">
                 BELI
               </button>
@@ -275,14 +275,14 @@
               <!-- Kategori, Harga, Tombol Beli -->
               <h3 class="mt-2 text-sm text-gray-700">'Jamu Herbal'</h3>
               <p class="mt-1 text-lg font-medium text-gray-900">Rp. 4.500,00</p>
-              <button class="mt-2 bg-orange-950 hover:bg-blue-700 text-white font-bold py-2 px-4 border border-blue-700 rounded"
+              <button class="mt-2 bg-orange-950 hover:bg-red-700 text-white font-bold py-2 px-4 border rounded"
                 onclick="location.href='https://shopee.co.id/JAMU-GALIAN-PAREM-Sido-Muncul-i.217988839.41650771917';">
                 BELI
               </button>
             </div>
       </div>
 
-      <div class="max-w-sm mx-auto">
+      <div class="max-w-sm mx-auto product-card" data-category="jamuHerbal">
             <div class="group block">
               <img src="{{ asset('galian-singset.png') }}" alt="Jamu Gemuk Sehat" class="aspect-square w-full rounded-lg bg-gray-200 object-cover group-hover:opacity-75 xl:aspect-7/8">
 
@@ -302,14 +302,14 @@
               <!-- Kategori, Harga, Tombol Beli -->
               <h3 class="mt-2 text-sm text-gray-700">'Jamu Herbal'</h3>
               <p class="mt-1 text-lg font-medium text-gray-900">Rp. 2.000,00</p>
-              <button class="mt-2 bg-orange-950 hover:bg-blue-700 text-white font-bold py-2 px-4 border border-blue-700 rounded"
+              <button class="mt-2 bg-orange-950 hover:bg-red-700 text-white font-bold py-2 px-4 border rounded"
                 onclick="location.href='https://shopee.co.id/JAMU-GALIAN-SINGSET-Sido-Muncul-i.217988839.40600786041';">
                 BELI
               </button>
             </div>
       </div>
 
-      <div class="max-w-sm mx-auto">
+      <div class="max-w-sm mx-auto product-card" data-category="jamuHerbal">
             <div class="group block">
               <img src="{{ asset('jamukita.jpg') }}" alt="Jamu Gemuk Sehat" class="aspect-square w-full rounded-lg bg-gray-200 object-cover group-hover:opacity-75 xl:aspect-7/8">
 
@@ -329,14 +329,14 @@
               <!-- Kategori, Harga, Tombol Beli -->
               <h3 class="mt-2 text-sm text-gray-700">'Jamu Herbal'</h3>
               <p class="mt-1 text-lg font-medium text-gray-900">Rp. 2.000,00</p>
-              <button class="mt-2 bg-orange-950 hover:bg-blue-700 text-white font-bold py-2 px-4 border border-blue-700 rounded"
+              <button class="mt-2 bg-orange-950 hover:bg-red-700 text-white font-bold py-2 px-4 border rounded"
                 onclick="location.href='https://shopee.co.id/JAMU-KOMPLIT-GALIAN-MONTOK-Sido-Muncul-i.217988839.43150772137';">
                 BELI
               </button>
             </div>
       </div>
 
-      <div class="max-w-sm mx-auto">
+      <div class="max-w-sm mx-auto product-card" data-category="jamuHerbal">
             <div class="group block">
               <img src="{{ asset('jamukita.jpg') }}" alt="Jamu Gemuk Sehat" class="aspect-square w-full rounded-lg bg-gray-200 object-cover group-hover:opacity-75 xl:aspect-7/8">
 
@@ -356,14 +356,14 @@
               <!-- Kategori, Harga, Tombol Beli -->
               <h3 class="mt-2 text-sm text-gray-700">'Jamu Herbal'</h3>
               <p class="mt-1 text-lg font-medium text-gray-900">Rp. 2.500,00</p>
-              <button class="mt-2 bg-orange-950 hover:bg-blue-700 text-white font-bold py-2 px-4 border border-blue-700 rounded"
+              <button class="mt-2 bg-orange-950 hover:bg-red-700 text-white font-bold py-2 px-4 border rounded"
                 onclick="location.href='https://shopee.co.id/JAMU-KOMPLIT-GEMUK-SEHAT-Sido-Muncul-i.217988839.40350777084';">
                 BELI
               </button>
             </div>
       </div>
 
-      <div class="max-w-sm mx-auto">
+      <div class="max-w-sm mx-auto product-card" data-category="jamuHerbal">
             <div class="group block">
               <img src="{{ asset('jamukita.jpg') }}" alt="Jamu Gemuk Sehat" class="aspect-square w-full rounded-lg bg-gray-200 object-cover group-hover:opacity-75 xl:aspect-7/8">
 
@@ -383,14 +383,14 @@
               <!-- Kategori, Harga, Tombol Beli -->
               <h3 class="mt-2 text-sm text-gray-700">'Jamu Herbal'</h3>
               <p class="mt-1 text-lg font-medium text-gray-900">Rp. 3.500,00</p>
-              <button class="mt-2 bg-orange-950 hover:bg-blue-700 text-white font-bold py-2 px-4 border border-blue-700 rounded"
+              <button class="mt-2 bg-orange-950 hover:bg-red-700 text-white font-bold py-2 px-4 border rounded"
                 onclick="location.href='https://shopee.co.id/JAMU-KOMPLIT-JERUK-NIPIS-KUKU-BIMA-Sido-Muncul-i.217988839.26936614354';">
                 BELI
               </button>
             </div>
       </div>
 
-      <div class="max-w-sm mx-auto">
+      <div class="max-w-sm mx-auto product-card" data-category="jamuHerbal">
             <div class="group block">
               <img src="{{ asset('jamukita.jpg') }}" alt="Jamu Gemuk Sehat" class="aspect-square w-full rounded-lg bg-gray-200 object-cover group-hover:opacity-75 xl:aspect-7/8">
 
@@ -410,14 +410,14 @@
               <!-- Kategori, Harga, Tombol Beli -->
               <h3 class="mt-2 text-sm text-gray-700">'Jamu Herbal'</h3>
               <p class="mt-1 text-lg font-medium text-gray-900">Rp. 3.500,00</p>
-              <button class="mt-2 bg-orange-950 hover:bg-blue-700 text-white font-bold py-2 px-4 border border-blue-700 rounded"
+              <button class="mt-2 bg-orange-950 hover:bg-red-700 text-white font-bold py-2 px-4 border rounded"
                 onclick="location.href='https://shopee.co.id/JAMU-KOMPLIT-JERUK-NIPIS-KUKU-BIMA-TL-Sido-Muncul-i.217988839.40301040554';">
                 BELI
               </button>
             </div>
       </div>
 
-      <div class="max-w-sm mx-auto">
+      <div class="max-w-sm mx-auto product-card" data-category="jamuHerbal">
             <div class="group block">
               <img src="{{ asset('jamukita.jpg') }}" alt="Jamu Gemuk Sehat" class="aspect-square w-full rounded-lg bg-gray-200 object-cover group-hover:opacity-75 xl:aspect-7/8">
 
@@ -437,14 +437,14 @@
               <!-- Kategori, Harga, Tombol Beli -->
               <h3 class="mt-2 text-sm text-gray-700">'Jamu Herbal'</h3>
               <p class="mt-1 text-lg font-medium text-gray-900">Rp. 2.500,00</p>
-              <button class="mt-2 bg-orange-950 hover:bg-blue-700 text-white font-bold py-2 px-4 border border-blue-700 rounded"
+              <button class="mt-2 bg-orange-950 hover:bg-red-700 text-white font-bold py-2 px-4 border rounded"
                 onclick="location.href='https://shopee.co.id/JAMU-KOMPLIT-JERUK-NIPIS-GALIAN-MONTOK-Sido-Muncul-i.217988839.42450782225';">
                 BELI
               </button>
             </div>
       </div>
 
-      <div class="max-w-sm mx-auto">
+      <div class="max-w-sm mx-auto product-card" data-category="jamuHerbal">
             <div class="group block">
               <img src="{{ asset('jamukita.jpg') }}" alt="Jamu Gemuk Sehat" class="aspect-square w-full rounded-lg bg-gray-200 object-cover group-hover:opacity-75 xl:aspect-7/8">
 
@@ -464,7 +464,7 @@
               <!-- Kategori, Harga, Tombol Beli -->
               <h3 class="mt-2 text-sm text-gray-700">'Jamu Herbal'</h3>
               <p class="mt-1 text-lg font-medium text-gray-900">Rp. 3.000,00</p>
-              <button class="mt-2 bg-orange-950 hover:bg-blue-700 text-white font-bold py-2 px-4 border border-blue-700 rounded"
+              <button class="mt-2 bg-orange-950 hover:bg-red-700 text-white font-bold py-2 px-4 border rounded"
                 onclick="location.href='https://shopee.co.id/JAMU-KOMPLIT-JERUK-NIPIS-GEMUK-SEHAT-Sido-Muncul-i.217988839.43350777018';">
                 BELI
               </button>
