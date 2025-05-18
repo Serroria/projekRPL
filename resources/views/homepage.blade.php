@@ -486,7 +486,7 @@
           arrow.textContent = desc.classList.contains("hidden") ? "▼" : "▲";
         }
       </script>
-    
+    </div>
   </div>
 </div>
 
