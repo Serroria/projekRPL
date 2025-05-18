@@ -1,6 +1,6 @@
   <div class="img-slider">
         <div class="slide active">
-            <img src="{{ asset('tehJahe.jpg') }}" alt="Poster 1">
+            <img src="{{ asset('tehJahe.jpg') }}" alt="Poster 1" class="active">
             <div class="info">
                 <h2>Slide 01</h2>
                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit odio cumque ipsum, maiores labore quos. Laudantium architecto quidem eveniet asperiores ullam rerum, ab adipisci cupiditate illum voluptate a sapiente ad.</p>
@@ -14,14 +14,14 @@
             </div>
         </div>
         <div class="slide">
-            <img src="tehJahe.jpg" alt="">
+            <img src="{{ asset('tehJahe.jpg') }}" alt="">
             <div class="info">
                 <h2>Slide 03</h2>
                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit odio cumque ipsum, maiores labore quos. Laudantium architecto quidem eveniet asperiores ullam rerum, ab adipisci cupiditate illum voluptate a sapiente ad.</p>
             </div>
         </div>
         <div class="slide">
-            <img src="herbal.jpg" alt="">
+            <img src="{{ asset('herbal.jpg') }}" alt="">
             <div class="info">
                 <h2>Slide 04</h2>
                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit odio cumque ipsum, maiores labore quos. Laudantium architecto quidem eveniet asperiores ullam rerum, ab adipisci cupiditate illum voluptate a sapiente ad.</p>
