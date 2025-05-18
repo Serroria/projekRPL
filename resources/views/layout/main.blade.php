@@ -16,7 +16,10 @@
    
     @vite('resources/css/app.css')
     @vite('resources/css/hamburger.css')
-    @vite('resources/css/category.css')
+    @vite('resources/css/posterSlide.css')
+    
+    @vite('resources/css/category.css') 
+   
     
     @vite('resources/js/category.js')
     @vite('resources/js/hamburger.js')
@@ -299,15 +302,20 @@
 
   <!---navigation bar--->
   
-  @include('partial.navBar');
-  @yield('content')
+  @include('partial.navBar')
+  
 </div>
 
 <!-- Poster Slider -->
- <!-- <div>
-  @include('partial.posterSlide');
- </div> -->
-<div 
+ <div class="container">
+@yield('content')
+ <div class="img-slider-container">@include('partial.posterSlide');</div>
+  
+ <!--Kategori-->
+
+@include('partial.category')
+ </div>
+<!-- <div 
   x-data="{
     currentSlide: 0,
     slides: ['image/poster1.png', 'image/poster2.png',],
@@ -324,10 +332,8 @@
     }
   }" 
   class="relative w-full h-[410px] overflow-hidden"
-></div>
-<!--Kategori-->
+></div> -->
 
-@include('partial.category')
 
 
 
