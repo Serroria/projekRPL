@@ -55,7 +55,14 @@
           </div>
 
           <div id="descBox-beraskencur" class="hidden mt-2 text-sm text-gray-600">
-            Minuman herbal tradisional yang terbuat dari beras dan kencur. Menyegarkan dan baik untuk kesehatan tubuh.
+            <ul class="list-disc list-inside space-y-2">
+              <li>Khasiat: <br>
+                Membantu meredakan pegal, membantu meredakan perut kembung dan membantu menghangatkan badan.</li>
+              <li>Saran Penyajian: <br>
+                1 bungkus diseduh dengan ± 150 ml (3/4 gelas) air panas/dingin.</li>
+              <li>1 Box isi 5 sachet 25 gram</li>
+              <li>Baik diminum pria dan wanita, tua/muda, dan anak-anak.</li>
+            </ul>
           </div>
 
           <h3 class="mt-2 text-sm text-gray-700">'Minuman Herbal'</h3>
@@ -82,12 +89,20 @@
 
               <!-- Deskripsi yang bisa ditoggle -->
               <div id="descBox-buyungupik" class="hidden mt-2 text-sm text-gray-600">
-                Jamu anak tradisional yang membantu menjaga kesehatan dan nafsu makan anak. Buyung Upik mengandung ekstrak beberapa bahan alami seperti temulawak, lempuyang wangi, kulit kayu manis, kunyit, jahe, kencur, daun sereh, dan daun pandan. 
+                  <ul class="list-disc list-inside space-y-2">
+                    <li>Khasiat: <br>
+                      Memelihara kesehatan, membantu memperbaiki nafsu makan dan secara tradisional digunakan pada penderita cacingan</li>
+                    <li>Saran Penyajian: <br>
+                      Dapat dimakan langsung atau diseduh dengan 3 - 5 sendok makan air matang panas/dingin, 2 - 3 kali sehari. <br>
+                      (Anak umur 3 - 6 : 1/2 bungkus) <br>
+                      (Anak umur 7 - 12 tahun : 1 bungkus)</li>
+                    <li>1 Box isi 11 sachet 200 gram</li>
+                  </ul>
               </div>
 
               <!-- Kategori, Harga, Tombol Beli -->
               <h3 class="mt-2 text-sm text-gray-700">'Jamu Anak'</h3>
-              <p class="mt-1 text-lg font-medium text-gray-900">Rp. 7.600,00</p>
+              <p class="mt-1 text-lg font-medium text-gray-900">Rp. 10.000,00</p>
               <button class="mt-2 bg-orange-950 hover:bg-red-700 text-white font-bold py-2 px-4 border rounded"
                 onclick="location.href='https://shopee.co.id/davidnicolas4?categoryId=100001&entryPoint=ShopByPDP&itemId=43550536931';">
                 BELI
@@ -109,7 +124,13 @@
 
               <!-- Deskripsi yang bisa ditoggle -->
               <div id="descBox-saritemulawak" class="hidden mt-2 text-sm text-gray-600">
-                Deskripsi Sari Temulawak
+                <ul class="list-disc list-inside space-y-2">
+                  <li>Khasiat: <br>
+                    Membantu memelihara kesehatan fungsi hati.</li>
+                  <li>Saran Penyajian: <br>
+                    3 x 1 kapsul sehari atau sesuai petunjuk dokter.</li>
+                  <li>1 botol isi 30 kapsul.</li>
+                </ul>
               </div>
 
               <!-- Kategori, Harga, Tombol Beli -->
@@ -136,7 +157,14 @@
 
               <!-- Deskripsi yang bisa ditoggle -->
               <div id="descBox-encok" class="hidden mt-2 text-sm text-gray-600">
-                Deskripsi Jamu Encok
+                <ul class="list-disc list-inside space-y-2">
+                  <li>Khasiat: <br>
+                    Membantu meredakan nyeri akibat encok pegal linu dan nyeri pada persendian.</li>
+                  <li>Saran Penyajian: <br>
+                    2 x sehari @ 1 bungkus selama 3 hari, selanjutnya tiap hari sebungkus sampai sembuh. 1 bungkus diseduh dengan 100 cc (± ½ gelas) air panas.</li>
+                  <li>Per sachet @ 7 gram</li>
+                  <li>Tidak direkomendasikan untuk wanita hamil dan menyusui serta penderita gangguan ginjal</li>
+                </ul>
               </div>
 
               <!-- Kategori, Harga, Tombol Beli -->
@@ -163,7 +191,14 @@
 
               <!-- Deskripsi yang bisa ditoggle -->
               <div id="descBox-bersalin" class="hidden mt-2 text-sm text-gray-600">
-                Deskripsi Jamu Bersalin
+                <ul class="list-disc list-inside space-y-2">
+                  <li>Khasiat: <br>
+                    Untuk wanita sehabis melahirkan. Secara tradisional membantu sirkulasi darah. Membantu memperbaiki nafsu makan dan membantu melancarkan air susu ibu (ASI) serta membantu menyegarkan badan.</li>
+                  <li>Saran Penyajian: <br>
+                    Diminum 2 x sehari @ 1 bungkus, mulai hari ke 11 sampai hari ke 40 sehabis melahirkan. 1 bungkus diseduh dengan 100 cc (±½ gelas) air panas. <br>
+                    Untuk selanjutnya minum jamu Galian Parem</li>
+                  <li>Per sachet @ 7 gram</li>
+                </ul>
               </div>
 
               <!-- Kategori, Harga, Tombol Beli -->
@@ -190,7 +225,16 @@
 
               <!-- Deskripsi yang bisa ditoggle -->
               <div id="descBox-klingsir" class="hidden mt-2 text-sm text-gray-600">
-                Deskripsi Jamu Klingsir
+                <ul class="list-disc list-inside space-y-2">
+                  <li>Khasiat: <br>
+                    Membantu meredakan sakit otot pinggang dan membantu melancarkan buang air kecil.</li>
+                  <li>Saran Penyajian: <br>
+                    Setiap 2-3 hari sekali 1 bungkus, bila perlu setiap hari 1 bungkus. <br>
+                    1 bungkus diseduh dengan 100 cc (± ½ gelas) air panas.</li>
+                  <li>Per sachet @ 7 gram</li>
+                  <li>Tidak direkomendasikan untuk wanita hamil dan menyusui serta penderita gangguan ginjal</li>
+                  <li>Bila tidak ada perbaikan gejala segera hubungi dokter</li>
+                </ul>
               </div>
 
               <!-- Kategori, Harga, Tombol Beli -->
@@ -217,7 +261,17 @@
 
               <!-- Deskripsi yang bisa ditoggle -->
               <div id="descBox-gemuk" class="hidden mt-2 text-sm text-gray-600">
-                Deskripsi Jamu Gemuk Sehat
+                <ul class="list-disc list-inside space-y-2">
+                  <li>Khasiat: <br>
+                    Secara tradisional membantu memperbaiki nafsu makan.</li>
+                  <li>Saran Penyajian: <br>
+                    Diminum 1-2 x sehari @ 1 bungkus sebelum makan, terutama malam hari. <br>
+                    1 bungkus diseduh dengan 100 cc (± ½ gelas) air panas. <br>
+                    Dapat ditambah sedikit garam, air jeruk nipis dan madu. <br>
+                    Minum teratur selama 2 bulan.</li>
+                  <li>Per sachet @ 7 gram</li>
+                  <li>Tidak direkomendasikan untuk wanita hamil dan menyusui serta penderita gangguan ginjal</li>
+                </ul>
               </div>
 
               <!-- Kategori, Harga, Tombol Beli -->
@@ -244,7 +298,15 @@
 
               <!-- Deskripsi yang bisa ditoggle -->
               <div id="descBox-delimaputih" class="hidden mt-2 text-sm text-gray-600">
-                Deskripsi Jamu Galian Delima Putih
+                <ul class="list-disc list-inside space-y-2">
+                  <li>Khasiat: <br>
+                    Secara tradisional membantu mengurangi lendir yang berlebihan pada daerah kewanitaan.</li>
+                  <li>Saran Penyajian: <br>
+                    1-2 x sehari @ 1 bungkus sesuai kebutuhan. 1 bungkus diseduh dengan 100 cc (± ½ gelas) air panas.</li>
+                  <li>Per sachet @ 7 gram</li>
+                  <li>Konsultasikan ke dokter apabila lendir tidak berkurang atau berbau atau berwarna kuning atau berdarah.</li>
+                  <li>Tidak direkomendasikan untuk wanita hamil dan menyusui serta penderita gangguan ginjal.</li>
+                </ul>
               </div>
 
               <!-- Kategori, Harga, Tombol Beli -->
@@ -271,7 +333,14 @@
 
               <!-- Deskripsi yang bisa ditoggle -->
               <div id="descBox-galianparem" class="hidden mt-2 text-sm text-gray-600">
-                Deskripsi Jamu Galian Parem
+                <ul class="list-disc list-inside space-y-2">
+                  <li>Khasiat: <br>
+                    Secara tradisional membantu memelihara kesehatan ibu sehabis bersalin, melancarkan air susu ibu (ASI) dan membantu menyegarkan badan.</li>
+                  <li>Saran Penyajian: <br>
+                    Diminum 2 x sehari @ 1 bungkus, mulai hari ke 40 setelah melahirkan. <br>
+                    1 bungkus diseduh dengan 100 cc (±½ gelas) air panas.</li>
+                  <li>Per sachet @ 7 gram</li>
+                </ul>
               </div>
 
               <!-- Kategori, Harga, Tombol Beli -->
@@ -298,7 +367,15 @@
 
               <!-- Deskripsi yang bisa ditoggle -->
               <div id="descBox-galiansingset" class="hidden mt-2 text-sm text-gray-600">
-                Deskripsi Jamu Galian Singset
+                <ul class="list-disc list-inside space-y-2">
+                  <li>Khasiat: <br>
+                    Secara tradisional dapat membantu mengurangi lemak tubuh.</li>
+                  <li>Saran Penyajian: <br>
+                    1-2 x sehari @ 1 bungkus selama 30 hari, untuk selanjutnya tiap 2 hari 1 bungkus. <br>
+                    1 bungkus diseduh dengan 100 cc (± ½ gelas) air panas.</li>
+                  <li>Per sachet @ 7 gram</li>
+                  <li>Tidak direkomendasikan untuk wanita hamil dan menyusui serta penderita gangguan ginjal.</li>
+                </ul>
               </div>
 
               <!-- Kategori, Harga, Tombol Beli -->
@@ -325,7 +402,22 @@
 
               <!-- Deskripsi yang bisa ditoggle -->
               <div id="descBox-komplitgalianmontok" class="hidden mt-2 text-sm text-gray-600">
-                Deskripsi Jamu Komplit Galian Montok
+                <ul class="list-disc list-inside space-y-2">
+                  <li>Khasiat: <br>
+                    Membantu memperbaiki nafsu makan, menyegarkan badan, dan memelihara daya tahan tubuh.</li>
+                  <li>Saran Penyajian: <br>
+                    - 1 sachet Jamu Sido Muncul diseduh dengan ±100 ml air panas <br>
+                    - Kemudian masukkan Beras Kencur, Madu Sido Original, aduk dan minum selagi hangat <br>
+                    - Kemudian minum Pil Ginseng untuk membantu memelihara daya tahan tubuh <br>
+                    - Sebagai penawar rasa, minum Jahe Wangi yang telah diseduh dengan ± 50 ml air panas</li>
+                  <li>Tiap paket Jamu Komplit Galian Montok terdiri dari: <br>
+                      - 1 sachet Jamu Sido Muncul Galian Montok <br>
+                      - 1 sachet Beras Kencur <br>
+                      - 1 sachet Madu Sido Original <br>
+                      - 1 sachet Pil Ginseng Sido Muncul <br>
+                      - 1 sachet Jahe Wangi</li>
+                  <li>Tidak direkomendasikan untuk wanita hamil dan menyusui serta penderita gangguan ginjal.</li>
+                </ul>
               </div>
 
               <!-- Kategori, Harga, Tombol Beli -->
@@ -352,7 +444,22 @@
 
               <!-- Deskripsi yang bisa ditoggle -->
               <div id="descBox-komplitgemuksehat" class="hidden mt-2 text-sm text-gray-600">
-                Deskripsi Jamu Komplit Gemuk Sehat
+                <ul class="list-disc list-inside space-y-2">
+                  <li>Khasiat: <br>
+                    Secara tradisional dapat membantu memperbaiki nafsu makan dan memelihara daya tahan tubuh.</li>
+                  <li>Saran Penyajian: <br>
+                    - 1 sachet Jamu Sido Muncul diseduh dengan ±100 ml air panas. <br>
+                    - Kemudian masukkan Beras Kencur, Madu Sido Original, aduk dan minum selagi hangat. <br>
+                    - Kemudian minum Pil Ginseng untuk membantu memelihara daya tahan tubuh. <br>
+                    - Sebagai penawar rasa, minum Jahe Wangi yang telah diseduh dengan ± 50 ml air panas</li>
+                  <li>Tiap paket Jamu Komplit Gemuk Sehat terdiri dari: <br>
+                      - 1 sachet Jamu Sido Muncul Gemuk Sehat <br>
+                      - 1 sachet Beras Kencur <br>
+                      - 1 sachet Madu Sido Original <br>
+                      - 1 sachet Pil Ginseng Sido Muncul <br>
+                      - 1 sachet Jahe Wangi</li>
+                  <li>Tidak direkomendasikan untuk wanita hamil dan menyusui serta penderita gangguan ginjal.</li>
+                </ul>
               </div>
 
               <!-- Kategori, Harga, Tombol Beli -->
@@ -379,7 +486,22 @@
 
               <!-- Deskripsi yang bisa ditoggle -->
               <div id="descBox-kukubima" class="hidden mt-2 text-sm text-gray-600">
-                Deskripsi Jamu Komplit Jeruk Nipis Kuku Bima
+                <ul class="list-disc list-inside space-y-2">
+                  <li>Khasiat: <br>
+                    Membantu meredakan sakit otot pinggang, memelihara daya tahan tubuh dan kesehatan pria.</li>
+                  <li>Saran Penyajian: <br>
+                    - 1 sachet Jamu Sido Muncul diseduh dengan ±100 ml air panas <br>
+                    - Kemudian masukkan Beras Kencur, Madu Jeruk Nipis, aduk dan minum selagi hangat <br>
+                    - Kemudian minum Pil Ginseng untuk membantu memelihara daya tahan tubuh <br>
+                    - Sebagai penawar rasa, minum Jahe Wangi yang telah diseduh dengan ± 50 ml air panas</li>
+                  <li>Tiap paket Jamu Komplit Jeruk Nipis Kuku Bima terdiri dari: <br>
+                      - 1 sachet Jamu Sido Muncul Kuku Bima <br>
+                      - 1 sachet Beras Kencur <br>
+                      - 1 sachet Madu Jeruk Nipis <br>
+                      - 1 sachet Pil Ginseng Sido Muncul <br>
+                      - 1 sachet Jahe Wangi</li>
+                  <li>Hati-hati pada penderita kardiovaskular atau diabetes mellitus serta gangguan ginjal.</li>
+                </ul>
               </div>
 
               <!-- Kategori, Harga, Tombol Beli -->
@@ -406,7 +528,22 @@
 
               <!-- Deskripsi yang bisa ditoggle -->
               <div id="descBox-kukubima-TL" class="hidden mt-2 text-sm text-gray-600">
-                Deskripsi Jamu Komplit Jeruk Nipis Kuku Bima TL
+                <ul class="list-disc list-inside space-y-2">
+                  <li>Khasiat: <br>
+                    Membantu memelihara stamina dan membantu meredakan pegal linu dan sakit otot pinggang.</li>
+                  <li>Saran Penyajian: <br>
+                    - 1 sachet Jamu Sido Muncul diseduh dengan ±100 ml air panas <br>
+                    - Kemudian masukkan Beras Kencur, Madu Jeruk Nipis, aduk dan minum selagi hangat <br>
+                    - Kemudian minum Pil Ginseng untuk membantu memelihara daya tahan tubuh <br>
+                    - Sebagai penawar rasa, minum Jahe Wangi yang telah diseduh dengan ± 50 ml air panas</li>
+                  <li>Tiap paket Jamu Komplit Jeruk Nipis Kuku Bima TL terdiri dari: <br>
+                      - 1 sachet Jamu Sido Muncul Kuku Bima TL <br>
+                      - 1 sachet Beras Kencur <br>
+                      - 1 sachet Madu Jeruk Nipis <br>
+                      - 1 sachet Pil Ginseng Sido Muncul <br>
+                      - 1 sachet Jahe Wangi</li>
+                  <li>Hati-hati pada penderita kardiovaskular, hipertensi atau diabetes mellitus serta penderita gangguan ginjal.</li>
+                </ul>
               </div>
 
               <!-- Kategori, Harga, Tombol Beli -->
@@ -433,7 +570,22 @@
 
               <!-- Deskripsi yang bisa ditoggle -->
               <div id="descBox-GM-jeruknipis" class="hidden mt-2 text-sm text-gray-600">
-                Deskripsi Jamu Komplit Jeruk Nipis Galian Montok
+                <ul class="list-disc list-inside space-y-2">
+                  <li>Khasiat: <br>
+                    Membantu memperbaiki nafsu makan, menyegarkan badan, dan memelihara daya tahan tubuh.</li>
+                  <li>Saran Penyajian: <br>
+                    - 1 sachet Jamu Sido Muncul diseduh dengan ±100 ml air panas <br>
+                    - Kemudian masukkan Beras Kencur, Madu Jeruk Nipis, aduk dan minum selagi hangat <br>
+                    - Kemudian minum Pil Ginseng untuk membantu memelihara daya tahan tubuh <br>
+                    - Sebagai penawar rasa, minum Jahe Wangi yang telah diseduh dengan ± 50 ml air panas</li>
+                  <li>Tiap paket Jamu Komplit Jeruk Nipis Galian Montok terdiri dari: <br>
+                      - 1 sachet Jamu Sido Muncul Galian Montok <br>
+                      - 1 sachet Beras Kencur <br>
+                      - 1 sachet Madu Jeruk Nipis <br>
+                      - 1 sachet Pil Ginseng Sido Muncul <br>
+                      - 1 sachet Jahe Wangi</li>
+                  <li>Tidak direkomendasikan untuk wanita hamil dan menyusui serta penderita gangguan ginjal.</li>
+                </ul>
               </div>
 
               <!-- Kategori, Harga, Tombol Beli -->
@@ -460,7 +612,22 @@
 
               <!-- Deskripsi yang bisa ditoggle -->
               <div id="descBox-GS-jeruknipis" class="hidden mt-2 text-sm text-gray-600">
-                Deskripsi Jamu Komplit Jeruk Nipis Gemuk Sehat
+                <ul class="list-disc list-inside space-y-2">
+                  <li>Khasiat: <br>
+                    Secara tradisional dapat membantu memperbaiki nafsu makan dan memelihara daya tahan tubuh.</li>
+                  <li>Saran Penyajian: <br>
+                    - 1 sachet Jamu Sido Muncul diseduh dengan ±100 ml air panas <br>
+                    - Kemudian masukkan Beras Kencur, Madu Jeruk Nipis, aduk dan minum selagi hangat <br>
+                    - Kemudian minum Pil Ginseng untuk membantu memelihara daya tahan tubuh <br>
+                    - Sebagai penawar rasa, minum Jahe Wangi yang telah diseduh dengan ± 50 ml air panas</li>
+                  <li>Tiap paket Jamu Komplit Jeruk Nipis Gemuk Sehat terdiri dari: <br>
+                      - 1 sachet Jamu Sido Muncul Gemuk Sehat <br>
+                      - 1 sachet Beras Kencur <br>
+                      - 1 sachet Madu Jeruk Nipis <br>
+                      - 1 sachet Pil Ginseng Sido Muncul <br>
+                      - 1 sachet Jahe Wangi</li>
+                  <li>Tidak direkomendasikan untuk wanita hamil dan menyusui serta penderita gangguan ginjal.</li>
+                </ul>
               </div>
 
               <!-- Kategori, Harga, Tombol Beli -->
