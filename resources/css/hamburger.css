@@ -93,6 +93,23 @@ body{
         background-color: #902727;
     }
 
+    /* Memindahkan hamburger bar ke kiri */
+    .navbar-container {
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+    /* Mempertahankan logo di tengah */
+    .navbar-logo {
+        width: 100%;
+        text-align: center;
+        order: 2;
+    }
+
+    .navbar-menu {
+        align-items: flex-start;
+    }
+
     .navbar-container .navbar-menu {
         display: none;
         flex-direction: column;
@@ -102,19 +119,15 @@ body{
         height: 100vh;
         width: 250px;
         top: 0;
-        right: 0;
+        left: 0;
         padding: 5rem 1.5rem;
-        box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
+        box-shadow: 0 -10px 10px rgba(0, 0, 0, 0.5);
         backdrop-filter: blur(10px);
+        
     }
 
     .navbar-container .navbar-menu.active{
         display: flex;
-    }
-
-    .navbar-logo {
-        text-align: center; /* Membuat logo berada di tengah */
-        margin: 0 auto;
     }
 
     .navbar-logo img {
@@ -125,6 +138,7 @@ body{
     .navbar-toggle {
         display: block;
         z-index: 999;
+        order: 1;
     }
 
     .navbar-toggle.navbar.active .bar:nth-child(2) {

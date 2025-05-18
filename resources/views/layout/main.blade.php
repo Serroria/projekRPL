@@ -307,7 +307,7 @@
  <!-- <div>
   @include('partial.posterSlide');
  </div> -->
-<!-- <div 
+<div 
   x-data="{
     currentSlide: 0,
     slides: ['image/poster1.png', 'image/poster2.png',],
@@ -324,7 +324,7 @@
     }
   }" 
   class="relative w-full h-[410px] overflow-hidden"
-></div> -->
+></div>
 <!--Kategori-->
 
 @include('partial.category')
