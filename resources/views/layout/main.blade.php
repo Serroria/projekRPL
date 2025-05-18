@@ -17,7 +17,7 @@
     @vite('resources/css/app.css')
     @vite('resources/css/hamburger.css')
     @vite('resources/css/category.css')
-    @vite('resources/css/category.js')
+    @vite('resources/js/category.js')
     @vite('resources/js/hamburger.js')
 
     <script src="https://cdn.tailwindcss.com"></script>
