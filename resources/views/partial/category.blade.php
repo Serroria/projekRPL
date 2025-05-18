@@ -5,7 +5,7 @@
             id="search-input"
             placeholder="Cari produk disini.."/>
 
-            <button id="search">Search</button>
+            <button id="search">Cari</button>
         </div>
         <div id="buttons">
   <button class="button-value" data-filter="all" onclick="filterProduct('all')">All</button>
