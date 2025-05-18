@@ -17,8 +17,10 @@
     @vite('resources/css/app.css')
     @vite('resources/css/hamburger.css')
     @vite('resources/css/category.css')
+    @vite('resources/css/posterSlide.css')
     @vite('resources/js/category.js')
     @vite('resources/js/hamburger.js')
+    @vite('resources/js/posterSlide.js')
 
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="//unpkg.com/alpinejs" defer></script>
@@ -302,7 +304,8 @@
 </div>
 
 <!-- Poster Slider -->
-<div 
+ @include('partial.poster-slide')
+<!-- <div 
   x-data="{
     currentSlide: 0,
     slides: ['image/poster1.png', 'image/poster2.png',],
@@ -319,7 +322,7 @@
     }
   }" 
   class="relative w-full h-[410px] overflow-hidden"
-></div>
+></div> -->
 <!--Kategori-->
 
 @include('partial.category')
