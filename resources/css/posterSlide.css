@@ -37,7 +37,7 @@ body {
     clip-path: circle(0% at 0 50%);
 }
 
-.img-slider .slide.slider.active  {
+.img-slider .slide.active  {
     clip-path: circle(100% at 50% 50%);
     transition: 2s;
     transition-property: clip-path;
