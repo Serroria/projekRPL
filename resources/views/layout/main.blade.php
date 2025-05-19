@@ -309,7 +309,7 @@
 <!-- Poster Slider -->
  <div class="container">
 @yield('content')
- <div class="img-slider-container">@include('partial.posterSlide');</div>
+ <div class="img-slider-container">@include('partial.posterSlide')</div>
   
  <!--Kategori-->
 
