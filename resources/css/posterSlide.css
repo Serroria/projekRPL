@@ -16,16 +16,20 @@ body {
     min-height: 100vh;
 }
 .container {
-    max-width: 1200px;
+    /* max-width: 1200px; */
+    width: 100%;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 ;
 }
+
+
 .img-slider{
     position: relative;
     width: 100%;
-    max-width: 800px;
+    /* max-width: 800px; */
     height: 500px;
-    margin: 20px auto;
+    margin: 0px auto;
+    /* margin: 20px auto; */
     background: transparent;
     overflow: hidden;
 }
@@ -37,7 +41,7 @@ body {
     clip-path: circle(0% at 0 50%);
 }
 
-.img-slider .slide.slider-active  {
+.img-slider .slide.active  {
     clip-path: circle(100% at 50% 50%);
     transition: 2s;
     transition-property: clip-path;
@@ -102,9 +106,10 @@ body {
 
 @media (max-width: 620px){
     .img-slider{
-        width: 100%;
+        width: 100vw;
         height: 300px;
-        margin: 10px auto;
+        margin: 0 auto;
+        /* margin: 10px auto; */
     }
 
     .navbar {
