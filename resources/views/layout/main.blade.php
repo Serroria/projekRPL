@@ -315,7 +315,7 @@
 
 @include('partial.category')
  </div>
-<!-- <div 
+<!-- <div tes
   x-data="{
     currentSlide: 0,
     slides: ['image/poster1.png', 'image/poster2.png',],
