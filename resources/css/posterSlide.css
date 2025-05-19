@@ -41,7 +41,7 @@ body {
     clip-path: circle(0% at 0 50%);
 }
 
-.img-slider .slide.active  {
+.img-slider .slide.slider-active  {
     clip-path: circle(100% at 50% 50%);
     transition: 2s;
     transition-property: clip-path;
@@ -99,7 +99,7 @@ body {
     cursor: pointer;
 }
 
-.img-slider .navigation .btn.active{
+.img-slider .navigation .btn.slider-active{
     background: #555;
     box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
 }

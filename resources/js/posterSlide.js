@@ -6,15 +6,15 @@ var slide = document.querySelectorAll('.slide');
 
         var manualNav = function(manual){
             slide.forEach((slide)=>{
-                slide.classList.remove('active');
+                slide.classList.remove('slider-active');
 
                 btns.forEach((btn)=>{
-                    btn.classList.remove('active');
+                    btn.classList.remove('slider-active');
                 });
             });
 
-            slide[manual].classList.add('active');
-            btns[manual].classList.add('active');
+            slide[manual].classList.add('slider-active');
+            btns[manual].classList.add('slider-active');
         }
 
         btns.forEach((btn, i)=> {
@@ -26,17 +26,17 @@ var slide = document.querySelectorAll('.slide');
 
            // slider autoplay
         var repeat = function(activeClass){
-            let active = document.getElementsByClassName('active');
+            let active = document.getElementsByClassName('slider-active');
             let i = 1;
 
             var repeater = () => {
                 setTimeout(function(){
                     [...active].forEach((activeSlide)=>{
-                       activeSlide.classList.remove('active');
+                       activeSlide.classList.remove('slider-active');
                     })
 
-                slide[i].classList.add('active');
-                btns[i].classList.add('active');
+                slide[i].classList.add('slider-active');
+                btns[i].classList.add('slider-active');
                 i++;
 
                 if(slide.length == i){
