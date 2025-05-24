@@ -11,10 +11,7 @@ use Validator;
 class ProductController extends Controller
 {
     public function admin()
-{
-    // return view('admin.admin');
-    // $categories = Category::all();
-    // return view('admin.admin', compact('categories'));
+{ 
      $categories = Category::all();
     return view('admin.admin', compact('categories'));
 }
@@ -24,19 +21,20 @@ public function homepage()
     $products = Product::with('category')->get();
     return view('homepage', compact('products'));
 }
-    // public function index(){
-    //     $products = Product::with('category')->get();
-    //     return view('products.index', compact('products'));
-    // }
+    
+    public function index(){
+        $products = Product::with('category')->get();
+        return view('products.index', compact('products'));
+    }
 
-    // public function create(){
-    //     $categories = Category::all();
-    //     return view('products.create', compact('categories'));
-    // }
+    public function create(){
+        $categories = Category::all();
+        return view('products.create', compact('categories'));
+    }
     public function store(Request $request)
     {
         $validatedData = $request ->validate([
-            'name'=> 'required|string|max:255',
+            'nama'=> 'required|string|max:255',
             'gambar'=>'required|image|mimes:jpeg, png, jpg, gif, svg|max:2048',
             'deskripsi'=> 'nullable|string',
             'category_id'=> 'required|exists:categories,id',
@@ -45,6 +43,8 @@ public function homepage()
 
         $path = $request -> file('gambar')->store('product', 'public');
 
+
+
         Product::create(['nama'=>$request->nama,
         'gambar'=>$path,
         'deskripsi'=>$request->deskripsi, 'category_id'=>
@@ -52,7 +52,7 @@ public function homepage()
         $request->harga,]);
         
 
-        return redirect()->route('product.index')->with('success', 'Produk berhasil ditambahkan');
+        return redirect()->route('admin.index')->with('success', 'Produk berhasil ditambahkan');
     }
 }
 ?>

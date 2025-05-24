@@ -46,7 +46,7 @@
       @foreach ($products as $product )
       
     
-      <div class="max-w-sm mx-auto product-card" data-category="minumanHerbal">
+      <div class="max-w-sm mx-auto product-card" data-category="{{ $product->category->nama }}">
         <div class="group block">
           <img src="{{ asset('storage/'.$product->gambar) }}" alt="{{ $product->nama }}" class="aspect-square w-full rounded-lg bg-gray-200 object-cover group-hover:opacity-75 xl:aspect-7/8">
           

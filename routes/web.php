@@ -24,6 +24,10 @@ Route::get('/login', [LoginController::class, 'showLoginForm'])->name('login');
 Route::post('/login', [LoginController::class, 'login']);
 Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
 
-Route::get('/products', [ProductController::class,'homepage'])->name('products.index');
+//route admin
 Route::get('/admin', [ProductController::class,'admin'])->name('admin');
+
+//rpute produk
+Route::get('/products', [ProductController::class,'homepage'])->name('products.index');
 Route::post('/product', [ProductController::class,'store'])->name('products.store');
+Route::get('/products', [ProductController::class, 'index'])->name('products.index');
