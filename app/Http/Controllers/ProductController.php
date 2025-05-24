@@ -15,7 +15,7 @@ class ProductController extends Controller
     // $categories = Category::all();
     // return view('admin.admin', compact('categories'));
      $categories = Category::all();
-    return view('admin.tambah', compact('categories'));
+    return view('admin.admin', compact('categories'));
 }
 
 public function homepage()
