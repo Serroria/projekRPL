@@ -43,6 +43,32 @@
     <h2 class="sr-only">Products</h2>
 
     <div class="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8">
+      @foreach ($products as $product )
+      
+    
+      <div class="max-w-sm mx-auto product-card" data-category="minumanHerbal">
+        <div class="group block">
+          <img src="{{ asset('storage/'.$product->gambar) }}" alt="{{ $product->nama }}" class="aspect-square w-full rounded-lg bg-gray-200 object-cover group-hover:opacity-75 xl:aspect-7/8">
+          
+          <div class="flex items-center justify-between mt-4 cursor-pointer" onclick="toggleDesc('beraskencur')">
+            <h3 class="text-sm text-gray-700 font-semibold flex items-center">
+              {{$product->nama}}
+              <span id="arrowIcon-beraskencur" class="ml-2 transition-transform">▼</span>
+            </h3>
+          </div>
+          <p>{{ $product->deskripsi }}</p>
+            <p><strong>Kategori:</strong> {{ $product->category->nama }}</p>
+            <p><strong>Harga:</strong> Rp. {{ number_format($product->harga, 2, ',', '.') }}</p>
+
+          <button class="mt-2 bg-orange-950 hover:bg-red-700 text-white font-bold py-2 px-4 border rounded" 
+            onclick="location.href='https://shopee.co.id/davidnicolas4?categoryId=100001&entryPoint=ShopByPDP&itemId=43550536931';">
+            BELI
+          </button>
+        </div>
+          @endforeach
+      </div>
+
+    <!-- <div class="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8">
       <div class="max-w-sm mx-auto product-card" data-category="minumanHerbal">
         <div class="group block">
           <img src="kencurberas.png" alt="Beras Kencur" class="aspect-square w-full rounded-lg bg-gray-200 object-cover group-hover:opacity-75 xl:aspect-7/8">
@@ -73,7 +99,7 @@
             BELI
           </button>
         </div>
-      </div>
+      </div> -->
       
       <div class="max-w-sm mx-auto product-card" data-category="jamuAnak">
             <div class="group block">

@@ -2,9 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('homepage');
-});
+// Route::get('/', function () {
+//     return view('homepage');
+// });
 
 Route::get('/login', function () {
     return view('Login');
@@ -14,15 +14,16 @@ Route::get('/company', function () {
 })->name('company');
 
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\ProductController;
+
+
+Route::get('/', [ProductController::class, 'homepage'])->name('homepage');
+
 
 Route::get('/login', [LoginController::class, 'showLoginForm'])->name('login');
 Route::post('/login', [LoginController::class, 'login']);
 Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware('auth');
-
-Route::get('/dashboard', function () {
-    return view('admin');
-})->middleware('auth');
+Route::get('/products', [ProductController::class,'homepage'])->name('products.index');
+Route::get('/admin', [ProductController::class,'admin'])->name('admin');
+Route::post('/product', [ProductController::class,'store'])->name('products.store');
