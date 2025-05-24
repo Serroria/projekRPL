@@ -6,6 +6,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Product;
 use App\Models\Category;
+use Validator;
 
 class ProductController extends Controller
 {
@@ -34,11 +35,11 @@ public function homepage()
     // }
     public function store(Request $request)
     {
-        $request ->validate([
+        $validatedData = $request ->validate([
             'name'=> 'required|string|max:255',
             'gambar'=>'required|image|mimes:jpeg, png, jpg, gif, svg|max:2048',
             'deskripsi'=> 'nullable|string',
-            'category_id'=> 'required|exist:categories,id',
+            'category_id'=> 'required|exists:categories,id',
             'harga'=> 'required|numeric|min:0',
         ]);
 
