@@ -52,7 +52,7 @@ public function homepage()
         $request->harga,]);
         
 
-        return redirect()->route('admin.index')->with('success', 'Produk berhasil ditambahkan');
+        return redirect()->route('admin')->with('success', 'Produk berhasil ditambahkan');
     }
 }
 ?>
