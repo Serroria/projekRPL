@@ -1,7 +1,7 @@
 @extends('layout.adminlayout')
     
 @section('content')
-<h1>Tambah Produk Baru </h1>
+<h1>Tambah Produk Baru</h1>
   <!-- Error messages -->
 @if ($errors->any())
     <div class="mb-4 text-red-600">
