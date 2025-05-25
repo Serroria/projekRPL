@@ -1,7 +1,7 @@
 
 
 @extends('layout.adminlayout')
-    
+  
 @section('content')
 <h1>Tambah Produk Baru</h1>
   <!-- Error messages -->
@@ -100,3 +100,13 @@
         @endforelse
     </tbody>
 </table>
+
+</table>
+
+<!-- Tambahkan pagination di sini -->
+<div style="margin-top: 20px;">
+    {{ $products->links() }}
+</div>
+
+@endsection
+

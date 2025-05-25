@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin</title>
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     @vite('resources/css/adminSidebar.css') 
     @vite('resources/js/adminSidebar.js')
 </head>
@@ -14,9 +15,9 @@
     </div>
 
      
-    <div class="main-content">
-        @include('admin.admin')
-        @include('admin.edit')
+    <div class="content">
+        {{-- @include('admin.admin')
+        @include('admin.edit') --}}
         @yield('content')
     </div>
     

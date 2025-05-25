@@ -15,7 +15,7 @@ class ProductController extends Controller
     public function admin($id=null)
 { 
      $categories = Category::all();
-     $products = Product::with('category')->get();
+     $products = Product::with('category')->paginate(20);
      $editProduct = null;
 
      if($id){
@@ -27,12 +27,12 @@ class ProductController extends Controller
 
 public function homepage()
 {
-    $products = Product::with('category')->get();
+    $products = Product::with('category')->paginate(20);
     return view('homepage', compact('products'));
 }
     
     public function index(){
-        $products = Product::with('category')->get();
+        $products = Product::with('category')->paginate(20);
         return view('products.index', compact('products'));
     }
 
