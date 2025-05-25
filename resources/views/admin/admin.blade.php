@@ -1,7 +1,7 @@
 
 
 @extends('layout.adminlayout')
-    
+  
 @section('content')
 <h1>Tambah Produk Baru</h1>
   <!-- Error messages -->
@@ -107,4 +107,6 @@
 <div style="margin-top: 20px;">
     {{ $products->links() }}
 </div>
+
+@endsection
 
