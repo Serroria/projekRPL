@@ -3,30 +3,28 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
+use App\Models\Category;
 
-class CreateProductsTable extends Migration
+class CreateCategoriesTable extends Migration
 {
     /**
      * Run the migrations.
      */
-    public function up(): void
+  public function up()
     {
-        Schema::create('products', function (Blueprint $table) {
-            $table->id();
-            $table->string('nama');
-            $table->string('gambar');
-            $table->text('deskripsi')->nullable();
-            $table->foreignId('category_id')->constrained('categories')->onDelete('cascade');
-            $table->decimal('harga', 10, 2);
-            $table->timestamps();
-        });
+        $categories = [
+            ['nama' => 'minumanHerbal'],
+            ['nama' => 'jamuAnak'],
+            ['nama' => 'jamuHerbal'],
+        ];
+
+        foreach ($categories as $category) {
+            Category::create($category);
+        }
     }
 
-    /**
-     * Reverse the migrations.
-     */
     public function down(): void
     {
-        Schema::dropIfExists('products');
+        Schema::dropIfExists('categories');
     }
 };
