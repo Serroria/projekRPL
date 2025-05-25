@@ -21,6 +21,7 @@
     
     @vite('resources/css/category.css') 
     @vite('resources/css/cart.css') 
+    @vite('resources/css/checkout.css') 
    
     
     @vite('resources/js/category.js')

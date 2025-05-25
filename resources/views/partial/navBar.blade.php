@@ -18,6 +18,9 @@
             </ul>
         </div>
     </nav>
+    <pre>
+  
+</pre>
     
 <!-- <header class="sticky top-0 z-50 bg-[#902727] shadow-md"> -->
 

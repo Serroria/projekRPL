@@ -8,25 +8,32 @@
     <div class="mb-4 bg-green-100 text-green-700 p-2 rounded">{{ session('success') }}</div>
   @endif
 
-  @if ($cart)
+  @php
+    $cart = session('cart', []);
+    $total = 0;
+  @endphp
+
+  @if (!empty($cart))
     <table class="w-full table-auto border">
       <thead>
         <tr class="bg-gray-200">
-          <th>Produk</th>
-          <th>Qty</th>
-          <th>Harga</th>
-          <th>Total</th>
+          <th class="text-left px-2 py-1">Produk</th>
+          <th class="text-left px-2 py-1">Qty</th>
+          <th class="text-left px-2 py-1">Harga</th>
+          <th class="text-left px-2 py-1">Total</th>
         </tr>
       </thead>
       <tbody>
-        @php $total = 0; @endphp
         @foreach ($cart as $item)
-          @php $total += $item['price'] * $item['quantity']; @endphp
-          <tr>
-            <td>{{ $item['name'] }}</td>
-            <td>{{ $item['quantity'] }}</td>
-            <td>Rp{{ number_format($item['price'], 0, ',', '.') }}</td>
-            <td>Rp{{ number_format($item['price'] * $item['quantity'], 0, ',', '.') }}</td>
+          @php
+            $itemTotal = ($item['price'] ?? 0) * ($item['quantity'] ?? 0);
+            $total += $itemTotal;
+          @endphp
+          <tr class="border-t">
+            <td class="px-2 py-1">{{ $item['name'] ?? '-' }}</td>
+            <td class="px-2 py-1">{{ $item['quantity'] ?? 0 }}</td>
+            <td class="px-2 py-1">Rp{{ number_format($item['price'] ?? 0, 0, ',', '.') }}</td>
+            <td class="px-2 py-1">Rp{{ number_format($itemTotal, 0, ',', '.') }}</td>
           </tr>
         @endforeach
       </tbody>
@@ -34,7 +41,7 @@
 
     <div class="mt-4 font-bold">
       Subtotal: Rp{{ number_format($total, 0, ',', '.') }} <br>
-      Ongkir: Rp4.999 <br>
+      Ongkir: Rp{{ number_format(4999, 0, ',', '.') }} <br>
       Total: Rp{{ number_format($total + 4999, 0, ',', '.') }}
     </div>
 
