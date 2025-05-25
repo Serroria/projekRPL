@@ -5,8 +5,8 @@ import tailwindcss from '@tailwindcss/vite';
 export default defineConfig({
     plugins: [
         laravel({
-            input: ['resources/css/app.css', 'resources/css/hamburger.css', 'resources/css/category.css', 'resources/css/posterSlide.css', 
-                'resources/js/app.js', 'resources/js/hamburger.js', 'resources/js/category.js', 'resources/js/posterSlide.js',],
+            input: ['resources/css/app.css', 'resources/css/hamburger.css', 'resources/css/category.css', 'resources/css/posterSlide.css','resources/css/adminSidebar.css',
+                'resources/js/app.js', 'resources/js/hamburger.js', 'resources/js/category.js', 'resources/js/posterSlide.js',  'resources/js/adminSidebar.js',],
             refresh: true,
         }),
         tailwindcss(),

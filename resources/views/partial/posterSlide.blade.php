@@ -1,38 +1,38 @@
   <div class="img-slider">
-        <div class="slide active">
+        <div class="slide slider-active">
             <img src="{{ asset('tehJahe.jpg') }}" alt="Poster 1" class="active">
             <div class="info">
-                <h2>Jamu Kita</h2>
-                <h3><b>Hidup Sehat, Pilihan Alami</b></h3>
-                <p>Nimati kekayaan tradisi dalam setiap botol. Sehat alami, pilih JamuKita</p>
+                <h2>JamuKita</h2>
+                <h3 class='text-white'><b>Kesehatan Alami, Pilihan Tradisi</b></h3>
+                <p>Temukan racikan jamu terbaik untuk menjaga vitalitas tubuh Anda. Sehat alami, lebih berenergi!</p>
             </div>
         </div>
         <div class="slide">
            <img src="{{ asset('herbal.jpg') }}" alt="Poster 1">
             <div class="info">
-                <h2>JamuKita </h2>
-                <h3><b>Kesehatan Alami, Kebaikan Tradisi</b></h3>
-                <p>Temukan racikan jamu tradisional untuk kesehatan tubuh dan pikiran Anda. Pilih yang alami, pilih <b>JamuKita</b></p>
+                <h2 class='text-white'>Fokus pada Khasiat</h2>
+                <h3 class='text-white'><b>Jaga Daya Tahan Tubuh dengan Jamukita</b></h3>
+                <p>Kembalikan energi dan daya tahan tubuh secara alami. Pilih jamu terbaik dari Jamukita.</p>
             </div>
         </div>
         <div class="slide">
             <img src="{{ asset('jahe.jpg') }}" alt="">
             <div class="info">
-                <h2>JamuKita</h2>
-                <h3><b>Sehat dengan Rasa Asli</b></h3>
-                <p>Rasakan kebaikan alam dalam setiap tegukan. Nikmati manfaat jamu untuk tubuh yang lebih bugar</p>
+                <h2 class='text-white'>Gaya Hidup Sehat</h2>
+                <h3 class='text-white'><b>Nikmati Hidup Sehat Setiap Hari</b></h3>
+                <p>Minum jamu, rasakan manfaatnya. Mulai perjalanan sehat Anda bersama Jamukita.</p>
             </div>
         </div>
         <div class="slide">
             <img src="{{ asset('jamuPic.jpeg') }}" alt="">
             <div class="info">
-                <h2>JamuKita</h2>
-                <h3><b>Hidup Sehat, Pilihan Alami</b></h3>
-                <p>Nikmati kekayaan tradisi dalam setiap tegukan. Sehat alami, pilih JamuKIta</p>
+                <h2 class='text-white'>Sehat Alami, Pilih JamuKita</h2>
+                <h3 class='text-white'><b>Segarkan Tubuh, Dukung Imunitas - Mulai Belanja Sekarang!</b></h3>
+                <p>Mulai perjalanansehat Anda dengan jamu berkualitas dari JamuKita!</p>
             </div>
         </div>
         <div class="navigation">
-            <div class="btn active"></div>
+            <div class="btn slider-active"></div>
             <div class="btn"></div>
             <div class="btn"></div>
             <div class="btn"></div>

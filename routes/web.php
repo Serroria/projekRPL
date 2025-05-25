@@ -2,9 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('homepage');
-});
+// Route::get('/', function () {
+//     return view('homepage');
+// });
 
 Route::get('/login', function () {
     return view('Login');
@@ -14,11 +14,27 @@ Route::get('/company', function () {
 })->name('company');
 
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\ProductController;
+
+
+Route::get('/', [ProductController::class, 'homepage'])->name('homepage');
+
 
 Route::get('/login', [LoginController::class, 'showLoginForm'])->name('login');
 Route::post('/login', [LoginController::class, 'login']);
 Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware('auth');
+//route admin
+Route::get('/admin/{id?}', [ProductController::class,'admin'])->name('admin');
+
+//rpute produk
+Route::get('/products', [ProductController::class,'homepage'])->name('products.index');
+Route::post('/product', [ProductController::class,'store'])->name('products.store');
+// Route::get('/products', [ProductController::class, 'index'])->name('products.index');
+
+//destroy product
+Route::put('/products/{id}', [ProductController::class, 'update'])->name('products.update');
+
+Route::delete('/products/{id}', [ProductController::class, 'destroy'])->name('products.destroy');
+
+

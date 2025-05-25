@@ -43,6 +43,34 @@
     <h2 class="sr-only">Products</h2>
 
     <div class="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8">
+      @foreach ($products as $product )
+      
+    
+      <div class="max-w-sm mx-auto product-card" data-category="{{ $product->category->nama }}">
+        <div class="group block">
+          <img src="{{ asset('storage/'.$product->gambar) }}" alt="{{ $product->nama }}" class="aspect-square w-full rounded-lg bg-gray-200 object-cover group-hover:opacity-75 xl:aspect-7/8">
+          
+          <div class="flex items-center justify-between mt-4 cursor-pointer" onclick="toggleDesc('beraskencur')">
+            <h3 class="text-sm text-gray-700 font-semibold flex items-center">
+              {{$product->nama}}
+              <span id="arrowIcon-{{ $product->id }}" class="ml-2 transition-transform">▼</span>
+            </h3>
+          </div>
+          <!-- Deskripsi produk yang disembunyikan awalnya -->
+        <div id="{{ $product->id }}-desc" class="hidden"></div>
+          <p>{{ $product->deskripsi }}</p>
+            <p><strong>Kategori:</strong> {{ $product->category->nama }}</p>
+            <p><strong>Harga:</strong> Rp. {{ number_format($product->harga, 2, ',', '.') }}</p>
+        </div>
+          <button class="mt-2 bg-orange-950 hover:bg-red-700 text-white font-bold py-2 px-4 border rounded" 
+            onclick="location.href='https://shopee.co.id/davidnicolas4?categoryId=100001&entryPoint=ShopByPDP&itemId=43550536931';">
+            BELI
+          </button>
+        </div>
+          @endforeach
+      </div>
+
+    <!-- <div class="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8">
       <div class="max-w-sm mx-auto product-card" data-category="minumanHerbal">
         <div class="group block">
           <img src="kencurberas.png" alt="Beras Kencur" class="aspect-square w-full rounded-lg bg-gray-200 object-cover group-hover:opacity-75 xl:aspect-7/8">
@@ -73,22 +101,24 @@
             BELI
           </button>
         </div>
-      </div>
-      
-      <div class="max-w-sm mx-auto product-card" data-category="jamuAnak">
+      </div> -->
+
+      <!-- <div class="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8">
+       -->
+      <!-- <div class="max-w-sm mx-auto product-card" data-category="jamuAnak">
             <div class="group block">
-              <img src="buyungupik2.png" alt="Buyung Upik" class="aspect-square w-full rounded-lg bg-gray-200 object-cover group-hover:opacity-75 xl:aspect-7/8">
+              <img src="buyungupik2.png" alt="Buyung Upik" class="aspect-square w-full rounded-lg bg-gray-200 object-cover group-hover:opacity-75 xl:aspect-7/8"> -->
 
               <!-- Judul + Toggle Panah -->
-              <div class="flex items-center justify-between mt-4 cursor-pointer" onclick="toggleDesc('buyungupik')">
+              <!-- <div class="flex items-center justify-between mt-4 cursor-pointer" onclick="toggleDesc('buyungupik')">
                 <h3 class="text-sm text-gray-700 font-semibold flex items-center">
                   Buyung Upik
                   <span id="arrowIcon-buyungupik" class="ml-2 transition-transform">▼</span>
                 </h3>
-              </div>
+              </div> -->
 
               <!-- Deskripsi yang bisa ditoggle -->
-              <div id="descBox-buyungupik" class="hidden mt-2 text-sm text-gray-600">
+              <!-- <div id="descBox-buyungupik" class="hidden mt-2 text-sm text-gray-600">
                   <ul class="list-disc list-inside space-y-2">
                     <li>Khasiat: <br>
                       Memelihara kesehatan, membantu memperbaiki nafsu makan dan secara tradisional digunakan pada penderita cacingan</li>
@@ -98,9 +128,9 @@
                       (Anak umur 7 - 12 tahun : 1 bungkus)</li>
                     <li>1 Box isi 11 sachet 200 gram</li>
                   </ul>
-              </div>
+              </div> -->
 
-              <!-- Kategori, Harga, Tombol Beli -->
+              <!-- Kategori, Harga, Tombol Beli
               <h3 class="mt-2 text-sm text-gray-700">'Jamu Anak'</h3>
               <p class="mt-1 text-lg font-medium text-gray-900">Rp. 10.000,00</p>
               <button class="mt-2 bg-orange-950 hover:bg-red-700 text-white font-bold py-2 px-4 border rounded"
@@ -108,22 +138,22 @@
                 BELI
               </button>
             </div>
-      </div>
+      </div> -->
 
-      <div class="max-w-sm mx-auto product-card" data-category="minumanHerbal">
+      <!-- <div class="max-w-sm mx-auto product-card" data-category="minumanHerbal">
             <div class="group block">
-              <img src="sari-temulawak.png" alt="Jamu Temulawak" class="aspect-square w-full rounded-lg bg-gray-200 object-cover group-hover:opacity-75 xl:aspect-7/8">
+              <img src="sari-temulawak.png" alt="Jamu Temulawak" class="aspect-square w-full rounded-lg bg-gray-200 object-cover group-hover:opacity-75 xl:aspect-7/8"> -->
 
               <!-- Judul + Toggle Panah -->
-              <div class="flex items-center justify-between mt-4 cursor-pointer" onclick="toggleDesc('saritemulawak')">
+              <!-- <div class="flex items-center justify-between mt-4 cursor-pointer" onclick="toggleDesc('saritemulawak')">
                 <h3 class="text-sm text-gray-700 font-semibold flex items-center">
                   Sari Temulawak
                   <span id="arrowIcon-saritemulawak" class="ml-2 transition-transform">▼</span>
                 </h3>
-              </div>
+              </div> -->
 
               <!-- Deskripsi yang bisa ditoggle -->
-              <div id="descBox-saritemulawak" class="hidden mt-2 text-sm text-gray-600">
+              <!-- <div id="descBox-saritemulawak" class="hidden mt-2 text-sm text-gray-600">
                 <ul class="list-disc list-inside space-y-2">
                   <li>Khasiat: <br>
                     Membantu memelihara kesehatan fungsi hati.</li>
@@ -131,32 +161,32 @@
                     3 x 1 kapsul sehari atau sesuai petunjuk dokter.</li>
                   <li>1 botol isi 30 kapsul.</li>
                 </ul>
-              </div>
+              </div> -->
 
               <!-- Kategori, Harga, Tombol Beli -->
-              <h3 class="mt-2 text-sm text-gray-700">'Minuman Herbal'</h3>
+              <!-- <h3 class="mt-2 text-sm text-gray-700">'Minuman Herbal'</h3>
               <p class="mt-1 text-lg font-medium text-gray-900">Rp. 85.000,00</p>
               <button class="mt-2 bg-orange-950 hover:bg-red-700 text-white font-bold py-2 px-4 border rounded"
                 onclick="location.href='https://shopee.co.id/davidnicolas4?categoryId=100001&entryPoint=ShopByPDP&itemId=43550536931';">
                 BELI
               </button>
             </div>
-      </div>
+      </div> -->
 
-      <div class="max-w-sm mx-auto product-card" data-category="jamuHerbal">
+      <!-- <div class="max-w-sm mx-auto product-card" data-category="jamuHerbal">
             <div class="group block">
               <img src="encok.png" alt="Jamu Temulawak" class="aspect-square w-full rounded-lg bg-gray-200 object-cover group-hover:opacity-75 xl:aspect-7/8">
 
               <!-- Judul + Toggle Panah -->
-              <div class="flex items-center justify-between mt-4 cursor-pointer" onclick="toggleDesc('encok')">
+              <!-- <div class="flex items-center justify-between mt-4 cursor-pointer" onclick="toggleDesc('encok')">
                 <h3 class="text-sm text-gray-700 font-semibold flex items-center">
                   Jamu Encok
                   <span id="arrowIcon-encok" class="ml-2 transition-transform">▼</span>
                 </h3>
-              </div>
+              </div>  -->
 
               <!-- Deskripsi yang bisa ditoggle -->
-              <div id="descBox-encok" class="hidden mt-2 text-sm text-gray-600">
+              <!-- <div id="descBox-encok" class="hidden mt-2 text-sm text-gray-600">
                 <ul class="list-disc list-inside space-y-2">
                   <li>Khasiat: <br>
                     Membantu meredakan nyeri akibat encok pegal linu dan nyeri pada persendian.</li>
@@ -165,32 +195,32 @@
                   <li>Per sachet @ 7 gram</li>
                   <li>Tidak direkomendasikan untuk wanita hamil dan menyusui serta penderita gangguan ginjal</li>
                 </ul>
-              </div>
+              </div> -->
 
               <!-- Kategori, Harga, Tombol Beli -->
-              <h3 class="mt-2 text-sm text-gray-700">'Jamu Herbal'</h3>
+              <!-- <h3 class="mt-2 text-sm text-gray-700">'Jamu Herbal'</h3>
               <p class="mt-1 text-lg font-medium text-gray-900">Rp. 2.000,00</p>
               <button class="mt-2 bg-orange-950 hover:bg-red-700 text-white font-bold py-2 px-4 border rounded"
                 onclick="location.href='https://shopee.co.id/JAMU-ENCOK-Sido-Muncul-i.217988839.40650755375';">
                 BELI
               </button>
             </div>
-      </div>
+      </div> -->
 
-      <div class="max-w-sm mx-auto product-card" data-category="jamuHerbal">
+      <!-- <div class="max-w-sm mx-auto product-card" data-category="jamuHerbal">
             <div class="group block">
-              <img src="{{ asset('jamu-bersalin.png') }}" alt="Jamu Bersalin" class="aspect-square w-full rounded-lg bg-gray-200 object-cover group-hover:opacity-75 xl:aspect-7/8">
+              <img src="{{ asset('jamu-bersalin.png') }}" alt="Jamu Bersalin" class="aspect-square w-full rounded-lg bg-gray-200 object-cover group-hover:opacity-75 xl:aspect-7/8"> -->
 
               <!-- Judul + Toggle Panah -->
-              <div class="flex items-center justify-between mt-4 cursor-pointer" onclick="toggleDesc('bersalin')">
+              <!-- <div class="flex items-center justify-between mt-4 cursor-pointer" onclick="toggleDesc('bersalin')">
                 <h3 class="text-sm text-gray-700 font-semibold flex items-center">
                   Jamu Bersalin
                   <span id="arrowIcon-bersalin" class="ml-2 transition-transform">▼</span>
                 </h3>
-              </div>
+              </div> -->
 
               <!-- Deskripsi yang bisa ditoggle -->
-              <div id="descBox-bersalin" class="hidden mt-2 text-sm text-gray-600">
+              <!-- <div id="descBox-bersalin" class="hidden mt-2 text-sm text-gray-600">
                 <ul class="list-disc list-inside space-y-2">
                   <li>Khasiat: <br>
                     Untuk wanita sehabis melahirkan. Secara tradisional membantu sirkulasi darah. Membantu memperbaiki nafsu makan dan membantu melancarkan air susu ibu (ASI) serta membantu menyegarkan badan.</li>
@@ -199,32 +229,32 @@
                     Untuk selanjutnya minum jamu Galian Parem</li>
                   <li>Per sachet @ 7 gram</li>
                 </ul>
-              </div>
+              </div> -->
 
               <!-- Kategori, Harga, Tombol Beli -->
-              <h3 class="mt-2 text-sm text-gray-700">'Jamu Herbal'</h3>
+              <!-- <h3 class="mt-2 text-sm text-gray-700">'Jamu Herbal'</h3>
               <p class="mt-1 text-lg font-medium text-gray-900">Rp. 2.000,00</p>
               <button class="mt-2 bg-orange-950 hover:bg-red-700 text-white font-bold py-2 px-4 border rounded"
                 onclick="location.href='https://shopee.co.id/JAMU-BERSALIN-Sido-Muncul-i.217988839.43250749369';">
                 BELI
               </button>
             </div>
-      </div>
+      </div> -->
 
-      <div class="max-w-sm mx-auto product-card" data-category="jamuHerbal">
+      <!-- <div class="max-w-sm mx-auto product-card" data-category="jamuHerbal">
             <div class="group block">
-              <img src="{{ asset('jamu-klingsir.png') }}" alt="Jamu Klingsir" class="aspect-square w-full rounded-lg bg-gray-200 object-cover group-hover:opacity-75 xl:aspect-7/8">
+              <img src="{{ asset('jamu-klingsir.png') }}" alt="Jamu Klingsir" class="aspect-square w-full rounded-lg bg-gray-200 object-cover group-hover:opacity-75 xl:aspect-7/8"> -->
 
               <!-- Judul + Toggle Panah -->
-              <div class="flex items-center justify-between mt-4 cursor-pointer" onclick="toggleDesc('klingsir')">
+              <!-- <div class="flex items-center justify-between mt-4 cursor-pointer" onclick="toggleDesc('klingsir')">
                 <h3 class="text-sm text-gray-700 font-semibold flex items-center">
                   Jamu Klingsir
                   <span id="arrowIcon-klingsir" class="ml-2 transition-transform">▼</span>
                 </h3>
-              </div>
+              </div> -->
 
               <!-- Deskripsi yang bisa ditoggle -->
-              <div id="descBox-klingsir" class="hidden mt-2 text-sm text-gray-600">
+              <!-- <div id="descBox-klingsir" class="hidden mt-2 text-sm text-gray-600">
                 <ul class="list-disc list-inside space-y-2">
                   <li>Khasiat: <br>
                     Membantu meredakan sakit otot pinggang dan membantu melancarkan buang air kecil.</li>
@@ -235,32 +265,32 @@
                   <li>Tidak direkomendasikan untuk wanita hamil dan menyusui serta penderita gangguan ginjal</li>
                   <li>Bila tidak ada perbaikan gejala segera hubungi dokter</li>
                 </ul>
-              </div>
+              </div> -->
 
               <!-- Kategori, Harga, Tombol Beli -->
-              <h3 class="mt-2 text-sm text-gray-700">'Jamu Herbal'</h3>
+              <!-- <h3 class="mt-2 text-sm text-gray-700">'Jamu Herbal'</h3>
               <p class="mt-1 text-lg font-medium text-gray-900">Rp. 2.000,00</p>
               <button class="mt-2 bg-orange-950 hover:bg-red-700 text-white font-bold py-2 px-4 border rounded"
                 onclick="location.href='https://shopee.co.id/JAMU-KLINGSIR-Sido-Muncul-i.217988839.41700776478';">
                 BELI
               </button>
             </div>
-      </div>
+      </div> -->
 
-      <div class="max-w-sm mx-auto product-card" data-category="jamuHerbal">
+      <!-- <div class="max-w-sm mx-auto product-card" data-category="jamuHerbal">
             <div class="group block">
-              <img src="{{ asset('jamu-gemuk-sehat.png') }}" alt="Jamu Gemuk Sehat" class="aspect-square w-full rounded-lg bg-gray-200 object-cover group-hover:opacity-75 xl:aspect-7/8">
+              <img src="{{ asset('jamu-gemuk-sehat.png') }}" alt="Jamu Gemuk Sehat" class="aspect-square w-full rounded-lg bg-gray-200 object-cover group-hover:opacity-75 xl:aspect-7/8"> -->
 
               <!-- Judul + Toggle Panah -->
-              <div class="flex items-center justify-between mt-4 cursor-pointer" onclick="toggleDesc('gemuk')">
+              <!-- <div class="flex items-center justify-between mt-4 cursor-pointer" onclick="toggleDesc('gemuk')">
                 <h3 class="text-sm text-gray-700 font-semibold flex items-center">
                   Jamu Gemuk Sehat
                   <span id="arrowIcon-gemuk" class="ml-2 transition-transform">▼</span>
                 </h3>
-              </div>
+              </div> -->
 
               <!-- Deskripsi yang bisa ditoggle -->
-              <div id="descBox-gemuk" class="hidden mt-2 text-sm text-gray-600">
+              <!-- <div id="descBox-gemuk" class="hidden mt-2 text-sm text-gray-600">
                 <ul class="list-disc list-inside space-y-2">
                   <li>Khasiat: <br>
                     Secara tradisional membantu memperbaiki nafsu makan.</li>
@@ -272,32 +302,32 @@
                   <li>Per sachet @ 7 gram</li>
                   <li>Tidak direkomendasikan untuk wanita hamil dan menyusui serta penderita gangguan ginjal</li>
                 </ul>
-              </div>
+              </div> -->
 
               <!-- Kategori, Harga, Tombol Beli -->
-              <h3 class="mt-2 text-sm text-gray-700">'Jamu Herbal'</h3>
+              <!-- <h3 class="mt-2 text-sm text-gray-700">'Jamu Herbal'</h3>
               <p class="mt-1 text-lg font-medium text-gray-900">Rp. 2.500,00</p>
               <button class="mt-2 bg-orange-950 hover:bg-red-700 text-white font-bold py-2 px-4 border rounded"
                 onclick="location.href='https://shopee.co.id/JAMU-GEMUK-SEHAT-Sido-Muncul-i.217988839.40800771846';">
                 BELI
               </button>
             </div>
-      </div>
+      </div> -->
 
-      <div class="max-w-sm mx-auto product-card" data-category="jamuHerbal">
+      <!-- <div class="max-w-sm mx-auto product-card" data-category="jamuHerbal">
             <div class="group block">
-              <img src="{{ asset('galian-delima-putih.png') }}" alt="Jamu Gemuk Sehat" class="aspect-square w-full rounded-lg bg-gray-200 object-cover group-hover:opacity-75 xl:aspect-7/8">
+              <img src="{{ asset('galian-delima-putih.png') }}" alt="Jamu Gemuk Sehat" class="aspect-square w-full rounded-lg bg-gray-200 object-cover group-hover:opacity-75 xl:aspect-7/8"> -->
 
               <!-- Judul + Toggle Panah -->
-              <div class="flex items-center justify-between mt-4 cursor-pointer" onclick="toggleDesc('delimaputih')">
+              <!-- <div class="flex items-center justify-between mt-4 cursor-pointer" onclick="toggleDesc('delimaputih')">
                 <h3 class="text-sm text-gray-700 font-semibold flex items-center">
                   Jamu Galian Delima Putih
                   <span id="arrowIcon-delimaputih" class="ml-2 transition-transform">▼</span>
                 </h3>
-              </div>
+              </div> -->
 
               <!-- Deskripsi yang bisa ditoggle -->
-              <div id="descBox-delimaputih" class="hidden mt-2 text-sm text-gray-600">
+              <!-- <div id="descBox-delimaputih" class="hidden mt-2 text-sm text-gray-600">
                 <ul class="list-disc list-inside space-y-2">
                   <li>Khasiat: <br>
                     Secara tradisional membantu mengurangi lendir yang berlebihan pada daerah kewanitaan.</li>
@@ -307,32 +337,32 @@
                   <li>Konsultasikan ke dokter apabila lendir tidak berkurang atau berbau atau berwarna kuning atau berdarah.</li>
                   <li>Tidak direkomendasikan untuk wanita hamil dan menyusui serta penderita gangguan ginjal.</li>
                 </ul>
-              </div>
+              </div> -->
 
               <!-- Kategori, Harga, Tombol Beli -->
-              <h3 class="mt-2 text-sm text-gray-700">'Jamu Herbal'</h3>
+              <!-- <h3 class="mt-2 text-sm text-gray-700">'Jamu Herbal'</h3>
               <p class="mt-1 text-lg font-medium text-gray-900">Rp. 2.500,00</p>
               <button class="mt-2 bg-orange-950 hover:bg-red-700 text-white font-bold py-2 px-4 border rounded"
                 onclick="location.href='https://shopee.co.id/JAMU-GALIAN-DELIMA-PUTIH-Sido-Muncul-i.217988839.43850750470';">
                 BELI
               </button>
             </div>
-      </div>
+      </div> -->
 
-      <div class="max-w-sm mx-auto product-card" data-category="jamuHerbal">
+      <!-- <div class="max-w-sm mx-auto product-card" data-category="jamuHerbal">
             <div class="group block">
               <img src="{{ asset('galian-parem.png') }}" alt="Jamu Gemuk Sehat" class="aspect-square w-full rounded-lg bg-gray-200 object-cover group-hover:opacity-75 xl:aspect-7/8">
 
               <!-- Judul + Toggle Panah -->
-              <div class="flex items-center justify-between mt-4 cursor-pointer" onclick="toggleDesc('galianparem')">
+              <!-- <div class="flex items-center justify-between mt-4 cursor-pointer" onclick="toggleDesc('galianparem')">
                 <h3 class="text-sm text-gray-700 font-semibold flex items-center">
                   Jamu Galian Parem
                   <span id="arrowIcon-galianparem" class="ml-2 transition-transform">▼</span>
                 </h3>
-              </div>
+              </div>  -->
 
               <!-- Deskripsi yang bisa ditoggle -->
-              <div id="descBox-galianparem" class="hidden mt-2 text-sm text-gray-600">
+              <!-- <div id="descBox-galianparem" class="hidden mt-2 text-sm text-gray-600">
                 <ul class="list-disc list-inside space-y-2">
                   <li>Khasiat: <br>
                     Secara tradisional membantu memelihara kesehatan ibu sehabis bersalin, melancarkan air susu ibu (ASI) dan membantu menyegarkan badan.</li>
@@ -341,32 +371,32 @@
                     1 bungkus diseduh dengan 100 cc (±½ gelas) air panas.</li>
                   <li>Per sachet @ 7 gram</li>
                 </ul>
-              </div>
+              </div> -->
 
               <!-- Kategori, Harga, Tombol Beli -->
-              <h3 class="mt-2 text-sm text-gray-700">'Jamu Herbal'</h3>
+              <!-- <h3 class="mt-2 text-sm text-gray-700">'Jamu Herbal'</h3>
               <p class="mt-1 text-lg font-medium text-gray-900">Rp. 4.500,00</p>
               <button class="mt-2 bg-orange-950 hover:bg-red-700 text-white font-bold py-2 px-4 border rounded"
                 onclick="location.href='https://shopee.co.id/JAMU-GALIAN-PAREM-Sido-Muncul-i.217988839.41650771917';">
                 BELI
               </button>
             </div>
-      </div>
+      </div> -->
 
-      <div class="max-w-sm mx-auto product-card" data-category="jamuHerbal">
+      <!-- <div class="max-w-sm mx-auto product-card" data-category="jamuHerbal">
             <div class="group block">
-              <img src="{{ asset('galian-singset.png') }}" alt="Jamu Gemuk Sehat" class="aspect-square w-full rounded-lg bg-gray-200 object-cover group-hover:opacity-75 xl:aspect-7/8">
+              <img src="{{ asset('galian-singset.png') }}" alt="Jamu Gemuk Sehat" class="aspect-square w-full rounded-lg bg-gray-200 object-cover group-hover:opacity-75 xl:aspect-7/8"> -->
 
               <!-- Judul + Toggle Panah -->
-              <div class="flex items-center justify-between mt-4 cursor-pointer" onclick="toggleDesc('galiansingset')">
+              <!-- <div class="flex items-center justify-between mt-4 cursor-pointer" onclick="toggleDesc('galiansingset')">
                 <h3 class="text-sm text-gray-700 font-semibold flex items-center">
                   Jamu Galian Singset
                   <span id="arrowIcon-galiansingset" class="ml-2 transition-transform">▼</span>
                 </h3>
-              </div>
+              </div> -->
 
               <!-- Deskripsi yang bisa ditoggle -->
-              <div id="descBox-galiansingset" class="hidden mt-2 text-sm text-gray-600">
+              <!-- <div id="descBox-galiansingset" class="hidden mt-2 text-sm text-gray-600">
                 <ul class="list-disc list-inside space-y-2">
                   <li>Khasiat: <br>
                     Secara tradisional dapat membantu mengurangi lemak tubuh.</li>
@@ -376,32 +406,32 @@
                   <li>Per sachet @ 7 gram</li>
                   <li>Tidak direkomendasikan untuk wanita hamil dan menyusui serta penderita gangguan ginjal.</li>
                 </ul>
-              </div>
+              </div> -->
 
               <!-- Kategori, Harga, Tombol Beli -->
-              <h3 class="mt-2 text-sm text-gray-700">'Jamu Herbal'</h3>
+              <!-- <h3 class="mt-2 text-sm text-gray-700">'Jamu Herbal'</h3>
               <p class="mt-1 text-lg font-medium text-gray-900">Rp. 2.000,00</p>
               <button class="mt-2 bg-orange-950 hover:bg-red-700 text-white font-bold py-2 px-4 border rounded"
                 onclick="location.href='https://shopee.co.id/JAMU-GALIAN-SINGSET-Sido-Muncul-i.217988839.40600786041';">
                 BELI
               </button>
             </div>
-      </div>
+      </div> -->
 
-      <div class="max-w-sm mx-auto product-card" data-category="jamuHerbal">
+      <!-- <div class="max-w-sm mx-auto product-card" data-category="jamuHerbal">
             <div class="group block">
-              <img src="{{ asset('jamukita.jpg') }}" alt="Jamu Gemuk Sehat" class="aspect-square w-full rounded-lg bg-gray-200 object-cover group-hover:opacity-75 xl:aspect-7/8">
+              <img src="{{ asset('jamukita.jpg') }}" alt="Jamu Gemuk Sehat" class="aspect-square w-full rounded-lg bg-gray-200 object-cover group-hover:opacity-75 xl:aspect-7/8"> -->
 
               <!-- Judul + Toggle Panah -->
-              <div class="flex items-center justify-between mt-4 cursor-pointer" onclick="toggleDesc('komplitgalianmontok')">
+              <!-- <div class="flex items-center justify-between mt-4 cursor-pointer" onclick="toggleDesc('komplitgalianmontok')">
                 <h3 class="text-sm text-gray-700 font-semibold flex items-center">
                   Jamu Komplit Galian Montok
                   <span id="arrowIcon-komplitgalianmontok" class="ml-2 transition-transform">▼</span>
                 </h3>
-              </div>
+              </div> -->
 
               <!-- Deskripsi yang bisa ditoggle -->
-              <div id="descBox-komplitgalianmontok" class="hidden mt-2 text-sm text-gray-600">
+              <!-- <div id="descBox-komplitgalianmontok" class="hidden mt-2 text-sm text-gray-600">
                 <ul class="list-disc list-inside space-y-2">
                   <li>Khasiat: <br>
                     Membantu memperbaiki nafsu makan, menyegarkan badan, dan memelihara daya tahan tubuh.</li>
@@ -418,32 +448,32 @@
                       - 1 sachet Jahe Wangi</li>
                   <li>Tidak direkomendasikan untuk wanita hamil dan menyusui serta penderita gangguan ginjal.</li>
                 </ul>
-              </div>
+              </div> -->
 
               <!-- Kategori, Harga, Tombol Beli -->
-              <h3 class="mt-2 text-sm text-gray-700">'Jamu Herbal'</h3>
+              <!-- <h3 class="mt-2 text-sm text-gray-700">'Jamu Herbal'</h3>
               <p class="mt-1 text-lg font-medium text-gray-900">Rp. 2.000,00</p>
               <button class="mt-2 bg-orange-950 hover:bg-red-700 text-white font-bold py-2 px-4 border rounded"
                 onclick="location.href='https://shopee.co.id/JAMU-KOMPLIT-GALIAN-MONTOK-Sido-Muncul-i.217988839.43150772137';">
                 BELI
               </button>
             </div>
-      </div>
+      </div> -->
 
-      <div class="max-w-sm mx-auto product-card" data-category="jamuHerbal">
+      <!-- <div class="max-w-sm mx-auto product-card" data-category="jamuHerbal">
             <div class="group block">
-              <img src="{{ asset('jamukita.jpg') }}" alt="Jamu Gemuk Sehat" class="aspect-square w-full rounded-lg bg-gray-200 object-cover group-hover:opacity-75 xl:aspect-7/8">
+              <img src="{{ asset('jamukita.jpg') }}" alt="Jamu Gemuk Sehat" class="aspect-square w-full rounded-lg bg-gray-200 object-cover group-hover:opacity-75 xl:aspect-7/8"> -->
 
               <!-- Judul + Toggle Panah -->
-              <div class="flex items-center justify-between mt-4 cursor-pointer" onclick="toggleDesc('komplitgemuksehat')">
+              <!-- <div class="flex items-center justify-between mt-4 cursor-pointer" onclick="toggleDesc('komplitgemuksehat')">
                 <h3 class="text-sm text-gray-700 font-semibold flex items-center">
                   Jamu Komplit Gemuk Sehat
                   <span id="arrowIcon-komplitgemuksehat" class="ml-2 transition-transform">▼</span>
                 </h3>
-              </div>
+              </div> -->
 
               <!-- Deskripsi yang bisa ditoggle -->
-              <div id="descBox-komplitgemuksehat" class="hidden mt-2 text-sm text-gray-600">
+              <!-- <div id="descBox-komplitgemuksehat" class="hidden mt-2 text-sm text-gray-600">
                 <ul class="list-disc list-inside space-y-2">
                   <li>Khasiat: <br>
                     Secara tradisional dapat membantu memperbaiki nafsu makan dan memelihara daya tahan tubuh.</li>
@@ -460,32 +490,32 @@
                       - 1 sachet Jahe Wangi</li>
                   <li>Tidak direkomendasikan untuk wanita hamil dan menyusui serta penderita gangguan ginjal.</li>
                 </ul>
-              </div>
+              </div> -->
 
               <!-- Kategori, Harga, Tombol Beli -->
-              <h3 class="mt-2 text-sm text-gray-700">'Jamu Herbal'</h3>
+              <!-- <h3 class="mt-2 text-sm text-gray-700">'Jamu Herbal'</h3>
               <p class="mt-1 text-lg font-medium text-gray-900">Rp. 2.500,00</p>
               <button class="mt-2 bg-orange-950 hover:bg-red-700 text-white font-bold py-2 px-4 border rounded"
                 onclick="location.href='https://shopee.co.id/JAMU-KOMPLIT-GEMUK-SEHAT-Sido-Muncul-i.217988839.40350777084';">
                 BELI
               </button>
             </div>
-      </div>
-
+      </div> -->
+<!-- 
       <div class="max-w-sm mx-auto product-card" data-category="jamuHerbal">
             <div class="group block">
-              <img src="{{ asset('jamukita.jpg') }}" alt="Jamu Gemuk Sehat" class="aspect-square w-full rounded-lg bg-gray-200 object-cover group-hover:opacity-75 xl:aspect-7/8">
+              <img src="{{ asset('jamukita.jpg') }}" alt="Jamu Gemuk Sehat" class="aspect-square w-full rounded-lg bg-gray-200 object-cover group-hover:opacity-75 xl:aspect-7/8"> -->
 
               <!-- Judul + Toggle Panah -->
-              <div class="flex items-center justify-between mt-4 cursor-pointer" onclick="toggleDesc('kukubima')">
+              <!-- <div class="flex items-center justify-between mt-4 cursor-pointer" onclick="toggleDesc('kukubima')">
                 <h3 class="text-sm text-gray-700 font-semibold flex items-center">
                   Jamu Komplit Jeruk Nipis Kuku Bima
                   <span id="arrowIcon-kukubima" class="ml-2 transition-transform">▼</span>
                 </h3>
-              </div>
+              </div> -->
 
               <!-- Deskripsi yang bisa ditoggle -->
-              <div id="descBox-kukubima" class="hidden mt-2 text-sm text-gray-600">
+              <!-- <div id="descBox-kukubima" class="hidden mt-2 text-sm text-gray-600">
                 <ul class="list-disc list-inside space-y-2">
                   <li>Khasiat: <br>
                     Membantu meredakan sakit otot pinggang, memelihara daya tahan tubuh dan kesehatan pria.</li>
@@ -502,32 +532,32 @@
                       - 1 sachet Jahe Wangi</li>
                   <li>Hati-hati pada penderita kardiovaskular atau diabetes mellitus serta gangguan ginjal.</li>
                 </ul>
-              </div>
+              </div> -->
 
               <!-- Kategori, Harga, Tombol Beli -->
-              <h3 class="mt-2 text-sm text-gray-700">'Jamu Herbal'</h3>
+              <!-- <h3 class="mt-2 text-sm text-gray-700">'Jamu Herbal'</h3>
               <p class="mt-1 text-lg font-medium text-gray-900">Rp. 3.500,00</p>
               <button class="mt-2 bg-orange-950 hover:bg-red-700 text-white font-bold py-2 px-4 border rounded"
                 onclick="location.href='https://shopee.co.id/JAMU-KOMPLIT-JERUK-NIPIS-KUKU-BIMA-Sido-Muncul-i.217988839.26936614354';">
                 BELI
               </button>
             </div>
-      </div>
+      </div> -->
 
-      <div class="max-w-sm mx-auto product-card" data-category="jamuHerbal">
+      <!-- <div class="max-w-sm mx-auto product-card" data-category="jamuHerbal">
             <div class="group block">
-              <img src="{{ asset('jamukita.jpg') }}" alt="Jamu Gemuk Sehat" class="aspect-square w-full rounded-lg bg-gray-200 object-cover group-hover:opacity-75 xl:aspect-7/8">
+              <img src="{{ asset('jamukita.jpg') }}" alt="Jamu Gemuk Sehat" class="aspect-square w-full rounded-lg bg-gray-200 object-cover group-hover:opacity-75 xl:aspect-7/8"> -->
 
               <!-- Judul + Toggle Panah -->
-              <div class="flex items-center justify-between mt-4 cursor-pointer" onclick="toggleDesc('kukubima-TL')">
+              <!-- <div class="flex items-center justify-between mt-4 cursor-pointer" onclick="toggleDesc('kukubima-TL')">
                 <h3 class="text-sm text-gray-700 font-semibold flex items-center">
                   Jamu Komplit Jeruk Nipis Kuku Bima TL
                   <span id="arrowIcon-kukubima-TL" class="ml-2 transition-transform">▼</span>
                 </h3>
-              </div>
+              </div> -->
 
               <!-- Deskripsi yang bisa ditoggle -->
-              <div id="descBox-kukubima-TL" class="hidden mt-2 text-sm text-gray-600">
+              <!-- <div id="descBox-kukubima-TL" class="hidden mt-2 text-sm text-gray-600">
                 <ul class="list-disc list-inside space-y-2">
                   <li>Khasiat: <br>
                     Membantu memelihara stamina dan membantu meredakan pegal linu dan sakit otot pinggang.</li>
@@ -544,32 +574,32 @@
                       - 1 sachet Jahe Wangi</li>
                   <li>Hati-hati pada penderita kardiovaskular, hipertensi atau diabetes mellitus serta penderita gangguan ginjal.</li>
                 </ul>
-              </div>
+              </div> -->
 
               <!-- Kategori, Harga, Tombol Beli -->
-              <h3 class="mt-2 text-sm text-gray-700">'Jamu Herbal'</h3>
+              <!-- <h3 class="mt-2 text-sm text-gray-700">'Jamu Herbal'</h3>
               <p class="mt-1 text-lg font-medium text-gray-900">Rp. 3.500,00</p>
               <button class="mt-2 bg-orange-950 hover:bg-red-700 text-white font-bold py-2 px-4 border rounded"
                 onclick="location.href='https://shopee.co.id/JAMU-KOMPLIT-JERUK-NIPIS-KUKU-BIMA-TL-Sido-Muncul-i.217988839.40301040554';">
                 BELI
               </button>
             </div>
-      </div>
+      </div> -->
 
-      <div class="max-w-sm mx-auto product-card" data-category="jamuHerbal">
+      <!-- <div class="max-w-sm mx-auto product-card" data-category="jamuHerbal">
             <div class="group block">
-              <img src="{{ asset('jamukita.jpg') }}" alt="Jamu Gemuk Sehat" class="aspect-square w-full rounded-lg bg-gray-200 object-cover group-hover:opacity-75 xl:aspect-7/8">
+              <img src="{{ asset('jamukita.jpg') }}" alt="Jamu Gemuk Sehat" class="aspect-square w-full rounded-lg bg-gray-200 object-cover group-hover:opacity-75 xl:aspect-7/8"> -->
 
               <!-- Judul + Toggle Panah -->
-              <div class="flex items-center justify-between mt-4 cursor-pointer" onclick="toggleDesc('GM-jeruknipis')">
+              <!-- <div class="flex items-center justify-between mt-4 cursor-pointer" onclick="toggleDesc('GM-jeruknipis')">
                 <h3 class="text-sm text-gray-700 font-semibold flex items-center">
                   Jamu Komplit Jeruk Nipis Galian Montok
                   <span id="arrowIcon-GM-jeruknipis" class="ml-2 transition-transform">▼</span>
                 </h3>
-              </div>
+              </div> -->
 
               <!-- Deskripsi yang bisa ditoggle -->
-              <div id="descBox-GM-jeruknipis" class="hidden mt-2 text-sm text-gray-600">
+              <!-- <div id="descBox-GM-jeruknipis" class="hidden mt-2 text-sm text-gray-600">
                 <ul class="list-disc list-inside space-y-2">
                   <li>Khasiat: <br>
                     Membantu memperbaiki nafsu makan, menyegarkan badan, dan memelihara daya tahan tubuh.</li>
@@ -586,32 +616,32 @@
                       - 1 sachet Jahe Wangi</li>
                   <li>Tidak direkomendasikan untuk wanita hamil dan menyusui serta penderita gangguan ginjal.</li>
                 </ul>
-              </div>
+              </div> -->
 
               <!-- Kategori, Harga, Tombol Beli -->
-              <h3 class="mt-2 text-sm text-gray-700">'Jamu Herbal'</h3>
+              <!-- <h3 class="mt-2 text-sm text-gray-700">'Jamu Herbal'</h3>
               <p class="mt-1 text-lg font-medium text-gray-900">Rp. 2.500,00</p>
               <button class="mt-2 bg-orange-950 hover:bg-red-700 text-white font-bold py-2 px-4 border rounded"
                 onclick="location.href='https://shopee.co.id/JAMU-KOMPLIT-JERUK-NIPIS-GALIAN-MONTOK-Sido-Muncul-i.217988839.42450782225';">
                 BELI
               </button>
             </div>
-      </div>
+      </div> -->
 
-      <div class="max-w-sm mx-auto product-card" data-category="jamuHerbal">
+      <!-- <div class="max-w-sm mx-auto product-card" data-category="jamuHerbal">
             <div class="group block">
               <img src="{{ asset('jamukita.jpg') }}" alt="Jamu Gemuk Sehat" class="aspect-square w-full rounded-lg bg-gray-200 object-cover group-hover:opacity-75 xl:aspect-7/8">
 
               <!-- Judul + Toggle Panah -->
-              <div class="flex items-center justify-between mt-4 cursor-pointer" onclick="toggleDesc('GS-jeruknipis')">
+              <!-- <div class="flex items-center justify-between mt-4 cursor-pointer" onclick="toggleDesc('GS-jeruknipis')">
                 <h3 class="text-sm text-gray-700 font-semibold flex items-center">
                   Jamu Komplit Jeruk Nipis Gemuk Sehat
                   <span id="arrowIcon-GS-jeruknipis" class="ml-2 transition-transform">▼</span>
                 </h3>
-              </div>
+              </div>  -->
 
               <!-- Deskripsi yang bisa ditoggle -->
-              <div id="descBox-GS-jeruknipis" class="hidden mt-2 text-sm text-gray-600">
+              <!-- <div id="descBox-GS-jeruknipis" class="hidden mt-2 text-sm text-gray-600">
                 <ul class="list-disc list-inside space-y-2">
                   <li>Khasiat: <br>
                     Secara tradisional dapat membantu memperbaiki nafsu makan dan memelihara daya tahan tubuh.</li>
@@ -628,18 +658,19 @@
                       - 1 sachet Jahe Wangi</li>
                   <li>Tidak direkomendasikan untuk wanita hamil dan menyusui serta penderita gangguan ginjal.</li>
                 </ul>
-              </div>
+              </div> -->
 
               <!-- Kategori, Harga, Tombol Beli -->
-              <h3 class="mt-2 text-sm text-gray-700">'Jamu Herbal'</h3>
+              <!-- <h3 class="mt-2 text-sm text-gray-700">'Jamu Herbal'</h3>
               <p class="mt-1 text-lg font-medium text-gray-900">Rp. 3.000,00</p>
               <button class="mt-2 bg-orange-950 hover:bg-red-700 text-white font-bold py-2 px-4 border rounded"
                 onclick="location.href='https://shopee.co.id/JAMU-KOMPLIT-JERUK-NIPIS-GEMUK-SEHAT-Sido-Muncul-i.217988839.43350777018';">
                 BELI
               </button>
             </div>
-      </div>
+      </div> -->
 
+      
 
 
       
