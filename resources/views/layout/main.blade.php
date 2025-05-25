@@ -9,7 +9,6 @@
 
     <link rel="stylesheet" href="resources/css/footer.css">
     <link rel="stylesheet" href="resources/css/home.css">
-    <link rel="stylesheet" href="{{ asset('css/posterslide.css') }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
     <script src="//unpkg.com/alpinejs" defer></script>
