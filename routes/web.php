@@ -25,9 +25,16 @@ Route::post('/login', [LoginController::class, 'login']);
 Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
 
 //route admin
-Route::get('/admin', [ProductController::class,'admin'])->name('admin');
+Route::get('/admin/{id?}', [ProductController::class,'admin'])->name('admin');
 
 //rpute produk
 Route::get('/products', [ProductController::class,'homepage'])->name('products.index');
 Route::post('/product', [ProductController::class,'store'])->name('products.store');
-Route::get('/products', [ProductController::class, 'index'])->name('products.index');
+// Route::get('/products', [ProductController::class, 'index'])->name('products.index');
+
+//destroy product
+Route::put('/products/{id}', [ProductController::class, 'update'])->name('products.update');
+
+Route::delete('/products/{id}', [ProductController::class, 'destroy'])->name('products.destroy');
+
+

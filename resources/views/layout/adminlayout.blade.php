@@ -15,6 +15,8 @@
 
      
     <div class="main-content">
+        @include('admin.admin')
+        @include('admin.edit')
         @yield('content')
     </div>
     
