@@ -42,7 +42,7 @@ Route::delete('/products/{id}', [ProductController::class, 'destroy'])->name('pr
 
 //cart
 Route::post('/add-to-cart/{id}', [CartController::class, 'addToCart'])->name('cart.add');
-Route::get('/cart', [CartController::class, 'showCart'])->name('cart.show');
+Route::get('/cart', [CartController::class, 'showCart'])->name('cart.view');
 Route::post('/checkout', [CartController::class, 'checkout'])->name('cart.checkout');
 Route::get('/cart/data', [CartController::class, 'cartData'])->name('cart.data');
 

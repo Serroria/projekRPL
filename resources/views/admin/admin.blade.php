@@ -65,6 +65,7 @@
 </form>
 
 <!--daftar produk-->
+<div class="containe-table">
 <table class="table-produk">
     <tr>
         <th>#</th>
@@ -110,7 +111,7 @@
     </tbody>
 </table>
 
-</table>
+</div>
 
 <!-- Tambahkan pagination di sini -->
 <div style="margin-top: 20px;">
