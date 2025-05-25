@@ -1,4 +1,3 @@
-
 <nav class="navbar">
         <div class="navbar-container">
             <!--logo-->
@@ -17,6 +16,7 @@
             </ul>
         </div>
     </nav>
+    
 <!-- <header class="sticky top-0 z-50 bg-[#902727] shadow-md"> -->
 
     <!-- <nav aria-label="Top" class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8" x-data="{ isOpen: false }">
