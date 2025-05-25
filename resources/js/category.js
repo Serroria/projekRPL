@@ -20,12 +20,18 @@ function applyFilters(searchTerm, category) {
 }
 
 // Toggle Deskripsi
-function toggleDesc(id) {
-    const desc = document.getElementById(`descBox-${id}`);
-    const arrow = document.getElementById(`arrowIcon-${id}`);
-    desc.classList.toggle("hidden");
-    arrow.textContent = desc.classList.contains("hidden") ? "▼" : "▲";
-}
+ function toggleDesc(id) {
+    const descBox = document.getElementById('descBox-' + id);
+    const arrowIcon = document.getElementById('arrowIcon-' + id);
+
+    if (descBox.classList.contains('hidden')) {
+      descBox.classList.remove('hidden');
+      arrowIcon.innerHTML = '▲';
+    } else {
+      descBox.classList.add('hidden');
+      arrowIcon.innerHTML = '▼';
+    }
+  }
 
 // Inisialisasi
 document.addEventListener('DOMContentLoaded', () => {
