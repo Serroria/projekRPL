@@ -14,6 +14,7 @@ Route::get('/company', function () {
 })->name('company');
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\CartController;
 
 // Homepage
 Route::get('/', [ProductController::class, 'homepage'])->name('homepage');
@@ -38,6 +39,12 @@ Route::get('/products', [ProductController::class, 'index'])->name('products.ind
 Route::post('/product', [ProductController::class,'store'])->name('products.store');
 Route::put('/products/{id}', [ProductController::class, 'update'])->name('products.update');
 Route::delete('/products/{id}', [ProductController::class, 'destroy'])->name('products.destroy');
+
+//cart
+Route::post('/add-to-cart/{id}', [CartController::class, 'addToCart'])->name('cart.add');
+Route::get('/cart', [CartController::class, 'showCart'])->name('cart.show');
+Route::post('/checkout', [CartController::class, 'checkout'])->name('cart.checkout');
+Route::get('/cart/data', [CartController::class, 'cartData'])->name('cart.data');
 
 // Debug
 Route::get('/admin-test', function() {

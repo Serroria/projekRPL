@@ -19,11 +19,13 @@
     @vite('resources/css/posterSlide.css')
     
     @vite('resources/css/category.css') 
+    @vite('resources/css/cart.css') 
    
     
     @vite('resources/js/category.js')
     @vite('resources/js/hamburger.js')
     @vite('resources/js/posterSlide.js')
+    @vite('resources/js/cart.js')
 
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="//unpkg.com/alpinejs" defer></script>

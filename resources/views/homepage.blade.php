@@ -62,16 +62,29 @@
   {!! nl2br(e($product->deskripsi)) !!}
 </div>
         <h3><strong>Kategori:</strong> {{ $product->category->nama }}</h3>
+        <p><strong>Stok:</strong> {{ $product->stok }}</p>
+
             <p><strong>Harga:</strong> Rp. {{ number_format($product->harga, 2, ',', '.') }}</p>
           <button class="mt-2 bg-orange-950 hover:bg-red-700 text-white font-bold py-2 px-4 border rounded" 
             onclick="location.href='https://shopee.co.id/davidnicolas4?categoryId=100001&entryPoint=ShopByPDP&itemId=43550536931';">
             BELI
           </button>
+<button onclick="showCartPopup()" class="bg-blue-700 text-white px-4 py-2 rounded">Lihat Keranjang / Checkout</button>
+
+         <button onclick="addToCart({{ $product->id }}, '{{ $product->nama }}', {{ $product->harga }})"
+  class="mt-2 bg-green-700 hover:bg-green-900 text-white font-bold py-2 px-4 rounded">
+  Add to Cart
+</button>
+
+
         </div>
         </div>
+
+    
+
           @endforeach
       
-
+ 
     <!-- <div class="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8">
       <div class="max-w-sm mx-auto product-card" data-category="minumanHerbal">
         <div class="group block">
@@ -680,15 +693,28 @@
       <!-- More products... -->
     </div>
 
-      <script>
+      {{-- <script>
         function toggleDesc(id) {
           const desc = document.getElementById(`descBox-${id}`);
           const arrow = document.getElementById(`arrowIcon-${id}`);
           desc.classList.toggle("hidden");
           arrow.textContent = desc.classList.contains("hidden") ? "▼" : "▲";
         }
-      </script>
+      </script> --}}
     </div>
+  </div>
+</div>
+
+   <!-- POP-UP MODAL -->
+<div id="checkoutModal" class="fixed inset-0 bg-gray-800 bg-opacity-50 flex justify-center items-center hidden z-50">
+  <div class="bg-white p-6 rounded-lg shadow-lg w-96">
+    <h2 class="text-xl font-semibold mb-4">Checkout</h2>
+    <div id="cartItems" class="mb-4"></div>
+    <p class="font-semibold">Subtotal: <span id="cartSubtotal">Rp0</span></p>
+    <p class="font-semibold">Ongkir: Rp4.999</p>
+    <hr class="my-2">
+    <p class="font-bold text-lg">Total: <span id="totalHarga"></span></p>
+    <button class="mt-4 bg-blue-600 hover:bg-blue-800 text-white py-2 px-4 rounded" onclick="toggleCheckout()">Tutup</button>
   </div>
 </div>
 
