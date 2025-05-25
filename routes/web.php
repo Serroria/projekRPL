@@ -12,29 +12,34 @@ Route::get('/login', function () {
 Route::get('/company', function () {
     return view('company');
 })->name('company');
-
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\ProductController;
 
-
+// Homepage
 Route::get('/', [ProductController::class, 'homepage'])->name('homepage');
 
-
+// Login
 Route::get('/login', [LoginController::class, 'showLoginForm'])->name('login');
 Route::post('/login', [LoginController::class, 'login']);
 Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
 
-//route admin
-Route::get('/admin/{id?}', [ProductController::class,'admin'])->name('admin');
+// Company
+Route::get('/company', function () {
+    return view('company');
+})->name('company');
 
-//rpute produk
-Route::get('/products', [ProductController::class,'homepage'])->name('products.index');
+// Admin Page
+Route::get('/admin/{id?}', [ProductController::class,'admin'])
+    ->where('id', '[0-9]+')
+    ->name('admin');
+
+// Product routes
+Route::get('/products', [ProductController::class, 'index'])->name('products.index');
 Route::post('/product', [ProductController::class,'store'])->name('products.store');
-// Route::get('/products', [ProductController::class, 'index'])->name('products.index');
-
-//destroy product
 Route::put('/products/{id}', [ProductController::class, 'update'])->name('products.update');
-
 Route::delete('/products/{id}', [ProductController::class, 'destroy'])->name('products.destroy');
 
-
+// Debug
+Route::get('/admin-test', function() {
+    return "Admin route working!";
+});

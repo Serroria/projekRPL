@@ -100,3 +100,11 @@
         @endforelse
     </tbody>
 </table>
+
+</table>
+
+<!-- Tambahkan pagination di sini -->
+<div style="margin-top: 20px;">
+    {{ $products->links() }}
+</div>
+
