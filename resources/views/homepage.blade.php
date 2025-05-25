@@ -66,17 +66,17 @@
         <p><strong>Stok:</strong> {{ $product->stok }}</p>
 
             <p><strong>Harga:</strong> Rp. {{ number_format($product->harga, 2, ',', '.') }}</p>
-          <button class="mt-2 bg-orange-950 hover:bg-red-700 text-white font-bold py-2 px-4 border rounded" 
+          {{-- <button class="mt-2 bg-orange-950 hover:bg-red-700 text-white font-bold py-2 px-4 border rounded" 
             onclick="location.href='https://shopee.co.id/davidnicolas4?categoryId=100001&entryPoint=ShopByPDP&itemId=43550536931';">
             BELI
-          </button>
-          <button onclick="toggleCheckout()"class="bg-blue-700 text-white px-4 py-2 rounded">Lihat Keranjang / Checkout</button>
+          </button> --}}
+          <button onclick="toggleCheckout()"class="bg-orange-950 text-white px-4 py-2 rounded">Lihat Keranjang / Checkout</button>
 
           <button 
             data-product-id="{{ $product->id }}"
             data-product-name="{{ $product->nama }}"
             data-price="{{ $product->harga }}"
-            class="add-to-cart mt-2 bg-green-700 hover:bg-green-900 text-white font-bold py-2 px-4 rounded">
+            class="add-to-cart mt-2 bg-orange-700 hover:bg-green-900 text-white font-bold py-2 px-4 rounded">
             Add to Cart
          </button>
 

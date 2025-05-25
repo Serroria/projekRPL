@@ -1,6 +1,6 @@
   <div class="img-slider" style="height: 300px;">
         <div class="slide slider-active">
-            <img src="{{ asset('tehJahe.jpg') }}" alt="Poster 1" class="active" style="height: 300px;">
+            <img src="{{ asset('tesiklan.jpg') }}" alt="Poster 1" class="active" style="height: 300px;">
             <div class="info">
                 <h2>JamuKita</h2>
                 <h3 class='text-white'><b>Kesehatan Alami, Pilihan Tradisi</b></h3>
@@ -8,7 +8,7 @@
             </div>
         </div>
         <div class="slide">
-           <img src="{{ asset('herbal.jpg') }}" alt="Poster 1">
+           <img src="{{ asset('tesiklan.jpg') }}" alt="Poster 1">
             <div class="info">
                 <h2 class='text-white'>Fokus pada Khasiat</h2>
                 <h3 class='text-white'><b>Jaga Daya Tahan Tubuh dengan Jamukita</b></h3>
@@ -16,7 +16,7 @@
             </div>
         </div>
         <div class="slide">
-            <img src="{{ asset('jahe.jpg') }}" alt="">
+            <img src="{{ asset('tesiklan.jpg') }}" alt="">
             <div class="info">
                 <h2 class='text-white'>Gaya Hidup Sehat</h2>
                 <h3 class='text-white'><b>Nikmati Hidup Sehat Setiap Hari</b></h3>
@@ -24,7 +24,7 @@
             </div>
         </div>
         <div class="slide">
-            <img src="{{ asset('jamuPic.jpeg') }}" alt="">
+            <img src="{{ asset('tesiklan.jpg') }}" alt="">
             <div class="info">
                 <h2 class='text-white'>Sehat Alami, Pilih JamuKita</h2>
                 <h3 class='text-white'><b>Segarkan Tubuh, Dukung Imunitas - Mulai Belanja Sekarang!</b></h3>
