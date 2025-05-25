@@ -29,6 +29,8 @@ body {
     overflow: hidden;
     margin-top: 0;
     padding-top: 0;
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
 }
 
 .img-slider .slide {
@@ -102,16 +104,21 @@ body {
     .img-slider{
         width: 100vw;
         height: 50px;
-        margin: 0 auto;
+        margin: 0px;
         /* margin: 10px auto; */
     }
 
     .navbar {
         width: 100%;
+        margin-bottom: 0 !important;
+        padding-bottom: 0 !important;
+        border-bottom: none !important;
+        box-shadow: none !important;
     }
 
     .navbar-container {
         padding: 0 0px;
+        margin-bottom: 0;
     }
 }
 
