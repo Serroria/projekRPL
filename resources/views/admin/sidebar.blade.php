@@ -1,6 +1,6 @@
  <div class="sidebar">
         <div class="logo-details">
-            <div class="logo_name">constGenius</div>
+            <div class="logo_name">JamuKita Admin</div>
             <i class='bx bx-menu' id="btn"></i>
         </div>
         <ul class="nav-list">
@@ -48,9 +48,9 @@
             </li>
             <li class="profile">
                 <div class="profile-details">
-                    <img src="./images/profile.png" alt="profileImg">
+                    <img src="iconLogo.png" alt="profileImg">
                     <div class="name_job">
-                        <div class="name">const Genius</div>
+                        <div class="name">JamuKita</div>
                         <div class="job">Web Developer</div>
                     </div>
                 </div>

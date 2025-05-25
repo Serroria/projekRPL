@@ -11,7 +11,7 @@
     top: 0;
     height: 100%;
     width: 78px;
-    background: #11101D;
+    background: #902727;
     padding: 6px 14px;
     z-index: 1;
     transition: all 0.5s ease;
@@ -130,7 +130,7 @@
     align-items: center;
     text-decoration: none;
     transition: all 0.4s ease;
-    background: #11101D;
+    background: #902727;
 }
 
 .sidebar li a:hover {
@@ -155,7 +155,7 @@
 .sidebar li a:hover .links_name,
 .sidebar li a:hover i {
     transition: all 0.5s ease;
-    color: #11101D;
+    color: #902727;
 }
 
 .sidebar li .tooltip {
@@ -193,7 +193,7 @@
     left: 0;
     bottom: -8px;
     padding: 10px 14px;
-    background: #1d1b31;
+    background: #902727;
     transition: all 0.5s ease;
     overflow: hidden;
 }
@@ -233,7 +233,7 @@
     top: 50%;
     right: 0;
     transform: translateY(-50%);
-    background: #1d1b31;
+    background: #902727;
     width: 100%;
     height: 60px;
     line-height: 60px;
@@ -262,7 +262,7 @@
 
 .home-section .text {
     display: inline-block;
-    color: #11101D;
+    color: #902727;
     font-size: 25px;
     font-weight: 500;
     margin: 18px;
