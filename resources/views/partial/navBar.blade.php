@@ -13,9 +13,14 @@
                 <li><a href="#">Tentang Kami</a></li>
                 <li><a href="#">Cara Order</a></li>
                 <li><a href="#">Kontak Kami</a></li>
+                <li><a href="{{ route('cart.view') }}" class="text-sm text-gray-800 hover:underline">🛒 Keranjang</a>
+</li>
             </ul>
         </div>
     </nav>
+    <pre>
+  
+</pre>
     
 <!-- <header class="sticky top-0 z-50 bg-[#902727] shadow-md"> -->
 

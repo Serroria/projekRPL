@@ -32,6 +32,7 @@ function applyFilters(searchTerm, category) {
       arrowIcon.innerHTML = '▼';
     }
   }
+  
 
 // Inisialisasi
 document.addEventListener('DOMContentLoaded', () => {
