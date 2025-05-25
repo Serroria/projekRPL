@@ -1,6 +1,6 @@
-  <div class="img-slider">
+  <div class="img-slider" style="height: 300px;">
         <div class="slide slider-active">
-            <img src="{{ asset('tehJahe.jpg') }}" alt="Poster 1" class="active">
+            <img src="{{ asset('tehJahe.jpg') }}" alt="Poster 1" class="active" style="height: 300px;">
             <div class="info">
                 <h2>JamuKita</h2>
                 <h3 class='text-white'><b>Kesehatan Alami, Pilihan Tradisi</b></h3>
