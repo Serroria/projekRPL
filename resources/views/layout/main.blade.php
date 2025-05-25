@@ -345,8 +345,8 @@
     <!-- Logo -->
     <img src="{{ asset('iconLogo.png') }}" alt="Logo JamuKita" class="w-12 h-12 mb-4" />
 
-    <!-- Isi footer -->
-    <div class="w-full max-w-5xl grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left mt-6">
+    <!-- Grid Footer -->
+    <div class="w-full max-w-5xl grid grid-cols-1 md:grid-cols-3 gap-8 text-center items-center mt-6">
       <!-- Tentang Kami -->
       <div>
         <h3 class="text-lg font-semibold mb-2">Tentang Kami</h3>
@@ -367,11 +367,10 @@
       <!-- Sosial Media -->
       <div>
         <h3 class="text-lg font-semibold mb-2">Ikuti Kami</h3>
-        <div class="flex justify-center md:justify-start space-x-4 text-2xl">
-        <a href="#" class="hover:text-yellow-300"><i class="fab fa-instagram"></i></a>
-        <a href="#" class="hover:text-yellow-300"><i class="fab fa-facebook"></i></a>
-        <a href="#" class="hover:text-yellow-300"><i class="fab fa-tiktok"></i></a>
-        <a href="#" class="hover:text-yellow-300"><i class="fab fa-x-twitter"></i></a>
+        <div class="flex justify-center space-x-4 text-2xl">
+          <a href="https://www.instagram.com/jamu_kita_umkm/profilecard/?igsh=MThxZWNjaWhsaGttbA==" class="hover:text-yellow-300"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="hover:text-yellow-300"><i class="fab fa-facebook"></i></a>
+          <a href="#" class="hover:text-yellow-300"><i class="fab fa-tiktok"></i></a>
         </div>
       </div>
     </div>
@@ -381,8 +380,9 @@
       &copy; 2025 Website Anda. Semua Hak Dilindungi.
     </div>
   </div>
-
 </footer>
+
+
     
 </body>
 </html>
