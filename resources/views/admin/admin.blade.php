@@ -55,23 +55,23 @@
         <input type="number" name="harga" step="0.01" value="{{ old('harga') }}" required>
     </div>
 
-    <div>
-    <label>Stok:</label><br>
+    {{-- <div> --}}
+    {{-- <label>Stok:</label><br>
     <input type="number" name="stok" value="{{ old('stok', $editProduct->stok ?? 0) }}" required>
-</div>
+</div> --}}
 
 
     <button type="submit">Tambah Produk</button>
 </form>
 
 <!--daftar produk-->
-<div class="containe-table">
+<div class="container-table">
 <table class="table-produk">
     <tr>
         <th>#</th>
         <th>Gambar</th>
         <th>Nama</th>
-        <th>Stok</th>
+        {{-- <th>Stok</th> --}}
         <th>Deskripsi</th>
         <th>Kategori</th>
         <th>Harga</th>
@@ -81,25 +81,25 @@
         @forelse($products as $product)
 
         <tr>
-            <td>{{ $loop->iteration }}</td>
-            <td>
-    <img src="{{ asset('storage/' . $product->gambar) }}" alt="{{ $product->nama }}" width="60">
-</td>
-            <td>{{ $product->nama}}</td>
-            <td>{{ $product->stok }}</td>
+            <td data-th="No">{{ $loop->iteration }}</td>
+            <td data-th="Gambar">
+                <img src="{{ asset('storage/' . $product->gambar) }}" alt="{{ $product->nama }}" width="60">
+            </td>
+            <td data-th="Nama">{{ $product->nama}}</td>
+            {{-- <td data-th="Stok">{{ $product->stok }}</td> --}}
 
-            <td>{{ Str::limit($product->deskripsi, 50)}}</td>
-            <td>{{$product->category->nama??'-' }}</td>
-            <td>Rp{{ number_format($product->harga, 0, ',', '.') }}</td>
+            <td data-th="Desc">{{ Str::limit($product->deskripsi, 50)}}</td>
+            <td data-th="Kategori">{{$product->category->nama??'-' }}</td>
+            <td data-th="Harga">Rp{{ number_format($product->harga, 0, ',', '.') }}</td>
 
-  <td>
-   <a href="{{ route('admin', $product->id) }}" class="btn btn-sm btn-warning">Edit</a>
-   <form action="{{ route('products.destroy', $product->id) }}" method="POST" style="display: inline;" onsubmit="return confirm('Yakin ingin menghapus?');">
-       @csrf
-       @method('DELETE')
-       <button type="submit" class="btn btn-sm btn-danger">Hapus</button>
-   </form>
-</td>
+            <td data-th="Aksi" >
+                <a href="{{ route('admin', $product->id) }}" class="btn btn-sm btn-warning">Edit</a>
+                <form action="{{ route('products.destroy', $product->id) }}" method="POST" style="display: inline;" onsubmit="return confirm('Yakin ingin menghapus?');">
+                @csrf
+                @method('DELETE')
+                <button type="submit" class="btn btn-sm btn-danger">Hapus</button>
+            </form>
+            </td>
 
 
         </tr>
