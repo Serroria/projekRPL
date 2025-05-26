@@ -299,6 +299,41 @@
     padding: 4px;
     
 }
+.form-label, input{
+    display: block;
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    color: #902727;
+}
+
+textarea{
+     display: block;
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+form{
+    width: 1000px;
+    border: 1px solid #6d1e1e;
+    margin: 40px auto;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.form-label{
+    margin-left: -8px;
+    margin-top: 10px;
+}
+
+.btn-form {
+    width: 29%;
+    margin-top: 10px;
+    background-color: #6d1e1e;
+    color: #fff;
+
+}
 
 .table-produk{
     margin: 1em 0;
@@ -356,7 +391,7 @@ button {
 }
 
 button:hover {
-  background: rgba(170, 170, 170, 0.062);
+  background: rgba(89, 22, 22, 0.062);
   transition: 0.5s;
 }
 
@@ -364,6 +399,21 @@ button svg {
   color: #fff;
 }
 
+select.form-control {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background-color: #fff;
+    font-size: 14px;
+    transition: border-color 0.3s;
+}
+
+select.form-control:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 4px rgba(0, 123, 255, 0.5);
+}
 
 
 /* Desktop mode */

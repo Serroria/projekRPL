@@ -23,23 +23,23 @@
         @method('PUT')
     @endif
     <div>
-        <label>Nama Produk:</label><br>
+        <label class="form-label">Nama Produk:</label><br>
         <input type="text" name="nama" value="{{ old('nama', $editProduct->nama ?? '') }}" required>
     </div>
 
     <div>
-        <label>Gambar Produk:</label><br>
+        <label class="form-label">Gambar Produk:</label><br>
        <input type="file" name="gambar" {{ $editProduct ? '' : 'required' }}>
 
     </div>
 
     <div>
-        <label>Deskripsi Produk:</label><br>
+        <label class="form-label">Deskripsi Produk:</label><br>
         <textarea name="deskripsi">{{ old('deskripsi', $editProduct->deskripsi ?? '') }}</textarea>
     </div>
 
     <div>
-        <label>Kategori Produk:</label><br>
+        <label class="form-label">Kategori Produk:</label><br>
         <select name="category_id" class="form-control" required>
             <option value="">-- Pilih Kategori --</option>
             @foreach ($categories as $category)
@@ -51,7 +51,7 @@
     </div>
 
     <div>
-        <label>Harga:</label><br>
+        <label class="form-label">Harga:</label><br>
         <input type="number" name="harga" step="0.01" value="{{ old('harga') }}" required>
     </div>
 
@@ -61,7 +61,7 @@
 </div> --}}
 
 
-    <button type="submit">Tambah Produk</button>
+    <button class="btn-form" type="submit">Tambah Produk</button>
 </form>
 
 <!--daftar produk-->
