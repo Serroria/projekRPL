@@ -388,7 +388,7 @@ button svg {
         background-color: #902727;
     }
 
-    .table-produk td::before {
+    /* .table-produk td::before {
         display: none;
-    }
+    } */
 }

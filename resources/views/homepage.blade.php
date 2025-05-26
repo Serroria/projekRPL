@@ -59,9 +59,9 @@
 
 
 <!-- Deskripsi -->
-        <div id="descBox-{{ $product->id }}" class="hidden mt-2 text-sm text-gray-600">
+      <div id="descBox-{{ $product->id }}" class="hidden mt-2 text-sm text-gray-600">
           {!! nl2br(e($product->deskripsi)) !!}
-        </div>
+      </div>
         <h3><strong>Kategori:</strong> {{ $product->category->nama }}</h3>
         <p><strong>Stok:</strong> {{ $product->stok }}</p>
 
@@ -79,8 +79,6 @@
             class="add-to-cart mt-2 bg-orange-700 hover:bg-green-900 text-white font-bold py-2 px-4 rounded">
             Add to Cart
          </button>
-
-
         </div>
     </div>
 
@@ -90,16 +88,9 @@
       <!-- More products... -->
   </div>
 </div>
-      {{-- <script>
-        function toggleDesc(id) {
-          const desc = document.getElementById(`descBox-${id}`);
-          const arrow = document.getElementById(`arrowIcon-${id}`);
-          desc.classList.toggle("hidden");
-          arrow.textContent = desc.classList.contains("hidden") ? "▼" : "▲";
-        }
-      </script> --}}
-      
-   <!-- POP-UP MODAL -->
+
+</div>
+<!-- POP-UP MODAL -->
     <div id="checkoutModal" class="fixed inset-0 bg-gray-800 bg-opacity-50 flex justify-center items-center hidden z-50">
       <div class="bg-white p-6 rounded-lg shadow-lg w-96">
         <h2 class="text-xl font-semibold mb-4">Checkout</h2>
@@ -111,10 +102,26 @@
             <button class="mt-4 bg-blue-600 hover:bg-blue-800 text-white py-2 px-4 rounded"         onclick="toggleCheckout()">        Tutup
               </button>
         </div>
-        </div>
-     
+      </div>
+    
   </div>
 
 </div>
 
 @endsection
+
+<script>
+  
+window.toggleDesc = function(id) {
+  const descBox = document.getElementById('descBox-' + id);
+    const arrowIcon = document.getElementById('arrowIcon-' + id);
+
+    if (descBox.classList.contains('hidden')) {
+      descBox.classList.remove('hidden');
+      arrowIcon.innerHTML = '▲';
+    } else {
+      descBox.classList.add('hidden');
+      arrowIcon.innerHTML = '▼';
+    }
+}
+  </script>
