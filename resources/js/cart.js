@@ -10,20 +10,26 @@
   renderCart();
 };
 
-window.renderCart = function() { // <-- Change here
- 
+window.renderCart = function() {
   let content = '';
   let subtotal = 0;
   cart.forEach((item) => {
     subtotal += item.qty * item.price;
     content += `
-      <div class="flex justify-between">
+      <div class="flex justify-between mb-2">
         <span>${item.name} x ${item.qty}</span>
         <span>Rp${(item.qty * item.price).toLocaleString()}</span>
-      </div>`;
+      </div>
+    `;
   });
 
-};
+  const ongkir = 4999;
+  const total = subtotal + ongkir;
+  
+  document.getElementById('cartItems').innerHTML = content;
+  document.getElementById('cartSubtotal').innerText = 'Rp' + subtotal.toLocaleString();
+  document.getElementById('totalHarga').innerText = 'Rp' + total.toLocaleString();
+}
 
 window.toggleCheckout = function() { // <-- Change here
   document.getElementById('checkoutModal').classList.toggle('hidden');
@@ -53,14 +59,31 @@ window.toggleCheckout = function() { // <-- Change here
 //     document.getElementById('checkoutModal').classList.add('hidden');
 //   }
 
+
+window.checkout = function() {
+  if(cart.length === 0) return;
+  
+  // Notifikasi checkout berhasil
+  showNotification('Checkout berhasil! Struk akan dicetak...');
+  
+  // Kosongkan keranjang
+  cart = [];
+  renderCart();
+  
+  // Tutup modal
+  toggleCheckout();
+}
+
 // In cart.js
-document.addEventListener('DOMContentLoaded', () => {
-  document.querySelectorAll('.add-to-cart').forEach(button => {
-    button.addEventListener('click', () => {
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('.buy-btn').forEach(button => {
+    button.addEventListener('click', function() {
       const productId = button.dataset.productId;
       const productName = button.dataset.productName;
       const price = parseFloat(button.dataset.price);
       addToCart(productId, productName, price);
+      showNotification(`${productName} berhasil ditambahkan ke keranjang!`);
+      renderCart();
     });
   });
 });
@@ -83,11 +106,6 @@ function showNotification(message) {
     setTimeout(() => notif.remove(), 500);
   }, 2000);
 
-  window.checkout = function() {
-  if(cart.length === 0) return;
-  
-  // Notifikasi checkout berhasil
-  showNotification('Checkout berhasil! Struk akan dicetak...');
   
   // Generate struk
   const strukContent = `
@@ -126,4 +144,5 @@ function showNotification(message) {
   toggleCheckout();
   renderCart();
 };
-}
+
+

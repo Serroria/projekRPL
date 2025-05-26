@@ -70,15 +70,16 @@
             onclick="location.href='https://shopee.co.id/davidnicolas4?categoryId=100001&entryPoint=ShopByPDP&itemId=43550536931';">
             BELI
           </button> --}}
-          <button onclick="toggleCheckout()"class="bg-orange-950 text-white px-4 py-2 rounded">Lihat Keranjang / Checkout</button>
+          <button onclick="toggleCheckout()"class="buy-btn">Checkout</button>
 
-          <button 
-            data-product-id="{{ $product->id }}"
-            data-product-name="{{ $product->nama }}"
-            data-price="{{ $product->harga }}"
-            class="add-to-cart mt-2 bg-orange-700 hover:bg-green-900 text-white font-bold py-2 px-4 rounded">
-            Add to Cart
-         </button>
+         <button 
+  class="buy-btn"
+  data-product-id="{{ $product->id }}"
+  data-product-name="{{ $product->nama }}"
+  data-price="{{ $product->harga }}"
+>
+  <i class="fa-solid fa-cart-shopping"></i>
+</button>
         </div>
     </div>
 
@@ -103,6 +104,8 @@
               </button>
         </div>
       </div>
+
+      
     
   </div>
 
