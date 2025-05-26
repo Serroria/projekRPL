@@ -314,14 +314,16 @@ textarea{
     box-sizing: border-box;
 }
 
-form{
-    width: 1000px;
+.form-produk {
+    width: 100%;
+    max-width: 1000px;
     border: 1px solid #6d1e1e;
     margin: 40px auto;
     padding: 20px;
     border-radius: 10px;
+    background-color: #fff;
+    box-sizing: border-box;
 }
-
 .form-label{
     margin-left: -8px;
     margin-top: 10px;
@@ -345,12 +347,20 @@ form{
 }
 
 .table-produk tr{
-    border-top: 1px solid #ddd;
-    border-bottom: 1px solid #ddd;
-    border-color: 1px solid #ddd;
+     display: block;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
 
 }
-
+.table-produk td {
+    display: block;
+    text-align: left;
+    padding: 10px;
+    position: relative;
+    border-bottom: 1px solid #a33b3b;
+    background-color: #902727;
+}
 .table-produk th, .table-produk td{
     text-align: left;
     margin: .5em 1em;
@@ -371,13 +381,17 @@ form{
 }
 
 .table-produk td::before {
-    background-color: transparent;
-    content: attr(data-th) ": ";
+     content: attr(data-th) ": ";
     font-weight: bold;
     display: inline-block;
-    width: 6.5em;
+    width: 40%;
     color: #fff;
 }
+
+.table-produk th {
+    display: none; /* hide table headers */
+}
+
 .table-produk tr:nth-child(even) td {
     background-color: #a33b3b;
 }
@@ -425,20 +439,31 @@ select.form-control:focus {
 
     .table-produk tr {
         display: table-row;
+         border: none;
     }
 
     .table-produk th,
     .table-produk td {
         display: table-cell;
         padding: 1em;
+         border-bottom: 1px solid #ddd;
     }
 
     .table-produk th {
-        display: table-cell;
-        background-color: #902727;
+         background-color: #902727;
+        color: #fff;
     }
 
     .table-produk td::before {
         display: none;
+    }
+
+     .form-produk {
+        padding: 15px;
+        margin: 20px 10px;
+    }
+
+    .btn-form {
+        width: 100%;
     }
 }

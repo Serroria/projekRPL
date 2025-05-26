@@ -17,7 +17,7 @@
 
 <!--form-->
 
-<form action="{{ route($editProduct ? 'products.update' : 'products.store', $editProduct ? $editProduct->id : '') }}" method="POST" enctype="multipart/form-data">
+<form class="form-produk" action="{{ route($editProduct ? 'products.update' : 'products.store', $editProduct ? $editProduct->id : '') }}" method="POST" enctype="multipart/form-data">
     @csrf
      @if ($editProduct)
         @method('PUT')
