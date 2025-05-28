@@ -42,7 +42,14 @@
   <!---navigation bar--->
   
   @include('partial.navBar')
-  
+  <div class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="/js/navBarContent.js"></script>
 </div>
 
 <!-- Poster Slider -->
