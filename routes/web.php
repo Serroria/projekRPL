@@ -46,6 +46,10 @@ Route::get('/cart', [CartController::class, 'showCart'])->name('cart.view');
 Route::post('/checkout', [CartController::class, 'checkout'])->name('cart.checkout');
 Route::get('/cart/data', [CartController::class, 'cartData'])->name('cart.data');
 
+//navbar content
+Route::get('/js/navBarContent.js', function () {
+    return response()->file(resource_path('js/navBarContent.js'));});
+
 // Debug
 Route::get('/admin-test', function() {
     return "Admin route working!";
