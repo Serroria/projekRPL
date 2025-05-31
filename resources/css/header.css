@@ -155,10 +155,18 @@ body {
         0 0 0 1px rgba(242, 225, 199, 0.1),
         inset 0 1px 0 rgba(242, 225, 199, 0.1);
         border: 1px solid rgba(242, 225, 199, 0.2); 
+    scrollbar-width: none; /* Untuk Firefox */
+  -ms-overflow-style: none; /* Untuk IE dan Edge */
     /* border: 2px solid rgba(242, 225, 199, 0.2); */
 }
+.modal-content::-webkit-scrollbar {
+  display: none; /* Untuk Chrome, Safari, dan Opera */
+}
 
-
+/* Tambahkan padding untuk kontak info */
+.contact-info {
+  padding: 1.5rem;
+}
 /* More compact header */
 .modal-header {
     padding: 1.5rem 1.5rem 0.5rem;
