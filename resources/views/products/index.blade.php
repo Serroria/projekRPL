@@ -42,11 +42,6 @@
   <div class="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
     <h2 class="sr-only">Products</h2>
 
-    @if(session('success'))
-    <div class="alert alert-success">
-        {{ session('success') }}
-    </div>
-@endif
     <div class="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8">
       @foreach ($products as $product )
       
@@ -75,21 +70,17 @@
             onclick="location.href='https://shopee.co.id/davidnicolas4?categoryId=100001&entryPoint=ShopByPDP&itemId=43550536931';">
             BELI
           </button> --}}
-          {{-- <button onclick="toggleCheckout()"class="buy-btn">Checkout</button>--}}
-  <form action="{{ route('cart.add') }}" method="POST"> 
+          {{-- <button onclick="toggleCheckout()"class="buy-btn">Checkout</button>
+  <form action="{{ route('cart.add') }}" method="POST"> --}}
                     @csrf
                     <input type="hidden" name="product_id" value="{{ $product->id }}">
                     <div class="input-group mb-3">
                         <input type="number" name="quantity" value="1" min="1" class="form-control">
                          <button class="buy-btn" type="submit">
-  <i class="fa-solid fa-cart-shopping"> CheckOut NOW</i>
+  <i class="fa-solid fa-cart-shopping"> CheckOut</i>
 </button>
-
                     </div>
                 </form>
-                <button class="buy-btn add-to-cart-btn" data-product-id="{{ $product->id }}">
-  <i class="fa-solid fa-cart-shopping"></i>
-</button>
          
          {{-- <button 
   class="buy-btn"
@@ -106,11 +97,6 @@
 
           @endforeach
       <!-- More products... -->
-
-      <!-- Notifikasi Toast -->
-<div class="toast-notification">
-    <span class="toast-message"></span>
-</div>
   </div>
 </div>
 
@@ -154,69 +140,28 @@ window.toggleDesc = function(id) {
   </script>
 
   <script>
- document.addEventListener('DOMContentLoaded', function() {
-    // Tangani klik tombol add to cart
-    document.querySelectorAll('.add-to-cart-btn').forEach(button => {
-        button.addEventListener('click', function() {
-            const productId = this.dataset.productId;
-            
-            // Kirim request AJAX
-            fetch('/cart/add', {
-                method: 'POST',
-                headers: {
-                    'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').content,
-                    'Content-Type': 'application/json',
-                    'Accept': 'application/json'
-                },
-                body: JSON.stringify({
-                    product_id: productId,
-                    quantity: 1
-                })
-            })
-            .then(response => response.json())
-            .then(data => {
-                if (data.success) {
-                    // Tampilkan notifikasi
-                    showToast('Produk berhasil ditambahkan ke keranjang!');
-                    
-                    // Update counter keranjang jika ada
-                    updateCartCounter();
-                }
-            })
-            .catch(error => {
-                showToast('Gagal menambahkan produk', 'error');
-            });
-        });
+  document.querySelectorAll('.buy-btn').forEach(button => {
+    button.addEventListener('click', function () {
+      const productId = this.dataset.productId;
+      const qty = 1; // default quantity
+
+      fetch(`/add-to-cart/${productId}`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'X-CSRF-TOKEN': '{{ csrf_token() }}' // Laravel needs this
+        },
+        body: JSON.stringify({ qty: qty })
+      })
+      .then(response => response.json())
+      .then(data => {
+        alert(data.success || 'Produk berhasil dimasukkan ke keranjang!');
+        // Tambahkan update cart icon atau badge di sini kalau mau
+      })
+      .catch(error => {
+        alert('Gagal menambahkan ke keranjang.');
+        console.error(error);
+      });
     });
-    
-    // Fungsi untuk menampilkan notifikasi toast
-    function showToast(message, type = 'success') {
-        const toast = document.querySelector('.toast-notification');
-        toast.querySelector('.toast-message').textContent = message;
-        
-        // Set warna berdasarkan type
-        toast.style.backgroundColor = type === 'success' ? '#4CAF50' : '#f44336';
-        
-        // Tampilkan toast
-        toast.classList.add('show');
-        
-        // Sembunyikan setelah 3 detik
-        setTimeout(() => {
-            toast.classList.remove('show');
-        }, 3000);
-    }
-    
-    // Fungsi untuk update counter keranjang
-    function updateCartCounter() {
-        fetch('/cart/count')
-            .then(response => response.json())
-            .then(data => {
-                const counter = document.querySelector('.cart-count');
-                if (counter) {
-                    counter.textContent = data.count;
-                    counter.style.display = data.count > 0 ? 'inline-block' : 'none';
-                }
-            });
-    }
-});
+  });
 </script>

@@ -145,4 +145,27 @@ function showNotification(message) {
   renderCart();
 };
 
+document.querySelectorAll('.buy-btn').forEach(button => {
+    button.addEventListener('click', function () {
+      const productId = this.dataset.productId;
+      const qty = 1;
 
+      fetch(`/add-to-cart/${productId}`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'X-CSRF-TOKEN': '{{ csrf_token() }}'
+        },
+        body: JSON.stringify({ qty })
+      })
+      .then(response => response.json())
+      .then(data => {
+        alert(data.success || 'Berhasil ditambahkan ke keranjang!');
+        // Bisa juga update jumlah di navbar/cart icon di sini
+      })
+      .catch(error => {
+        console.error(error);
+        alert('Gagal menambahkan ke keranjang.');
+      });
+    });
+  });

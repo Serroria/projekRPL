@@ -1,4 +1,5 @@
-<nav class="navbar">
+<header>
+  <nav class="navbar">
         <div class="navbar-container">
             <!--logo-->
             <a href="#" class="navbar-logo">
@@ -8,15 +9,30 @@
                 <span class="bar"></span>
                 <span class="bar"></span>
             </button>
+
+          
+          
             <ul class="navbar-menu">
                 <li><a href="#" >Beranda</a></li>
                 <li><a href="#" class="menu-item">Tentang Kami</a></li>
                 <li><a href="#" class="menu-item">Cara Order</a></li>
                 <li><a href="#" class="menu-item">Kontak Kami</a></li>
-                <li><a href="{{ route('cart.view') }}" class="text-sm text-gray-800 hover:underline">🛒 Keranjang</a></li>
+                <li><button class="cart-toggle">
+    <i class="fas fa-shopping-cart"></i>
+    <span class="cart-count" style="display: none">0</span>
+</button></li>
+                <li ><a href="{{ route('cart.index') }}" class="btn btn-success">Lihat Keranjang</a></li>
             </ul>
-        </div>
+             <!--cart -->
+            
+
+    
+
 </nav>
+</header>
+
+
+
 
 
     

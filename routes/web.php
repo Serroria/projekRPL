@@ -17,7 +17,7 @@ use App\Http\Controllers\ProductController;
 use App\Http\Controllers\CartController;
 
 // Homepage
-Route::get('/', [ProductController::class, 'homepage'])->name('homepage');
+Route::get('/home', [ProductController::class, 'homepage'])->name('homepage');
 
 // Login
 Route::get('/login', [LoginController::class, 'showLoginForm'])->name('login');
@@ -41,10 +41,20 @@ Route::put('/products/{id}', [ProductController::class, 'update'])->name('produc
 Route::delete('/products/{id}', [ProductController::class, 'destroy'])->name('products.destroy');
 
 //cart
-Route::post('/add-to-cart/{id}', [CartController::class, 'addToCart'])->name('cart.add');
-Route::get('/cart', [CartController::class, 'showCart'])->name('cart.view');
-Route::post('/checkout', [CartController::class, 'checkout'])->name('cart.checkout');
-Route::get('/cart/data', [CartController::class, 'cartData'])->name('cart.data');
+Route::post('/cart/add', [CartController::class, 'addToCartAjax'])->name('cart.add-ajax');
+Route::get('/cart/count', [CartController::class, 'getCartCount'])->name('cart.count');
+
+
+Route::get('/', function () {
+    return view('products.index', ['products' => \App\Models\Product::all()]);
+});
+
+Route::prefix('cart')->group(function () {
+    Route::get('/', [CartController::class, 'index'])->name('cart.index');
+    Route::post('/add', [CartController::class, 'add'])->name('cart.add');
+    Route::post('/update/{cart}', [CartController::class, 'update'])->name('cart.update');
+    Route::delete('/remove/{cart}', [CartController::class, 'remove'])->name('cart.remove');
+});
 
 //navbar content
 Route::get('/js/navBarContent.js', function () {
@@ -54,3 +64,9 @@ Route::get('/js/navBarContent.js', function () {
 Route::get('/admin-test', function() {
     return "Admin route working!";
 });
+
+//cart clear
+Route::post('/cart/clear', function () {
+    session()->forget('cart');
+    return redirect()->route('cart.view')->with('success', 'Keranjang dikosongkan');
+})->name('cart.clear');

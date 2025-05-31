@@ -29,6 +29,7 @@
     @vite('resources/js/hamburger.js')
     @vite('resources/js/posterSlide.js')
     @vite('resources/js/cart.js')
+    @vite('resources/js/cart2.js')
 
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="//unpkg.com/alpinejs" defer></script>

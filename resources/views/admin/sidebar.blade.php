@@ -4,20 +4,20 @@
             <i class='bx bx-menu' id="btn"></i>
         </div>
         <ul class="nav-list">
-            <li>
+            {{-- <li>
                 <a href="#" onclick="showContent('dashboard')">
                     <i class='bx bx-grid-alt'></i>
                     <span class="links_name">Dashboard</span>
                 </a>
                 <span class="tooltip">Dashboard</span>
-            </li>
-            <li>
+            </li> --}}
+            {{-- <li>
                 <a href="#" onclick="showContent('user')">
                     <i class='bx bx-user'></i>
                     <span class="links_name">User</span>
                 </a>
                 <span class="tooltip">User</span>
-            </li>
+            </li> --}}
             <li>
                 <a href="#" onclick="showContent('products')">
                     <i class='bx bx-chat'></i>
@@ -25,7 +25,7 @@
                 </a>
                 <span class="tooltip">Product</span>
             </li>
-            <li>
+            {{-- <li>
                 <a href="#" onclick="showContent('financial')">
                     <i class='bx bx-pie-chart-alt-2'></i>
                     <span class="links_name">Analytics</span>
@@ -45,7 +45,7 @@
                     <span class="links_name">Settings</span>
                 </a>
                 <span class="tooltip">Settings</span>
-            </li>
+            </li> --}}
             <li class="profile">
                 <div class="profile-details">
                     <img src="iconLogo.png" alt="profileImg">
