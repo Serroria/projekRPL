@@ -129,6 +129,16 @@
         </div>
       </div>
 
+      <!-- Modal Struktur -->
+<div id="info-modal" class="modal" style="display: none;">
+  <div class="modal-content">
+    <span class="close-modal">&times;</span>
+    <div id="modal-title" style="font-weight: bold; font-size: 18px; margin-bottom: 10px;"></div>
+    <div id="modal-body"></div>
+  </div>
+</div>
+
+
       
     
   </div>

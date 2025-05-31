@@ -23,18 +23,28 @@
 </button></li>
                 <li ><a href="{{ route('cart.index') }}" class="btn btn-success">Lihat Keranjang</a></li>
             </ul>
-             <!--cart -->
+
+
+       
             
 
     
 
 </nav>
-</header>
 
+  <!--modal-->
+    <div class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close-modal">&times;</span>
+                <div id="modal-title"></div>
+            </div>
+            <div class="modal-body" id="modal-body"></div>
+        </div>
+    </div> 
+{{-- 
 
-
-
-{{-- <nav class="navbar">
+ <nav class="navbar">
         <div class="navbar-container">
             <!-- Logo -->
             <a href="#" class="navbar-logo">Jamu Kita</a>
@@ -52,7 +62,7 @@
                 <li><a href="#" class="menu-item">Tentang Kami</a></li>
                 <li><a href="#" class="menu-item">Cara Order</a></li>
                 <li><a href="#" class="menu-item">Kontak Kami</a></li>
-                <li><a href="#" class="text-sm text-gray-800 hover:underline">🛒 Keranjang</a></li>
+                 <li ><a href="{{ route('cart.index') }}" class="btn btn-success">Lihat Keranjang</a></li>
             </ul>
         </div>
     </nav>
@@ -65,7 +75,11 @@
             </div>
             <div class="modal-body" id="modal-body"></div>
         </div>
-    </div> --}}
+    </div>  --}}
+</header>
+
+
+
 
 
     

@@ -23,6 +23,7 @@
     @vite('resources/css/category.css') 
     @vite('resources/css/cart.css') 
     @vite('resources/css/checkout.css') 
+    @vite('resources/css/header.css') 
    
     
     @vite('resources/js/category.js')
@@ -30,6 +31,7 @@
     @vite('resources/js/posterSlide.js')
     @vite('resources/js/cart.js')
     @vite('resources/js/cart2.js')
+    {{-- @vite('resources/js/navbarContent.js') --}}
 
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="//unpkg.com/alpinejs" defer></script>
