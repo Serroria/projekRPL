@@ -18,6 +18,39 @@
         </div>
 </nav>
 
+{{-- <nav class="navbar">
+        <div class="navbar-container">
+            <!-- Logo -->
+            <a href="#" class="navbar-logo">Jamu Kita</a>
+            
+            <!-- Mobile Toggle Button -->
+            <button class="navbar-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+            
+            <!-- Menu -->
+            <ul class="navbar-menu">
+                <li><a href="#" class="menu-item">Beranda</a></li>
+                <li><a href="#" class="menu-item">Tentang Kami</a></li>
+                <li><a href="#" class="menu-item">Cara Order</a></li>
+                <li><a href="#" class="menu-item">Kontak Kami</a></li>
+                <li><a href="#" class="text-sm text-gray-800 hover:underline">🛒 Keranjang</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close-modal">&times;</span>
+                <div id="modal-title"></div>
+            </div>
+            <div class="modal-body" id="modal-body"></div>
+        </div>
+    </div> --}}
+
 
     
 <!-- <header class="sticky top-0 z-50 bg-[#902727] shadow-md"> -->
