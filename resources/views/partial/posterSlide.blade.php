@@ -28,7 +28,7 @@
             <div class="info">
                 <h2 class='text-white'>Sehat Alami, Pilih JamuKita</h2>
                 <h3 class='text-white'><b>Segarkan Tubuh, Dukung Imunitas - Mulai Belanja Sekarang!</b></h3>
-                <p>Mulai perjalanansehat Anda dengan jamu berkualitas dari JamuKita!</p>
+                <p>Mulai perjalanan sehat Anda dengan jamu berkualitas dari JamuKita!</p>
             </div>
         </div>
         <div class="navigation">

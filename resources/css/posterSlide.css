@@ -12,6 +12,7 @@ body {
     padding: 0;
     background: #f2e1c7;
     min-height: 100vh;
+    overflow-x: hidden;
 }
 
 .container {
@@ -26,7 +27,7 @@ body {
     width: 100vw;
     height: 350px;
     margin: 0 auto;
-    overflow: hidden;
+    overflow-x: hidden;
     margin-top: 0;
     padding-top: 0;
     margin-bottom: 0 !important;
