@@ -1,0 +1,9 @@
+.social-link {
+  color: white;
+  transition: color 0.3s ease;
+}
+
+.social-link:hover,
+.social-link:focus {
+  color: burlywood;
+}
