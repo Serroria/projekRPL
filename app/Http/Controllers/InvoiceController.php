@@ -4,40 +4,48 @@ namespace App\Http\Controllers;
 
 use App\Models\Order;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\InvoiceMail;
+
 
 class InvoiceController extends Controller
 {
-   
-public function sendInvoice($orderNumber)
-{
-    $order = Order::with('items.product')
-                ->where('order_number', $orderNumber)
-                ->firstOrFail();
-    
-    // Pilihan 1: Kirim via WhatsApp
-    $whatsappUrl = $this->generateWhatsAppUrl($order);
-    
-    // Pilihan 2: Kirim via Email
-    Mail::to($order->customer_email)->send(new InvoiceMail($order));
-    
-    return redirect()->back()->with('success', 'Invoice telah dikirim');
-}
 
-private function generateWhatsAppUrl($order)
+    public function show(Order $order)
 {
-    $message = "Halo {$order->customer_name},\n\n";
-    $message .= "Berikut detail pesanan Anda:\n";
-    $message .= "No. Order: {$order->order_number}\n";
-    
-    foreach ($order->items as $item) {
-        $message .= "- {$item->product->name} (x{$item->quantity}) Rp ".number_format($item->price)."\n";
-    }
-    
-    $message .= "\nTotal: Rp ".number_format($order->total_amount);
-    $message .= "\n\nStatus: {$order->status}";
-    $message .= "\n\nTerima kasih telah berbelanja!";
-    
-    $encodedMessage = urlencode($message);
-    return "https://wa.me/{$order->customer_phone}?text={$encodedMessage}";
+    return view('invoice', compact('order'));
 }
+   
+// public function sendInvoice($orderNumber)
+// {
+//     $order = Order::with('items.product')
+//                 ->where('order_number', $orderNumber)
+//                 ->firstOrFail();
+    
+//     // Pilihan 1: Kirim via WhatsApp
+//     $whatsappUrl = $this->generateWhatsAppUrl($order);
+    
+//     // Pilihan 2: Kirim via Email
+//     Mail::to($order->customer_email)->send(new InvoiceMail($order));
+    
+//     return redirect()->back()->with('success', 'Invoice telah dikirim');
+// }
+
+// private function generateWhatsAppUrl($order)
+// {
+//     $message = "Halo {$order->customer_name},\n\n";
+//     $message .= "Berikut detail pesanan Anda:\n";
+//     $message .= "No. Order: {$order->order_number}\n";
+    
+//     foreach ($order->items as $item) {
+//         $message .= "- {$item->product->name} (x{$item->quantity}) Rp ".number_format($item->price)."\n";
+//     }
+    
+//     $message .= "\nTotal: Rp ".number_format($order->total_amount);
+//     $message .= "\n\nStatus: {$order->status}";
+//     $message .= "\n\nTerima kasih telah berbelanja!";
+    
+//     $encodedMessage = urlencode($message);
+//     return "https://wa.me/{$order->customer_phone}?text={$encodedMessage}";
+// }
 }

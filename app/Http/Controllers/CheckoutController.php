@@ -35,7 +35,8 @@ class CheckoutController extends Controller
 
     public function placeOrder(Request $request)
     {
-        $request->validate([
+        
+        $validated = $request->validate([
             'customer_name' => 'required|string|max:255',
             'customer_email' => 'required|email|max:255',
             'customer_phone' => 'required|string|max:20',
@@ -53,22 +54,21 @@ class CheckoutController extends Controller
         }
         
         // Hitung total
+        
         $total = $cartItems->sum(function($item) {
             return $item->product->price * $item->quantity;
         });
         
         // Buat order
         $order = Order::create([
-            'order_number' => 'ORD-' . Str::upper(Str::random(8)),
-            'session_id' => session('cart_session'),
-            'customer_name' => $request->customer_name,
-            'customer_email' => $request->customer_email,
-            'customer_phone' => $request->customer_phone,
-            'shipping_address' => $request->shipping_address,
-            'payment_method' => $request->payment_method,
-            'total_amount' => $total,
-            'status' => 'pending',
-            'notes' => $request->notes
+           'customer_name' => $validated['customer_name'],
+        'customer_email' => $validated['customer_email'],
+        'customer_phone' => $validated['customer_phone'],
+        'shipping_address' => $validated['shipping_address'],
+        'payment_method' => $validated['payment_method'],
+        'notes' => $request->notes,
+        'total_amount' => Cart::getTotal(),
+        'status' => 'pending'
         ]);
         
         // Tambahkan order items
@@ -77,7 +77,7 @@ class CheckoutController extends Controller
                 'order_id' => $order->id,
                 'product_id' => $item->product_id,
                 'quantity' => $item->quantity,
-                'price' => $item->product->price
+                'price' => $item->product->harga
             ]);
         }
         
@@ -90,6 +90,6 @@ logger()->info('Cart emptied', ['session_id' => session('cart_session')]);
 // (Opsional tapi disarankan) reset session cart supaya tidak reuse lagi
 session()->forget('cart_session');
         // Redirect ke halaman invoice
-        return redirect()->route('invoice.show', $order->order_number);
+        return redirect()->route('invoice.show', $order);
     }
 }

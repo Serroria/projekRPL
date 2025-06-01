@@ -17,6 +17,7 @@ use App\Http\Controllers\ProductController;
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\CheckoutController;
 use App\Http\Controllers\InvoiceController;
+use App\Http\Controllers\Admin\OrderController;
 
 // Homepage
 Route::get('/home', [ProductController::class, 'homepage'])->name('homepage');
@@ -83,10 +84,23 @@ Route::post('/cart/clear', function () {
 Route::get('/checkout', [CheckoutController::class, 'showCheckoutForm'])->name('checkout');
 Route::post('/checkout', [CheckoutController::class, 'placeOrder'])->name('checkout.place-order');
 
-// Invoice routes
-Route::get('/invoice/{orderNumber}', [InvoiceController::class, 'show'])->name('invoice.show');
-Route::get('/invoice/{orderNumber}/download', [InvoiceController::class, 'download'])->name('invoice.download');
+// // Invoice routes
+// Route::get('/invoice/{orderNumber}', [InvoiceController::class, 'show'])->name('invoice.show');
+// Route::get('/invoice/{orderNumber}/download', [InvoiceController::class, 'download'])->name('invoice.download');
 
-// routes/web.php
-Route::post('/invoice/{orderNumber}/send', [InvoiceController::class, 'sendInvoice'])
-     ->name('invoice.send');
+// // routes/web.php
+// Route::post('/invoice/{orderNumber}/send', [InvoiceController::class, 'sendInvoice'])
+//      ->name('invoice.send');
+
+Route::post('/checkout/place-order', [CheckoutController::class, 'placeOrder'])->name('checkout.place-order');
+Route::get('/invoice/{order}', [InvoiceController::class, 'show'])->name('invoice.show');
+
+
+Route::get('/invoice', function () {
+    return view('invoice');
+})->name('invoice');
+
+
+//admin
+Route::get('/admin/orders', [OrderController::class, 'index'])->name('orders.index');
+Route::patch('/admin/orders/{order}', [OrderController::class, 'updateStatus'])->name('orders.updateStatus');

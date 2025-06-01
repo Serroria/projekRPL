@@ -1,4 +1,24 @@
-<!DOCTYPE html>
+
+@component('mail::message')
+# Terima Kasih {{ $order->customer_name }}
+
+Pesanan Anda telah kami terima. Berikut ringkasannya:
+
+- Metode: {{ $order->payment_method }}
+- Alamat: {{ $order->shipping_address }}
+
+@component('mail::button', ['url' => route('orders.show', $order->id)])
+Lihat Detail
+@endcomponent
+
+Terima kasih,<br>
+{{ config('app.name') }}
+@endcomponent
+
+
+
+
+{{-- <!DOCTYPE html>
 <html>
 <head>
     <title>Invoice #{{ $order->order_number }}</title>
@@ -103,4 +123,4 @@
     $whatsappUrl .= $message;
 @endphp
 </body>
-</html>
+</html> --}}
