@@ -78,6 +78,7 @@ body {
     border-radius: 20px;
     font-size: 16px;
     max-width: 600px;
+    margin-top: 1em;
 }
 
 .img-slider .navigation {
@@ -104,10 +105,31 @@ body {
 @media (max-width: 620px){
     .img-slider{
         width: 100vw;
-        height: 50px;
+        height: 100px;
         margin: 0px;
         /* margin: 10px auto; */
     }
+
+     .img-slider .slide .info {
+        top: 10px;
+        left: 10px;
+        padding: 10px 15px;
+    }
+
+    .img-slider .slide .info h2 {
+        font-size: 24px;
+    }
+
+    .img-slider .slide .info p {
+        font-size: 14px;
+        max-width: 90%;
+        padding: 8px 14px;
+    }
+
+    .img-slider .navigation {
+        bottom: 10px;
+    }
+
 
     .navbar {
         width: 100%;
