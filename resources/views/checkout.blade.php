@@ -7,6 +7,87 @@
     <title>Checkout</title>
 </head>
 <body>
+
+    <header>
+  <nav class="navbar">
+        <div class="navbar-container">
+            <!--logo-->
+            <a href="#" class="navbar-logo">
+                <img src="iconLogo.png" alt="logoJamuKita"></a>
+            <button class="navbar-toggle">  
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+
+          
+          
+            <ul class="navbar-menu">
+                <li><a href="#" >Beranda</a></li>
+                <li><a href="#" class="menu-item">Tentang Kami</a></li>
+                <li><a href="#" class="menu-item">Cara Order</a></li>
+                <li><a href="#" class="menu-item">Kontak Kami</a></li>
+                <li><button class="cart-toggle">
+    
+    <span class="cart-count" style="display: none">0</span>
+</button></li>
+                <li ><a href="{{ route('cart.index') }}" class="btn btn-success" class="fas fa-shopping-cart">Lihat Keranjang</a></li>
+            </ul>
+
+
+       
+            
+
+    
+
+</nav>
+
+  <!--modal-->
+    <div class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close-modal">&times;</span>
+                <div id="modal-title"></div>
+            </div>
+            <div class="modal-body" id="modal-body"></div>
+        </div>
+    </div> 
+{{-- 
+
+ <nav class="navbar">
+        <div class="navbar-container">
+            <!-- Logo -->
+            <a href="#" class="navbar-logo">Jamu Kita</a>
+            
+            <!-- Mobile Toggle Button -->
+            <button class="navbar-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+            
+            <!-- Menu -->
+            <ul class="navbar-menu">
+                <li><a href="#" class="menu-item">Beranda</a></li>
+                <li><a href="#" class="menu-item">Tentang Kami</a></li>
+                <li><a href="#" class="menu-item">Cara Order</a></li>
+                <li><a href="#" class="menu-item">Kontak Kami</a></li>
+                 <li ><a href="{{ route('cart.index') }}" class="btn btn-success">Lihat Keranjang</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close-modal">&times;</span>
+                <div id="modal-title"></div>
+            </div>
+            <div class="modal-body" id="modal-body"></div>
+        </div>
+    </div>  --}}
+</header>
+
     
 <div class="container py-4">
     <h1 class="mb-4">Checkout</h1>
