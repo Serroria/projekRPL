@@ -19,19 +19,19 @@
     @vite('resources/css/app.css')
     @vite('resources/css/hamburger.css')
     @vite('resources/css/posterSlide.css')
-    
     @vite('resources/css/category.css') 
     @vite('resources/css/cart.css') 
     @vite('resources/css/checkout.css') 
     @vite('resources/css/header.css') 
-   
-    
     @vite('resources/js/category.js')
     @vite('resources/js/hamburger.js')
     @vite('resources/js/posterSlide.js')
     @vite('resources/js/cart.js')
     @vite('resources/js/cart2.js')
     {{-- @vite('resources/js/navbarContent.js') --}}
+    @vite('resources/css/linkCepat.css')
+    @vite('resources/css/sosmed.css')
+
 
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="//unpkg.com/alpinejs" defer></script>
@@ -84,27 +84,38 @@
         <p>Kami adalah UMKM yang bergerak di bidang jual beli obat herbal tradional Indonesia.</p>
       </div>
 
-      <!-- Link Cepat -->
-      <div>
-        <h3 class="text-lg font-semibold mb-2">Link Cepat</h3>
-        <ul>
-          <li><a href="#" class="hover:underline">Beranda</a></li>
-          <li><a href="#" class="hover:underline">Layanan</a></li>
-          <li><a href="#" class="hover:underline">Kontak</a></li>
-          <li><a href="#" class="hover:underline">Privasi</a></li>
-        </ul>
-      </div>
+<!-- Footer Link Cepat -->
+<div>
+  <h3 class="text-lg font-semibold mb-2">Link Cepat</h3>
+  <ul>
+      <li><a href="#" class="menu-item">Beranda</a></li>
+      <li><a href="#" class="menu-item">Cara Order</a></li>
+      <li><a href="#" class="menu-item">Kontak Kami</a></li>
+      <li><a href="#" class="menu-item">Tentang Kami</a></li>
+  </ul>
+</div>
 
-      <!-- Sosial Media -->
-      <div>
-        <h3 class="text-lg font-semibold mb-2">Ikuti Kami</h3>
-        <div class="flex justify-center space-x-4 text-2xl">
-          <a href="https://www.instagram.com/jamu_kita_umkm/profilecard/?igsh=MThxZWNjaWhsaGttbA==" class="hover:text-yellow-300"><i class="fab fa-instagram"></i></a>
-          <a href="#" class="hover:text-yellow-300"><i class="fab fa-facebook"></i></a>
-          <a href="#" class="hover:text-yellow-300"><i class="fab fa-tiktok"></i></a>
-        </div>
-      </div>
+<!-- Modal Custom -->
+<div class="modal" style="display:none;">
+  <div class="modal-content">
+    <button class="close-modal">&times;</button>
+    <div id="modal-title"></div>
+    <div id="modal-body"></div>
+  </div>
+</div>
+
+
+  <!-- Sosial Media -->
+  <div>
+    <h3 class="text-lg font-semibold mb-2">Ikuti Kami</h3>
+    <div class="flex justify-center space-x-4 text-2xl">
+      <a href="https://www.instagram.com/jamu_kita_umkm/profilecard/?igsh=MThxZWNjaWhsaGttbA==" class="social-link"><i class="fab fa-instagram"></i></a>
+      <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+      <a href="#" class="social-link"><i class="fab fa-tiktok"></i></a>
     </div>
+  </div>
+
+
 
     <!-- Footer Bawah -->
     <div class="text-center mt-8 text-sm text-gray-200">
@@ -114,6 +125,8 @@
 </footer>
 
 
-    <script src="{{ asset('js/category.js') }}"></script>
+<script src="{{ asset('js/category.js') }}"></script>
+<script src="{{ asset('js/navBarContent.js') }}"></script>
+
 </body>
 </html>
