@@ -82,8 +82,8 @@
     <h3 class="text-lg font-semibold mb-2">Ikuti Kami</h3>
     <div class="flex justify-center space-x-4 text-2xl">
       <a href="https://www.instagram.com/jamu_kita_umkm/profilecard/?igsh=MThxZWNjaWhsaGttbA==" class="social-link"><i class="fab fa-instagram"></i></a>
-      <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
-      <a href="#" class="social-link"><i class="fab fa-tiktok"></i></a>
+      <a href="https://www.facebook.com/share/198DFtRiUb/" class="social-link"><i class="fab fa-facebook"></i></a>
+      <a href="https://www.tiktok.com/@jamu.kita?_t=ZS-8wqRYJ0tg6C&_r=1" class="social-link"><i class="fab fa-tiktok"></i></a>
     </div>
   </div>
 
