@@ -13,7 +13,18 @@ return new class extends Migration
     {
         Schema::create('orders', function (Blueprint $table) {
             $table->id();
-            $table->integer('total_price');
+            $table->string('order_number')->unique()->after('id');
+
+            $table->string('session_id')->nullable();
+            $table->unsignedInteger('user_id')->nullable();
+            $table->string('customer_name');
+    $table->string('customer_email');
+    $table->string('customer_phone');
+    $table->text('shipping_address');
+    $table->string('payment_method'); // transfer, cod, etc
+    $table->decimal('total_amount', 10, 2);
+    $table->enum('status', ['pending', 'processing', 'shipped', 'completed', 'cancelled'])->default('pending');
+    $table->text('notes')->nullable();
             $table->timestamps();
         });
     }
@@ -23,6 +34,9 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('orders');
+            Schema::table('orders', function (Blueprint $table) {
+        $table->dropColumn('order_number');
+    });
+
     }
 };

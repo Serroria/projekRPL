@@ -53,12 +53,31 @@
     </tbody>
 </table>
 
-<a href="#" class="btn btn-primary">Checkout</a>
+<a href="{{ route('checkout') }}" class="btn btn-primary">Checkout</a>
 @else
 <div class="alert alert-info">Keranjang belanja kosong</div>
 @endif
 
 <a href="{{ url('/home') }}" class="btn btn-secondary">Lanjut Belanja</a>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    updateCartCounter(); // ← Tambahkan ini agar counter tetap sinkron di halaman manapun
+
+    function updateCartCounter() {
+        fetch('/cart/count')
+            .then(response => response.json())
+            .then(data => {
+                const counter = document.querySelector('.cart-count');
+                if (counter) {
+                    counter.textContent = data.count;
+                    counter.style.display = data.count > 0 ? 'inline-block' : 'none';
+                }
+            });
+    }
+});
+</script>
+
 </body>
 </html>
 

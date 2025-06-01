@@ -2,41 +2,8 @@
 
 <!-- Katalog Home Page-->
 @section('mainLayout')
-<!-- 
-  <!-- Slides -->
 
-  
-  <!-- <template x-for="(slide, index) in slides" :key="index">
-    <img 
-      x-show="currentSlide === index"
-      :src="slide"
-      alt="Poster Iklan"
-      class="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000"
-      x-transition:enter="transition-opacity ease-in duration-700"
-      x-transition:enter-start="opacity-0"
-      x-transition:enter-end="opacity-100"
-      x-transition:leave="transition-opacity ease-out duration-700"
-      x-transition:leave-start="opacity-100"
-      x-transition:leave-end="opacity-0"
-    />
-  </template> -->
 
-  <!-- Navigation Buttons
-  <button 
-    @click="prev" 
-    class="absolute top-1/2 left-4 transform -translate-y-1/2 bg-black bg-opacity-50 text-white text-3xl rounded-full p-2 hover:bg-opacity-75"
-    aria-label="Previous"
-  >
-    &#10094;
-  </button>
-  <button 
-    @click="next" 
-    class="absolute top-1/2 right-4 transform -translate-y-1/2 bg-black bg-opacity-50 text-white text-3xl rounded-full p-2 hover:bg-opacity-75"
-    aria-label="Next"
-  >
-    &#10095;
-  </button>  -->
-{{-- </div> --}}
 
 <div class= bg-[#f9f6ee] >
   <div class="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
@@ -87,8 +54,9 @@
 
                     </div>
                 </form>
-                <button class="buy-btn add-to-cart-btn" data-product-id="{{ $product->id }}">
-  <i class="fa-solid fa-cart-shopping"></i>
+                
+                <button  class="buy-btn add-to-cart-btn" data-product-id="{{ $product->id }}">
+  <i class="fa-solid fa-cart-shopping">add</i>
 </button>
          
          {{-- <button 
@@ -169,12 +137,18 @@ window.toggleDesc = function(id) {
     document.querySelectorAll('.add-to-cart-btn').forEach(button => {
         button.addEventListener('click', function() {
             const productId = this.dataset.productId;
+            const button = this;
+
+// Tampilkan loading state
+            button.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Adding...';
+            button.disabled = true;
             
+
             // Kirim request AJAX
-            fetch('/cart/add', {
+            fetch('/cart/count',  {
                 method: 'POST',
                 headers: {
-                    'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').content,
+                     'X-CSRF-TOKEN': '{{ csrf_token() }}',
                     'Content-Type': 'application/json',
                     'Accept': 'application/json'
                 },
@@ -191,34 +165,44 @@ window.toggleDesc = function(id) {
                     
                     // Update counter keranjang jika ada
                     updateCartCounter();
+                }else {
+                  showToast(data.message || 'Gagal menambahkan produk', 'error')
                 }
             })
             .catch(error => {
-                showToast('Gagal menambahkan produk', 'error');
+                showToast('Terjadi kesalahan', 'error');
+            })
+            .finally(() => {
+                // Kembalikan tampilan tombol ke semula
+                button.innerHTML = '<i class="fa-solid fa-cart-shopping"></i> Add to Cart';
+                button.disabled = false;
             });
         });
     });
     
     // Fungsi untuk menampilkan notifikasi toast
     function showToast(message, type = 'success') {
-        const toast = document.querySelector('.toast-notification');
-        toast.querySelector('.toast-message').textContent = message;
+        const toast = document.createElement('div');
+        toast.className = `toast-notification ${type}`;
+        toast.innerHTML = `
+            <span class="toast-message">${message}</span>
+        `;
         
-        // Set warna berdasarkan type
-        toast.style.backgroundColor = type === 'success' ? '#4CAF50' : '#f44336';
+        document.body.appendChild(toast);
         
         // Tampilkan toast
-        toast.classList.add('show');
+        setTimeout(() => toast.classList.add('show'), 10);
         
         // Sembunyikan setelah 3 detik
         setTimeout(() => {
             toast.classList.remove('show');
+            setTimeout(() => toast.remove(), 300);
         }, 3000);
-    }
+    }       
     
     // Fungsi untuk update counter keranjang
     function updateCartCounter() {
-        fetch('/cart/count')
+       fetch('/cart/count')
             .then(response => response.json())
             .then(data => {
                 const counter = document.querySelector('.cart-count');

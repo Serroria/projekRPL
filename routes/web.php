@@ -15,6 +15,8 @@ Route::get('/company', function () {
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\CartController;
+use App\Http\Controllers\CheckoutController;
+use App\Http\Controllers\InvoiceController;
 
 // Homepage
 Route::get('/home', [ProductController::class, 'homepage'])->name('homepage');
@@ -56,6 +58,12 @@ Route::prefix('cart')->group(function () {
     Route::delete('/remove/{cart}', [CartController::class, 'remove'])->name('cart.remove');
 });
 
+
+Route::post('/cart/add-ajax', [CartController::class, 'addToCartAjax']);
+Route::post('/cart/count', [CartController::class, 'getCartCount']);
+Route::post('/cart/add', [CartController::class, 'add'])->name('cart.add');
+
+
 //navbar content
 Route::get('/js/navBarContent.js', function () {
     return response()->file(resource_path('js/navBarContent.js'));});
@@ -70,3 +78,15 @@ Route::post('/cart/clear', function () {
     session()->forget('cart');
     return redirect()->route('cart.view')->with('success', 'Keranjang dikosongkan');
 })->name('cart.clear');
+
+// Checkout routes
+Route::get('/checkout', [CheckoutController::class, 'showCheckoutForm'])->name('checkout');
+Route::post('/checkout', [CheckoutController::class, 'placeOrder'])->name('checkout.place-order');
+
+// Invoice routes
+Route::get('/invoice/{orderNumber}', [InvoiceController::class, 'show'])->name('invoice.show');
+Route::get('/invoice/{orderNumber}/download', [InvoiceController::class, 'download'])->name('invoice.download');
+
+// routes/web.php
+Route::post('/invoice/{orderNumber}/send', [InvoiceController::class, 'sendInvoice'])
+     ->name('invoice.send');

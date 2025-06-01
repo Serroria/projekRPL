@@ -11,16 +11,17 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('orders_items', function (Blueprint $table) {
-            $table->id();
-             $table->unsignedBigInteger('order_id');
-    $table->string('product_name');
+        Schema::create('order_items', function (Blueprint $table) {
+    $table->id();
+    $table->unsignedBigInteger('order_id');
+    $table->unsignedBigInteger('product_id');
     $table->integer('quantity');
-    $table->integer('price');
-            $table->timestamps();
-
-            $table->foreign('order_id')->references('id')->on('orders')->onDelete('cascade');
-        });
+    $table->decimal('price', 10, 2);
+    $table->timestamps();
+    
+    $table->foreign('order_id')->references('id')->on('orders')->onDelete('cascade');
+    $table->foreign('product_id')->references('id')->on('products');
+});
     }
 
     /**

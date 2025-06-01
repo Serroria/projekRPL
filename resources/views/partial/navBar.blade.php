@@ -18,10 +18,10 @@
                 <li><a href="#" class="menu-item">Cara Order</a></li>
                 <li><a href="#" class="menu-item">Kontak Kami</a></li>
                 <li><button class="cart-toggle">
-    <i class="fas fa-shopping-cart"></i>
+    
     <span class="cart-count" style="display: none">0</span>
 </button></li>
-                <li ><a href="{{ route('cart.index') }}" class="btn btn-success">Lihat Keranjang</a></li>
+                <li ><a href="{{ route('cart.index') }}" class="btn btn-success" class="fas fa-shopping-cart">Lihat Keranjang</a></li>
             </ul>
 
 

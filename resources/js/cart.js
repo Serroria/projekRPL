@@ -1,171 +1,171 @@
- let cart = [];
+//  let cart = [];
 
-  window.addToCart = function(productId, productName, price) { // <-- Change here
-  const existing = cart.find(p => p.id === productId);
-  if (existing) {
-    existing.qty += 1;
-  } else {
-    cart.push({ id: productId, name: productName, price, qty: 1 });
-  }
-  renderCart();
-};
-
-window.renderCart = function() {
-  let content = '';
-  let subtotal = 0;
-  cart.forEach((item) => {
-    subtotal += item.qty * item.price;
-    content += `
-      <div class="flex justify-between mb-2">
-        <span>${item.name} x ${item.qty}</span>
-        <span>Rp${(item.qty * item.price).toLocaleString()}</span>
-      </div>
-    `;
-  });
-
-  const ongkir = 4999;
-  const total = subtotal + ongkir;
-  
-  document.getElementById('cartItems').innerHTML = content;
-  document.getElementById('cartSubtotal').innerText = 'Rp' + subtotal.toLocaleString();
-  document.getElementById('totalHarga').innerText = 'Rp' + total.toLocaleString();
-}
-
-window.toggleCheckout = function() { // <-- Change here
-  document.getElementById('checkoutModal').classList.toggle('hidden');
+//   window.addToCart = function(productId, productName, price) { // <-- Change here
+//   const existing = cart.find(p => p.id === productId);
+//   if (existing) {
+//     existing.qty += 1;
+//   } else {
+//     cart.push({ id: productId, name: productName, price, qty: 1 });
+//   }
+//   renderCart();
 // };
 
-//   document.getElementById('cartItems').innerHTML = content;
-//   document.getElementById('cartSubtotal').innerText = 'Rp' + subtotal.toLocaleString();
-  
+// window.renderCart = function() {
+//   let content = '';
+//   let subtotal = 0;
+//   cart.forEach((item) => {
+//     subtotal += item.qty * item.price;
+//     content += `
+//       <div class="flex justify-between mb-2">
+//         <span>${item.name} x ${item.qty}</span>
+//         <span>Rp${(item.qty * item.price).toLocaleString()}</span>
+//       </div>
+//     `;
+//   });
+
 //   const ongkir = 4999;
 //   const total = subtotal + ongkir;
+  
+//   document.getElementById('cartItems').innerHTML = content;
+//   document.getElementById('cartSubtotal').innerText = 'Rp' + subtotal.toLocaleString();
 //   document.getElementById('totalHarga').innerText = 'Rp' + total.toLocaleString();
-
-//   document.getElementById('checkoutModal').classList.remove('hidden');
 // }
 
+// window.toggleCheckout = function() { // <-- Change here
+//   document.getElementById('checkoutModal').classList.toggle('hidden');
+// // };
 
-//   function toggleCheckout() {
-//     document.getElementById('checkoutModal').classList.toggle('hidden');
-//   }
+// //   document.getElementById('cartItems').innerHTML = content;
+// //   document.getElementById('cartSubtotal').innerText = 'Rp' + subtotal.toLocaleString();
+  
+// //   const ongkir = 4999;
+// //   const total = subtotal + ongkir;
+// //   document.getElementById('totalHarga').innerText = 'Rp' + total.toLocaleString();
 
-//   function showCartPopup() {
-//   document.getElementById('checkoutModal').classList.remove('hidden');
+// //   document.getElementById('checkoutModal').classList.remove('hidden');
+// // }
+
+
+// //   function toggleCheckout() {
+// //     document.getElementById('checkoutModal').classList.toggle('hidden');
+// //   }
+
+// //   function showCartPopup() {
+// //   document.getElementById('checkoutModal').classList.remove('hidden');
+// // }
+
+
+// //   function closeCartPopup() {
+// //     document.getElementById('checkoutModal').classList.add('hidden');
+// //   }
+
+
+// window.checkout = function() {
+//   if(cart.length === 0) return;
+  
+//   // Notifikasi checkout berhasil
+//   showNotification('Checkout berhasil! Struk akan dicetak...');
+  
+//   // Kosongkan keranjang
+//   cart = [];
+//   renderCart();
+  
+//   // Tutup modal
+//   toggleCheckout();
 // }
 
+// // In cart.js
+// document.addEventListener('DOMContentLoaded', function() {
+//   document.querySelectorAll('.buy-btn').forEach(button => {
+//     button.addEventListener('click', function() {
+//       const productId = button.dataset.productId;
+//       const productName = button.dataset.productName;
+//       const price = parseFloat(button.dataset.price);
+//       addToCart(productId, productName, price);
+//       showNotification(`${productName} berhasil ditambahkan ke keranjang!`);
+//       renderCart();
+//     });
+//   });
+// });
 
-//   function closeCartPopup() {
-//     document.getElementById('checkoutModal').classList.add('hidden');
-//   }
+// // Notifikasi
+//   showNotification(`${productName} berhasil ditambahkan ke keranjang!`);
+//   renderCart();
+// };
 
-
-window.checkout = function() {
-  if(cart.length === 0) return;
+// // Fungsi notifikasi
+// function showNotification(message) {
+//   const notif = document.createElement('div');
+//   notif.className = 'fixed top-4 right-4 bg-green-500 text-white px-6 py-3 rounded-lg shadow-lg animate-slide-in';
+//   notif.textContent = message;
   
-  // Notifikasi checkout berhasil
-  showNotification('Checkout berhasil! Struk akan dicetak...');
+//   document.body.appendChild(notif);
   
-  // Kosongkan keranjang
-  cart = [];
-  renderCart();
-  
-  // Tutup modal
-  toggleCheckout();
-}
-
-// In cart.js
-document.addEventListener('DOMContentLoaded', function() {
-  document.querySelectorAll('.buy-btn').forEach(button => {
-    button.addEventListener('click', function() {
-      const productId = button.dataset.productId;
-      const productName = button.dataset.productName;
-      const price = parseFloat(button.dataset.price);
-      addToCart(productId, productName, price);
-      showNotification(`${productName} berhasil ditambahkan ke keranjang!`);
-      renderCart();
-    });
-  });
-});
-
-// Notifikasi
-  showNotification(`${productName} berhasil ditambahkan ke keranjang!`);
-  renderCart();
-};
-
-// Fungsi notifikasi
-function showNotification(message) {
-  const notif = document.createElement('div');
-  notif.className = 'fixed top-4 right-4 bg-green-500 text-white px-6 py-3 rounded-lg shadow-lg animate-slide-in';
-  notif.textContent = message;
-  
-  document.body.appendChild(notif);
-  
-  setTimeout(() => {
-    notif.classList.add('animate-slide-out');
-    setTimeout(() => notif.remove(), 500);
-  }, 2000);
+//   setTimeout(() => {
+//     notif.classList.add('animate-slide-out');
+//     setTimeout(() => notif.remove(), 500);
+//   }, 2000);
 
   
-  // Generate struk
-  const strukContent = `
-    <div class="p-4 print:block" id="struk">
-      <h2 class="text-2xl font-bold mb-4">Struk Pembelian</h2>
-      <div class="mb-4">
-        ${cart.map(item => `
-          <div class="flex justify-between mb-2">
-            <span>${item.name} x${item.qty}</span>
-            <span>Rp${(item.price * item.qty).toLocaleString()}</span>
-          </div>
-        `).join('')}
-      </div>
-      <hr class="my-2">
-      <p class="font-bold text-lg">Total: Rp${(parseInt(document.getElementById('totalHarga').innerText.replace(/\D/g, ''))).toLocaleString()}</p>
-      <p class="mt-4 text-gray-500 text-sm">Terima kasih telah berbelanja!</p>
-    </div>
-  `;
+//   // Generate struk
+//   const strukContent = `
+//     <div class="p-4 print:block" id="struk">
+//       <h2 class="text-2xl font-bold mb-4">Struk Pembelian</h2>
+//       <div class="mb-4">
+//         ${cart.map(item => `
+//           <div class="flex justify-between mb-2">
+//             <span>${item.name} x${item.qty}</span>
+//             <span>Rp${(item.price * item.qty).toLocaleString()}</span>
+//           </div>
+//         `).join('')}
+//       </div>
+//       <hr class="my-2">
+//       <p class="font-bold text-lg">Total: Rp${(parseInt(document.getElementById('totalHarga').innerText.replace(/\D/g, ''))).toLocaleString()}</p>
+//       <p class="mt-4 text-gray-500 text-sm">Terima kasih telah berbelanja!</p>
+//     </div>
+//   `;
 
-  // Tampilkan struk dalam jendela cetak
-  const printWindow = window.open('', '_blank');
-  printWindow.document.write(`
-    <html>
-      <head>
-        <title>Struk Pembelian</title>
-        <script src="https://cdn.tailwindcss.com"></script>
-      </head>
-      <body class="p-4">${strukContent}</body>
-    </html>
-  `);
-  printWindow.document.close();
-  printWindow.print();
+//   // Tampilkan struk dalam jendela cetak
+//   const printWindow = window.open('', '_blank');
+//   printWindow.document.write(`
+//     <html>
+//       <head>
+//         <title>Struk Pembelian</title>
+//         <script src="https://cdn.tailwindcss.com"></script>
+//       </head>
+//       <body class="p-4">${strukContent}</body>
+//     </html>
+//   `);
+//   printWindow.document.close();
+//   printWindow.print();
   
-  // Kosongkan keranjang dan tutup modal
-  cart = [];
-  toggleCheckout();
-  renderCart();
-};
+//   // Kosongkan keranjang dan tutup modal
+//   cart = [];
+//   toggleCheckout();
+//   renderCart();
+// };
 
-document.querySelectorAll('.buy-btn').forEach(button => {
-    button.addEventListener('click', function () {
-      const productId = this.dataset.productId;
-      const qty = 1;
+// document.querySelectorAll('.buy-btn').forEach(button => {
+//     button.addEventListener('click', function () {
+//       const productId = this.dataset.productId;
+//       const qty = 1;
 
-      fetch(`/add-to-cart/${productId}`, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'X-CSRF-TOKEN': '{{ csrf_token() }}'
-        },
-        body: JSON.stringify({ qty })
-      })
-      .then(response => response.json())
-      .then(data => {
-        alert(data.success || 'Berhasil ditambahkan ke keranjang!');
-        // Bisa juga update jumlah di navbar/cart icon di sini
-      })
-      .catch(error => {
-        console.error(error);
-        alert('Gagal menambahkan ke keranjang.');
-      });
-    });
-  });
+//       fetch(`/add-to-cart/${productId}`, {
+//         method: 'POST',
+//         headers: {
+//           'Content-Type': 'application/json',
+//           'X-CSRF-TOKEN': '{{ csrf_token() }}'
+//         },
+//         body: JSON.stringify({ qty })
+//       })
+//       .then(response => response.json())
+//       .then(data => {
+//         alert(data.success || 'Berhasil ditambahkan ke keranjang!');
+//         // Bisa juga update jumlah di navbar/cart icon di sini
+//       })
+//       .catch(error => {
+//         console.error(error);
+//         alert('Gagal menambahkan ke keranjang.');
+//       });
+//     });
+//   });
