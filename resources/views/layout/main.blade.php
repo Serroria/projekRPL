@@ -31,6 +31,8 @@
     {{-- @vite('resources/js/navbarContent.js') --}}
     @vite('resources/css/linkCepat.css')
     @vite('resources/css/sosmed.css')
+    @vite('resources/js/linkCepat.js')
+
 
 
     <script src="https://cdn.tailwindcss.com"></script>
@@ -84,25 +86,25 @@
         <p>Kami adalah UMKM yang bergerak di bidang jual beli obat herbal tradional Indonesia.</p>
       </div>
 
-<!-- Footer Link Cepat -->
-<div>
-  <h3 class="text-lg font-semibold mb-2">Link Cepat</h3>
-  <ul>
-      <li><a href="#" class="menu-item">Beranda</a></li>
-      <li><a href="#" class="menu-item">Cara Order</a></li>
-      <li><a href="#" class="menu-item">Kontak Kami</a></li>
-      <li><a href="#" class="menu-item">Tentang Kami</a></li>
-  </ul>
-</div>
-
-<!-- Modal Custom -->
-<div class="modal" style="display:none;">
-  <div class="modal-content">
-    <button class="close-modal">&times;</button>
-    <div id="modal-title"></div>
-    <div id="modal-body"></div>
+  <!-- Footer Link Cepat -->
+  <div>
+    <h3 class="text-lg font-semibold mb-2">Link Cepat</h3>
+    <ul>
+        <li><a href="#" class="menu-item">Beranda</a></li>
+        <li><a href="#" class="menu-item">Cara Order</a></li>
+        <li><a href="#" class="menu-item">Kontak Kami</a></li>
+        <li><a href="#" class="menu-item">Tentang Kami</a></li>
+    </ul>
   </div>
-</div>
+
+  <!-- Modal Custom -->
+  <div class="modal" style="display:none;">
+    <div class="modal-content">
+      <button class="close-modal">&times;</button>
+      <div id="modal-title"></div>
+      <div id="modal-body"></div>
+    </div>
+  </div>
 
 
   <!-- Sosial Media -->
@@ -126,7 +128,6 @@
 
 
 <script src="{{ asset('js/category.js') }}"></script>
-<script src="{{ asset('js/navBarContent.js') }}"></script>
 
 </body>
 </html>
