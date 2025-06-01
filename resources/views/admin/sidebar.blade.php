@@ -25,6 +25,13 @@
                 </a>
                 <span class="tooltip">Product</span>
             </li>
+               <li>
+                <a href="#" onclick="showContent('orders')">
+                    <i class='bx bx-cart-alt'></i>
+                    <span class="links_name">Order</span>
+                </a>
+                <span class="tooltip">Order</span>
+            </li>
             {{-- <li>
                 <a href="#" onclick="showContent('financial')">
                     <i class='bx bx-pie-chart-alt-2'></i>
@@ -32,13 +39,7 @@
                 </a>
                 <span class="tooltip">Analytics</span>
             </li>
-            <li>
-                <a href="#" onclick="showContent('orders')">
-                    <i class='bx bx-cart-alt'></i>
-                    <span class="links_name">Order</span>
-                </a>
-                <span class="tooltip">Order</span>
-            </li>
+         
             <li>
                 <a href="#" onclick="showContent('settings')">
                     <i class='bx bx-cog'></i>

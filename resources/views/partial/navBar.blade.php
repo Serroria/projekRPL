@@ -13,7 +13,7 @@
           
           
             <ul class="navbar-menu">
-                <li><a href="#" >Beranda</a></li>
+                <li><a href="{{ route( 'homepage') }}" >Beranda</a></li>
                 <li><a href="#" class="menu-item">Tentang Kami</a></li>
                 <li><a href="#" class="menu-item">Cara Order</a></li>
                 <li><a href="#" class="menu-item">Kontak Kami</a></li>

@@ -36,3 +36,270 @@
     transform: translateY(0);
     opacity: 1;
 }
+
+/* ============================
+   Gaya Dasar (Reset / Global)
+   ============================ */
+
+.body-cart {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
+}
+
+.container-cart {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.body-cart h2 {
+  margin-top: 0;
+  padding-top: 20px;
+  font-size: 1.8rem;
+  text-align: center;
+  color: #444;
+  border-bottom: 1px solid #e0e0e0;
+  padding-bottom: 10px;
+}
+
+/* ================
+   Styling Tabel
+   ================ */
+
+.table-cart {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-size: 0.95rem;
+   border-radius: 10%;
+   
+}
+
+.table-cart th,
+.table-cart td {
+  border: 1px solid #ddd;
+  padding: 12px 15px;
+  text-align: left;
+ 
+}
+
+.table-cart th {
+  background-color: #c82333;
+  color: #fff;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  
+}
+
+.table-cart tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+   border-radius: 10%;
+}
+
+.table-cart tbody tr:hover {
+  background-color: #e8f5e9;
+}
+
+.table-cart .table-footer-cart td {
+  border-top: 2px solid #333;
+  background-color: #fafafa;
+}
+
+/* ================
+   Styling Tombol
+   ================ */
+.input-jumlah {
+    width: 60px;
+    height: 30px;
+    font-size: 14px;
+    padding: 2px 5px;
+}
+
+.tombol-update {
+    height: 30px;
+    font-size: 14px;
+    padding: 2px 8px;
+    margin-left: 5px;
+}
+ 
+.btn-cart {
+  display: inline-block;
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-decoration: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+  border: none;
+  margin-right: 8px;
+}
+
+.btn-cart:focus {
+  outline: none;
+}
+
+/* Primary Button (Checkout) */
+.btn-cart-primary {
+  background-color: #0a5e8f;
+  color: #fff;
+}
+
+.btn-cart-primary:hover {
+  background-color: #6b060c;
+}
+
+/* Secondary Button (Lanjut Belanja) */
+.btn-cart-secondary {
+  background-color: #6c757d;
+  color: #fff;
+}
+
+.btn-cart-secondary:hover {
+  background-color: #5a6268;
+}
+
+/* Danger Button (Hapus) */
+.btn-cart-danger {
+  background-color: #dc3545;
+  color: #fff;
+}
+
+.btn-cart-danger:hover {
+  background-color: #c82333;
+}
+
+/* Outline-Secondary Button (Update) */
+.btn-cart-outline-secondary {
+  background-color: transparent;
+  color: #6c757d;
+  border: 2px solid #6c757d;
+  padding: 6px 12px;
+}
+
+.btn-cart-outline-secondary:hover {
+  background-color: #6c757d;
+  color: #fff;
+}
+
+/* ================
+   Form & Input Group
+   ================ */
+
+   .quantity-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.input-jumlah {
+    width: 60px;
+    text-align: center;
+    font-size: 14px;
+    height: 30px;
+}
+
+.btn-qty {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    width: 30px;
+    height: 30px;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.btn-qty:hover {
+    background-color: #45a049;
+}
+
+
+.form-inline-cart {
+  margin: 0; /* agar tidak ada margin tambahan */
+}
+
+.input-group-cart {
+  display: flex;
+  max-width: 140px;
+}
+
+.input-group-cart input.form-control {
+  flex: 1;
+  padding: 6px 8px;
+  border: 1px solid #ccc;
+  border-right: none;
+  border-radius: 4px 0 0 4px;
+  font-size: 0.9rem;
+}
+
+.input-group-cart button {
+  border: 1px solid #ccc;
+  border-left: none;
+  background-color: #f0f0f0;
+  color: #333;
+  padding: 6px 8px;
+  border-radius: 0 4px 4px 0;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.input-group-cart button:hover {
+  background-color: #e0e0e0;
+}
+
+/* ================
+   Alert Info
+   ================ */
+
+.alert-cart {
+  padding: 15px 20px;
+  margin: 20px 0;
+  border-radius: 4px;
+  font-size: 0.95rem;
+}
+
+.alert-info-cart {
+  background-color: #d1ecf1;
+  color: #0c5460;
+  border: 1px solid #bee5eb;
+}
+
+/* ================
+   Group Tombol Bawah
+   ================ */
+
+.button-group-cart {
+  margin: 20px 0 40px; /* jarak atas & bawah */
+  text-align: right;    /* tombol berjajar di kanan */
+}
+
+.button-group-cart .btn {
+  margin-left: 8px;
+}
+
+/* ================
+   Responsive Breakpoint (opsional)
+   ================ */
+
+@media (max-width: 600px) {
+  .table-cart th, .table-cart td {
+    padding: 8px 10px;
+  }
+  .input-group-cart {
+    max-width: 100px;
+  }
+  .btn-cart {
+    padding: 6px 12px;
+    font-size: 0.85rem;
+  }
+}

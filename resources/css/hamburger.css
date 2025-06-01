@@ -185,6 +185,33 @@ body{
     }
 
 
+.quantity-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.input-jumlah {
+    width: 60px;
+    text-align: center;
+    font-size: 14px;
+    height: 30px;
+}
+
+.btn-qty {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    width: 30px;
+    height: 30px;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.btn-qty:hover {
+    background-color: #45a049;
+}
 
 
 @media (max-width: 480px){

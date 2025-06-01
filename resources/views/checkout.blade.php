@@ -68,7 +68,7 @@
                         
                         <button type="submit" class="btn btn-primary"><a href="{{ route('invoice') }}" class="btn btn-primary">Buat Pesanan</a>
 </button>
-                        <button onclick="window.print()" class="btn btn-secondary">Cetak Invoice</button>
+                        {{-- <button onclick="window.print()" class="btn btn-secondary">Cetak Invoice</button> --}}
                     </form>
                 </div>
             </div>
