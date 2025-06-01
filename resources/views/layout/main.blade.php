@@ -29,9 +29,7 @@
     @vite('resources/js/cart.js')
     @vite('resources/js/cart2.js')
     {{-- @vite('resources/js/navbarContent.js') --}}
-    @vite('resources/css/linkCepat.css')
     @vite('resources/css/sosmed.css')
-    @vite('resources/js/linkCepat.js')
 
 
 
@@ -77,35 +75,6 @@
   <div class="container mx-auto flex flex-col items-center justify-center">
     <!-- Logo -->
     <img src="{{ asset('iconLogo.png') }}" alt="Logo JamuKita" class="w-12 h-12 mb-4" />
-
-    <!-- Grid Footer -->
-    <div class="w-full max-w-5xl grid grid-cols-1 md:grid-cols-3 gap-8 text-center items-center mt-6">
-      <!-- Tentang Kami -->
-      <div>
-        <h3 class="text-lg font-semibold mb-2">Tentang Kami</h3>
-        <p>Kami adalah UMKM yang bergerak di bidang jual beli obat herbal tradional Indonesia.</p>
-      </div>
-
-  <!-- Footer Link Cepat -->
-  <div>
-    <h3 class="text-lg font-semibold mb-2">Link Cepat</h3>
-    <ul>
-        <li><a href="#" class="menu-item">Beranda</a></li>
-        <li><a href="#" class="menu-item">Cara Order</a></li>
-        <li><a href="#" class="menu-item">Kontak Kami</a></li>
-        <li><a href="#" class="menu-item">Tentang Kami</a></li>
-    </ul>
-  </div>
-
-  <!-- Modal Custom -->
-  <div class="modal" style="display:none;">
-    <div class="modal-content">
-      <button class="close-modal">&times;</button>
-      <div id="modal-title"></div>
-      <div id="modal-body"></div>
-    </div>
-  </div>
-
 
   <!-- Sosial Media -->
   <div>
