@@ -27,8 +27,9 @@ class InvoiceMail extends Mailable
 
     public function build()
 {
-    return $this->subject('Invoice Pesanan #'.$this->order->order_number)
-                ->view('emails.invoice');
+    return $this->subject('Invoice Pesanan #' . $this->order->order_number)
+                ->markdown('emails.invoice')
+                ->with('order', $this->order);
 }
 
     /**

@@ -100,7 +100,10 @@ Route::get('/invoice', function () {
     return view('invoice');
 })->name('invoice');
 
+Route::get('/invoice/{id}', [InvoiceController::class, 'show'])->name('invoice');
+
 
 //admin
 Route::get('/admin/orders', [OrderController::class, 'index'])->name('orders.index');
 Route::patch('/admin/orders/{order}', [OrderController::class, 'updateStatus'])->name('orders.updateStatus');
+

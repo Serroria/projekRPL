@@ -147,7 +147,7 @@
                             <textarea class="form-control" id="notes" name="notes" rows="2"></textarea>
                         </div>
                         
-                        <button type="submit" class="btn btn-primary"><a href="{{ route('invoice') }}" class="btn btn-primary">Buat Pesanan</a>
+                        <button type="submit" class="btn btn-primary">Buat Pesanan
 </button>
                         {{-- <button onclick="window.print()" class="btn btn-secondary">Cetak Invoice</button> --}}
                     </form>

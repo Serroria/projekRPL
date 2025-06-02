@@ -18,6 +18,11 @@ class Order extends Model
         
     ];
 
+    // app/Models/Order.php
+public function items()
+{
+    return $this->hasMany(OrderItem::class);
+}
     // protected static function boot()
     // {
     //     parent::boot();

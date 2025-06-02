@@ -14,6 +14,7 @@ class InvoiceController extends Controller
     public function show(Order $order)
 {
     return view('invoice', compact('order'));
+    Mail::to($order->customer_email)->send(new InvoiceMail($order));
 }
    
 // public function sendInvoice($orderNumber)

@@ -90,6 +90,9 @@ logger()->info('Cart emptied', ['session_id' => session('cart_session')]);
 // (Opsional tapi disarankan) reset session cart supaya tidak reuse lagi
 session()->forget('cart_session');
         // Redirect ke halaman invoice
-        return redirect()->route('invoice.show', $order);
+        // return redirect()->route('invoice.show', $order);
+    
+       return redirect()->route('invoice', $order->id);
+
     }
 }
