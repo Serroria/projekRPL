@@ -44,7 +44,7 @@
                 <tr>
                     <th>Produk</th>
                     <th>Harga</th>
-                    <th>Qty</th>
+                    <th>Jumlah</th>
                     <th>Subtotal</th>
                 </tr>
             </thead>
