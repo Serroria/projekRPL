@@ -86,13 +86,12 @@ Route::post('/checkout', [CheckoutController::class, 'placeOrder'])->name('check
 
 // // Invoice routes
 // Route::get('/invoice/{orderNumber}', [InvoiceController::class, 'show'])->name('invoice.show');
-// Route::get('/invoice/{orderNumber}/download', [InvoiceController::class, 'download'])->name('invoice.download');
+Route::get('/invoice/{orderNumber}/download', [InvoiceController::class, 'download'])->name('invoice.download');
 
 // // routes/web.php
-// Route::post('/invoice/{orderNumber}/send', [InvoiceController::class, 'sendInvoice'])
-//      ->name('invoice.send');
-
-Route::post('/checkout/place-order', [CheckoutController::class, 'placeOrder'])->name('checkout.place-order');
+Route::post('/invoice/{orderNumber}/send', [InvoiceController::class, 'sendInvoice'])
+     ->name('invoice.send');
+// Route::post('/checkout/place-order', [CheckoutController::class, 'placeOrder'])->name('checkout.place-order');
 Route::get('/invoice/{order}', [InvoiceController::class, 'show'])->name('invoice.show');
 
 
@@ -100,7 +99,7 @@ Route::get('/invoice', function () {
     return view('invoice');
 })->name('invoice');
 
-Route::get('/invoice/{id}', [InvoiceController::class, 'show'])->name('invoice');
+// Route::get('/invoice/{id}', [InvoiceController::class, 'show'])->name('invoice.show');
 
 
 //admin

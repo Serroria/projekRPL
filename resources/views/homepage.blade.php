@@ -84,7 +84,7 @@
 
 </div>
 <!-- POP-UP MODAL -->
-    <div id="checkoutModal" class="fixed inset-0 bg-gray-800 bg-opacity-50 flex justify-center items-center hidden z-50">
+    <div id="checkoutModal" class="fixed inset-0 bg-gray-800 bg-opacity-50 justify-center items-center hidden z-50">
       <div class="bg-white p-6 rounded-lg shadow-lg w-96">
         <h2 class="text-xl font-semibold mb-4">Checkout</h2>
         <div id="cartItems" class="mb-4"></div>
@@ -145,7 +145,7 @@ window.toggleDesc = function(id) {
             
 
             // Kirim request AJAX
-            fetch('/cart/count',  {
+            fetch('/cart/add-ajax',  {
                 method: 'POST',
                 headers: {
                      'X-CSRF-TOKEN': '{{ csrf_token() }}',
