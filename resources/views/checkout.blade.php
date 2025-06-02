@@ -5,6 +5,90 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Checkout</title>
+      @vite('resources/css/header.css') 
+      @vite('resources/css/hamburger.css')
+    @vite('resources/js/hamburger.js')
+    @vite('resources/css/cart.css') 
+
+    <style>
+    body {
+        background-color: #f8f9fa;
+    }
+
+    .checkout-container {
+        background: #ffffff;
+        padding: 20px;
+        border-radius: 15px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+    }
+
+    .checkout-container h1 {
+        font-weight: bold;
+        color: #343a40;
+    }
+
+    .card-header {
+        background-color: #f0f0f5;
+        font-weight: 600;
+        font-size: 1.1rem;
+        color: #333;
+    }
+
+    .form-control:focus {
+        border-color: #0d6efd;
+        box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.25);
+    }
+
+    .form-label {
+        font-weight: 500;
+        color: #495057;
+    }
+
+    .btn-primary {
+        background-color: #0d6efd;
+        border: none;
+        font-weight: bold;
+        padding: 10px 20px;
+        border-radius: 10px;
+    }
+
+    .btn-outline-secondary {
+        border-radius: 8px;
+        font-weight: 500;
+        margin-bottom: 15px;
+    }
+
+    .card-body .d-flex {
+        font-size: 0.95rem;
+    }
+
+    .fw-bold {
+        font-size: 1.1rem;
+        color: #212529;
+    }
+
+    textarea.form-control {
+        resize: none;
+    }
+
+    .card {
+        border-radius: 12px;
+        overflow: hidden;
+    }
+
+    .card-body {
+        padding: 20px;
+    }
+
+    .center-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+</style>
+
 </head>
 <body>
 
@@ -88,7 +172,7 @@
     </div>  --}}
 </header>
 
-    
+    <div class=".center-page">
 <div class="container py-4">
     <h1 class="mb-4">Checkout</h1>
        <a href="{{ route('cart.index') }}" class="btn btn-outline-secondary">
@@ -187,7 +271,7 @@
         </div>
     </div>
 </div>
-
+    </div>
 <script>
 document.addEventListener('DOMContentLoaded', function() {
     // Refresh data cart setiap 5 detik

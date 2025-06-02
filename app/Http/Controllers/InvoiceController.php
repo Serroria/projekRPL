@@ -14,6 +14,10 @@ class InvoiceController extends Controller
 
     public function show(Order $order)
     {
+        $order->load('items.product');
+    $order->total_amount = $order->items->sum(function($item) {
+        return $item->price * $item->quantity;
+    });
         return view('invoice', compact('order'));
         // Mail::to($order->customer_email)->send(new InvoiceMail($order));
     }
@@ -27,6 +31,9 @@ public function download($orderNumber)
     $pdf = Pdf::loadView('invoice', compact('order'));
     return $pdf->download("Invoice-{$order->order_number}.pdf");
 }
+
+
+
 
     // public function sendInvoice($orderNumber)
 // {

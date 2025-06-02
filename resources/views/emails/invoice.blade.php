@@ -2,6 +2,7 @@
 <html>
 <head>
     <title>Invoice #{{ $order->order_number }}</title>
+    
 </head>
 <body>
     <h2>Invoice Pesanan</h2>

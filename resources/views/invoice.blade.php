@@ -4,6 +4,7 @@
 <html>
 <head>
     <title>Invoice #{{ $order->order_number }}</title>
+    
     <style>
         body { font-family: Arial, sans-serif; }
         .invoice-box { max-width: 800px; margin: auto; padding: 30px; border: 1px solid #eee; }
@@ -22,7 +23,7 @@
 <body>
     <div class="invoice-box">
         <div class="header">
-            <div class="logo">Toko Online</div>
+            <div class="logo">JamuKita</div>
             <div class="invoice-details">
                 <h2>INVOICE</h2>
                 <p>No: {{ $order->order_number }}</p>
