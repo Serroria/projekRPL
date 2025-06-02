@@ -114,7 +114,7 @@ class CheckoutController extends Controller
         // Redirect ke halaman invoice
         // return redirect()->route('invoice.show', $order);
 
-        return redirect()->route('invoice', $order->id);
+        return redirect()->route('invoice.show', $order->id);
 
     }
 }

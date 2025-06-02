@@ -95,9 +95,9 @@ Route::post('/invoice/{orderNumber}/send', [InvoiceController::class, 'sendInvoi
 Route::get('/invoice/{order}', [InvoiceController::class, 'show'])->name('invoice.show');
 
 
-Route::get('/invoice', function () {
-    return view('invoice');
-})->name('invoice');
+// Route::get('/invoice', function () {
+//     return view('invoice');
+// })->name('invoice');
 
 // Route::get('/invoice/{id}', [InvoiceController::class, 'show'])->name('invoice.show');
 

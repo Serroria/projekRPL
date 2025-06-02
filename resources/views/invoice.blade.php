@@ -26,7 +26,7 @@
             <div class="invoice-details">
                 <h2>INVOICE</h2>
                 <p>No: {{ $order->order_number }}</p>
-                <p>Tanggal: {{ $order->created_at->format('d/m/Y') }}</p>
+                <p>Tanggal: {{$order->created_at ? $order->created_at->format('d/m/Y') : '-' }}</p>
             </div>
         </div>
 
@@ -67,7 +67,7 @@
 
         <div style="margin-top: 20px;">
             <p><strong>Metode Pembayaran:</strong> {{ ucfirst($order->payment_method) }}</p>
-            <p><strong>Status:</strong> {{ ucfirst($order->status) }}</p>
+            {{-- <p><strong>Status:</strong> {{ ucfirst($order->status) }}</p> --}}
             @if($order->notes)
             <p><strong>Catatan:</strong> {{ $order->notes }}</p>
             @endif
@@ -86,14 +86,14 @@
                 $message = "Halo $order->customer_name,%0A%0A";
                 $message .= "Invoice Pesanan #$order->order_number%0A";
                 $message .= "Total: Rp " . number_format($order->total_amount, 0, ',', '.') . "%0A%0A";
-                $message .= "Lihat detail: " . route('invoice', $order->id);
+                $message .= "Lihat detail: " . route('invoice.show', $order->id);
                 $whatsappUrl .= urlencode($message);
             @endphp
 
-            <form action="{{ route('invoice.send', $order->order_number) }}" method="POST" style="display:inline;">
+            {{-- <form action="{{ route('invoice.send', $order->order_number) }}" method="POST" style="display:inline;">
                 @csrf
                 <button type="submit" name="method" value="email" class="btn">Kirim via Email</button>
-            </form>
+            </form> --}}
 
             <a href="{{ $whatsappUrl }}" target="_blank" class="btn btn-success">Kirim via WhatsApp</a>
         </div>

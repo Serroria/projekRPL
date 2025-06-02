@@ -6,6 +6,7 @@ use App\Models\Order;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\InvoiceMail;
+use Barryvdh\DomPDF\Facade\Pdf;
 
 
 class InvoiceController extends Controller
@@ -16,6 +17,16 @@ class InvoiceController extends Controller
         return view('invoice', compact('order'));
         // Mail::to($order->customer_email)->send(new InvoiceMail($order));
     }
+
+   
+
+public function download($orderNumber)
+{
+    $order = Order::with('items.product')->where('order_number', $orderNumber)->firstOrFail();
+    
+    $pdf = Pdf::loadView('invoice', compact('order'));
+    return $pdf->download("Invoice-{$order->order_number}.pdf");
+}
 
     // public function sendInvoice($orderNumber)
 // {
